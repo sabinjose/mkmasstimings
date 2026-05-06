@@ -3,202 +3,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>MK Mass Times — today &amp; tomorrow</title>
+<title>MK Mass Times</title>
 <meta name="description" content="Catholic mass times across Milton Keynes and the surrounding area, refreshed from parish newsletters.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%E2%9C%9D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+
 <style>
   :root {
-    --bg: #fafaf7;
-    --card: #ffffff;
-    --ink: #1a1a1a;
-    --ink-soft: #555;
-    --rule: #ececec;
-    --accent: #6a3e2e;
-    --whatsapp: #25D366;
-    --pill-bg: #efe8de;
-    --pill-ink: #6a3e2e;
+    --bg:       #f7f3ec;
+    --surface:  #ffffff;
+    --ink:      #1a1816;
+    --ink-2:    #4d4843;
+    --ink-3:    #807a72;
+    --rule:     #ebe5db;
+    --accent:   #6a3e2e;
+    --tag-bg:   #efe4d3;
+    --tag-ink:  #6a3e2e;
+    --whatsapp: #25d366;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #14130f;
-      --card: #1d1c18;
-      --ink: #f1eee7;
-      --ink-soft: #a09a8e;
-      --rule: #2b2a25;
-      --accent: #d8b594;
-      --pill-bg: #2c241c;
-      --pill-ink: #d8b594;
+      --bg:       #0f0e0c;
+      --surface:  #1b1916;
+      --ink:      #f5f0e8;
+      --ink-2:    #c4bdb1;
+      --ink-3:    #8a8378;
+      --rule:     #2a2722;
+      --accent:   #e9b88f;
+      --tag-bg:   #2c2218;
+      --tag-ink:  #e9b88f;
     }
   }
+
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
+
   body {
     background: var(--bg);
     color: var(--ink);
-    font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    padding: max(env(safe-area-inset-top), 16px) 16px max(env(safe-area-inset-bottom), 32px);
-    max-width: 760px;
+    font: 14.5px/1.4 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    padding: max(env(safe-area-inset-top), 12px) 12px max(env(safe-area-inset-bottom), 28px);
+    max-width: 640px;
     margin: 0 auto;
+    -webkit-text-size-adjust: 100%;
   }
-  header { padding: 8px 0 12px; }
-  h1 {
-    font-size: 1.4rem;
-    margin: 0 0 4px;
-    letter-spacing: -0.01em;
-  }
-  .subhead { color: var(--ink-soft); font-size: 0.95rem; }
-  .meta {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    font-size: 0.78rem;
-    color: var(--ink-soft);
-    margin-top: 8px;
+  @media (min-width: 600px) {
+    body { padding-left: 18px; padding-right: 18px; font-size: 15px; }
   }
 
-  .actions {
-    display: flex;
-    gap: 8px;
-    margin: 16px 0 8px;
-    flex-wrap: wrap;
+  /* Header */
+  header { margin: 4px 0 10px; }
+  h1 {
+    font-size: 1.15rem;
+    margin: 0 0 2px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    font-weight: 700;
   }
-  button {
-    font: inherit;
-    padding: 10px 14px;
-    border-radius: 8px;
+  .subhead { color: var(--ink-2); font-size: 0.92rem; font-weight: 500; }
+  .meta {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    font-size: 0.72rem; color: var(--ink-3); margin-top: 4px;
+  }
+  .meta .dot { opacity: 0.5; }
+
+  /* Toolbar (toggle + actions in one row) */
+  .toolbar {
+    display: flex; align-items: center; gap: 8px;
+    flex-wrap: wrap;
+    margin: 10px 0 8px;
+  }
+  .day-toggle {
+    display: inline-flex;
+    background: var(--surface);
     border: 1px solid var(--rule);
-    background: var(--card);
-    color: var(--ink);
+    border-radius: 999px;
+    padding: 2px;
+    flex: 0 0 auto;
+  }
+  .day-toggle button {
+    border: 0;
+    background: transparent;
+    color: var(--ink-2);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
   }
-  button:active { transform: translateY(1px); }
-  button.primary {
+  .day-toggle button.active {
+    background: var(--accent);
+    color: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    .day-toggle button.active { color: #1a1410; }
+  }
+  .actions { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
+  .actions-bottom {
+    margin: 18px 0 4px;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+  .actions-bottom .btn {
+    padding: 10px 16px;
+    font-size: 0.92rem;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  @media (min-width: 480px) {
+    .actions-bottom .btn { flex: 0 0 auto; }
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn.primary {
     background: var(--whatsapp);
-    color: white;
+    color: #fff;
     border-color: var(--whatsapp);
   }
-  button.copied { background: var(--pill-bg); color: var(--pill-ink); border-color: var(--pill-bg); }
+  .btn.copied {
+    background: var(--tag-bg);
+    color: var(--tag-ink);
+    border-color: var(--tag-bg);
+  }
 
-  .day-block {
-    margin: 28px 0 0;
-  }
-  .day-header {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    margin: 0 0 12px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid var(--accent);
-  }
-  .day-header h2 {
-    margin: 0;
-    font-size: 1.05rem;
-    color: var(--accent);
-    letter-spacing: 0.02em;
+  /* Bucket section */
+  section.bucket { margin: 12px 0 14px; }
+  section.bucket h3 {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.7rem;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+    margin: 0 0 6px;
     font-weight: 700;
   }
-  .day-header .day-date {
-    color: var(--ink-soft);
-    font-size: 0.95rem;
+  section.bucket h3 .count {
+    color: var(--ink-3);
+    font-weight: 500;
+    font-size: 0.65rem;
   }
 
-  section.bucket { margin: 16px 0; }
-  section.bucket h3 {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--ink-soft);
-    margin: 0 0 6px;
-    font-weight: 600;
-  }
-
+  /* Service rows — tight, single-line where possible */
   .card {
-    background: var(--card);
+    background: var(--surface);
     border: 1px solid var(--rule);
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
   }
   .row {
     display: grid;
     grid-template-columns: 64px 1fr;
-    gap: 12px;
-    padding: 12px 14px;
+    gap: 10px;
+    padding: 7px 12px;
     border-top: 1px solid var(--rule);
     align-items: baseline;
   }
   .row:first-child { border-top: 0; }
-  .time {
+  .row .time {
     font-variant-numeric: tabular-nums;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 0.95rem;
     color: var(--accent);
+    line-height: 1.3;
+    white-space: nowrap;
   }
-  .where {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    flex-wrap: wrap;
+  .row .body { min-width: 0; line-height: 1.35; }
+  .row .place {
+    font-weight: 600;
+    color: var(--ink);
+    overflow-wrap: anywhere;
   }
-  .church { font-weight: 500; }
-  .parish-tag {
-    color: var(--ink-soft);
+  .row .sub {
+    color: var(--ink-3);
     font-size: 0.85rem;
-    font-style: italic;
+    margin-left: 4px;
+    font-weight: 400;
   }
-  .loc { color: var(--ink-soft); font-size: 0.9rem; }
-  .note { color: var(--ink-soft); font-size: 0.85rem; display: block; margin-top: 2px; }
+  .row .note {
+    color: var(--ink-3);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
   .pill {
     display: inline-block;
-    background: var(--pill-bg);
-    color: var(--pill-ink);
-    font-size: 0.7rem;
-    font-weight: 600;
+    background: var(--tag-bg);
+    color: var(--tag-ink);
+    font-size: 0.62rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 2px 8px;
+    letter-spacing: 0.07em;
+    padding: 1px 6px;
     border-radius: 999px;
+    line-height: 1.5;
+    vertical-align: middle;
+    margin-left: 4px;
   }
+  .pill.pill-cancel {
+    background: rgba(180, 60, 60, 0.12);
+    color: #b43c3c;
+  }
+  @media (prefers-color-scheme: dark) {
+    .pill.pill-cancel {
+      background: rgba(255, 130, 130, 0.18);
+      color: #ff9b9b;
+    }
+  }
+  .row.cancelled .place { color: var(--ink-3); text-decoration: line-through; text-decoration-thickness: 1px; }
+  .row.cancelled .time  { color: var(--ink-3); }
+
+  .row .src {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    text-decoration: none;
+    margin-left: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .row .src:hover { background: var(--tag-bg); border-color: var(--tag-bg); }
+  .row .src:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
   .empty {
-    color: var(--ink-soft);
-    font-style: italic;
-    padding: 12px 14px;
-    font-size: 0.92rem;
+    color: var(--ink-3);
+    padding: 12px;
+    text-align: center;
+    font-size: 0.88rem;
+  }
+  .empty.big { padding: 22px 16px; }
+  .empty.big strong {
+    display: block;
+    color: var(--ink-2);
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+    font-weight: 600;
   }
 
   footer {
-    margin-top: 36px;
-    padding-top: 16px;
+    margin-top: 24px;
+    padding-top: 12px;
     border-top: 1px solid var(--rule);
-    color: var(--ink-soft);
-    font-size: 0.8rem;
+    color: var(--ink-3);
+    font-size: 0.75rem;
+    line-height: 1.5;
   }
-  footer a { color: var(--ink-soft); }
+  footer p { margin: 4px 0; }
+  footer a { color: var(--ink-2); }
 
-  .skeleton { color: var(--ink-soft); padding: 14px; }
+  .skeleton { color: var(--ink-3); padding: 14px; text-align: center; }
 </style>
 </head>
 <body>
 
 <header>
   <h1>Mass Times — Milton Keynes &amp; Area</h1>
-  <div class="subhead" id="subhead">Today &amp; Tomorrow</div>
+  <div class="subhead" id="subhead">Loading…</div>
   <div class="meta" id="meta"></div>
 </header>
 
-<div class="actions">
-  <button class="primary" id="shareWa">📲 Share on WhatsApp</button>
-  <button id="copyBtn">📋 Copy as text</button>
+<div class="toolbar">
+  <div class="day-toggle" role="tablist" aria-label="Day">
+    <button id="btnToday" class="active" type="button" role="tab">Today</button>
+    <button id="btnTomorrow" type="button" role="tab">Tomorrow</button>
+  </div>
 </div>
 
 <div id="dayContainer">
   <div class="skeleton">Loading…</div>
 </div>
 
+<div class="actions actions-bottom">
+  <button class="btn primary" id="shareWa" title="Share on WhatsApp">📲 Share on WhatsApp</button>
+  <button class="btn" id="copyBtn" title="Copy as text">📋 Copy</button>
+</div>
+
 <footer>
-  <p>Data extracted from parish newsletters by AI. Always confirm with the parish before travelling.<br>
-  Source: <a href="https://github.com/sabinjose/mkmasstimings" target="_blank" rel="noopener">github.com/sabinjose/mkmasstimings</a></p>
+  <p>AI-extracted from parish newsletters, refreshed Wed–Sun. Always confirm with the parish before travelling.</p>
+  <p><a href="https://github.com/sabinjose/mkmasstimings" target="_blank" rel="noopener">github.com/sabinjose/mkmasstimings</a></p>
 </footer>
 
 <script>
@@ -218,7 +318,6 @@ const todayISO = () => {
     String(d.getMonth() + 1).padStart(2, "0") + "-" +
     String(d.getDate()).padStart(2, "0");
 };
-
 const tomorrowISO = () => {
   const d = new Date();
   d.setDate(d.getDate() + 1);
@@ -227,7 +326,21 @@ const tomorrowISO = () => {
     String(d.getDate()).padStart(2, "0");
 };
 
+// "13:45" -> "1:45pm" / "9:00" -> "9am"
+function formatTime(t) {
+  if (!t) return "—";
+  const m = /^(\d{1,2}):(\d{2})$/.exec(t);
+  if (!m) return t;
+  let h = parseInt(m[1], 10);
+  const min = m[2];
+  const ampm = h >= 12 ? "pm" : "am";
+  h = h % 12; if (h === 0) h = 12;
+  return (min === "00") ? `${h}${ampm}` : `${h}:${min}${ampm}`;
+}
+const timeKey = (t) => t || "99:99";
+
 let DATA = null;
+let SELECTED = "today";
 
 function classify(svc) {
   const t = (svc.type || "").toLowerCase();
@@ -235,6 +348,16 @@ function classify(svc) {
   if (ADORATION_TYPES.some(x => t.includes(x))) return "adoration";
   if (MASS_TYPES.some(x => t.includes(x))) return "mass";
   return "adoration";
+}
+
+// "No Mass today" notices — keep them but render distinctly so users see
+// at a glance that the church is closed for that liturgy. Catches every
+// phrasing parishes use: "No Mass", "No Parish Mass", "No morning Mass",
+// "No public Mass", "no service today", "Mass cancelled", etc.
+const CANCELLATION_RE = /\b(no\s+(?:[a-z]+\s+){0,3}(?:mass|service|liturgy)|mass\s+cancelled)\b/i;
+function isCancellation(svc) {
+  return CANCELLATION_RE.test(svc.type || "") ||
+         CANCELLATION_RE.test(svc.notes || "");
 }
 
 function flattenServices(parishes) {
@@ -246,7 +369,9 @@ function flattenServices(parishes) {
         ...s,
         parish: p.parish,
         location: p.location,
-        bucket: classify(s),
+        source_url: p.source_url || "",
+        bucket: isCancellation(s) ? "mass" : classify(s),
+        cancelled: isCancellation(s),
       });
     }
   }
@@ -254,95 +379,140 @@ function flattenServices(parishes) {
 }
 
 function escapeHTML(s) {
-  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
+  return String(s).replace(/[&<>"']/g, c =>
+    ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 }
 
-function placeName(svc) {
-  // Prefer specific church when the parish has multiple sites.
-  if (svc.church) {
-    const loc = svc.church_location || svc.location;
-    return { primary: svc.church, secondary: loc, parish: svc.parish };
-  }
-  return { primary: svc.parish, secondary: svc.location, parish: null };
+// Rewrite raw text-export URLs to human-friendly viewer URLs.
+// Otherwise users see plaintext or get a forced download.
+function viewableSourceURL(url) {
+  if (!url) return url;
+  // Google Docs export → preview viewer
+  let m = url.match(/^https?:\/\/docs\.google\.com\/document\/d\/([a-zA-Z0-9_\-]+)\/export(?:\?.*)?$/);
+  if (m) return `https://docs.google.com/document/d/${m[1]}/preview`;
+  // Drive direct download → preview viewer
+  m = url.match(/^https?:\/\/drive\.google\.com\/uc\?.*\bid=([a-zA-Z0-9_\-]+)/);
+  if (m) return `https://drive.google.com/file/d/${m[1]}/preview`;
+  return url;
 }
+
+// For each service, decide what to show as primary place vs subdued location.
+function placeName(svc) {
+  if (svc.church) {
+    return {
+      primary: svc.church,
+      secondary: svc.church_location || svc.location || "",
+    };
+  }
+  return { primary: svc.parish, secondary: svc.location || "" };
+}
+
+// ?date=YYYY-MM-DD lets you preview any day (used as Today; Tomorrow shifts +1)
+const URL_DATE_OVERRIDE = (() => {
+  const v = new URLSearchParams(location.search).get("date");
+  return /^\d{4}-\d{2}-\d{2}$/.test(v || "") ? v : null;
+})();
+const baseDate = () => URL_DATE_OVERRIDE || todayISO();
+const nextDate = () => {
+  const d = new Date(baseDate() + "T00:00:00");
+  d.setDate(d.getDate() + 1);
+  return d.getFullYear() + "-" +
+    String(d.getMonth() + 1).padStart(2, "0") + "-" +
+    String(d.getDate()).padStart(2, "0");
+};
+const selectedDate  = () => SELECTED === "tomorrow" ? nextDate() : baseDate();
+const selectedLabel = () => SELECTED === "tomorrow" ? "Tomorrow" : "Today";
 
 function rowHTML(svc) {
-  const time = svc.time || "—";
-  const lang = svc.language ? `<span class="pill">${escapeHTML(svc.language)}</span>` : "";
-  const note = svc.notes ? `<span class="note">${escapeHTML(svc.notes)}</span>` : "";
+  const t = svc.cancelled ? "—" : formatTime(svc.time);
   const place = placeName(svc);
-  const sec = place.secondary ? `<span class="loc">${escapeHTML(place.secondary)}</span>` : "";
-  const tag = place.parish ? `<span class="parish-tag">(${escapeHTML(place.parish)})</span>` : "";
-  return `<div class="row">
-    <div class="time">${escapeHTML(time)}</div>
-    <div>
-      <div class="where">
-        <span class="church">${escapeHTML(place.primary)}</span>${sec}${tag}${lang}
-      </div>
-      ${note}
+
+  const tags = [];
+  if (svc.cancelled) tags.push(`<span class="pill pill-cancel">No Mass</span>`);
+  if (svc.language)  tags.push(`<span class="pill">${escapeHTML(svc.language)}</span>`);
+  if (svc.source_url) {
+    const href = viewableSourceURL(svc.source_url);
+    tags.push(`<a class="src" href="${escapeHTML(href)}" target="_blank" rel="noopener" title="Open parish newsletter" aria-label="Open parish newsletter">↗</a>`);
+  }
+  const tagsHTML = tags.join("");
+
+  const sub  = place.secondary ? `<span class="sub">· ${escapeHTML(place.secondary)}</span>` : "";
+
+  // Show note inline only when meaningfully short, else on its own line.
+  // Skip the note if it's basically the same as the cancellation flag.
+  let noteText = (svc.notes || "").trim();
+  if (svc.cancelled && CANCELLATION_RE.test(noteText)) noteText = "";
+  const noteInline = noteText && noteText.length <= 36;
+  const noteBlock  = noteText && noteText.length >  36;
+
+  const rowClass = svc.cancelled ? "row cancelled" : "row";
+
+  return `<div class="${rowClass}">
+    <div class="time">${escapeHTML(t)}</div>
+    <div class="body">
+      <span class="place">${escapeHTML(place.primary)}</span>${sub}${tagsHTML}${noteInline ? `<span class="sub">— ${escapeHTML(noteText)}</span>` : ""}
+      ${noteBlock ? `<div class="note">${escapeHTML(noteText)}</div>` : ""}
     </div>
   </div>`;
 }
 
 function bucketSection(label, services, emptyText) {
-  if (!services.length) {
-    return `<section class="bucket">
-      <h3>${label}</h3>
-      <div class="card"><div class="empty">${emptyText}</div></div>
-    </section>`;
-  }
-  const sorted = [...services].sort((a,b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
+  const sorted = [...services].sort((a,b) => timeKey(a.time).localeCompare(timeKey(b.time)));
+  const inner = sorted.length
+    ? sorted.map(rowHTML).join("")
+    : `<div class="empty">${emptyText}</div>`;
   return `<section class="bucket">
-    <h3>${label}</h3>
-    <div class="card">${sorted.map(rowHTML).join("")}</div>
+    <h3>${label}${services.length ? ` <span class="count">${services.length}</span>` : ""}</h3>
+    <div class="card">${inner}</div>
   </section>`;
 }
 
 function dayBlock(label, dateISO, services) {
+  if (!services.length) {
+    return `<div class="card"><div class="empty big">
+      <strong>No services listed for ${escapeHTML(label.toLowerCase())}.</strong>
+      Newsletters typically cover Sun–Sat — check back after the next refresh.
+    </div></div>`;
+  }
   const masses = services.filter(s => s.bucket === "mass");
-  const conf = services.filter(s => s.bucket === "confession");
-  const ador = services.filter(s => s.bucket === "adoration");
-  const empty = !services.length;
+  const conf   = services.filter(s => s.bucket === "confession");
+  const ador   = services.filter(s => s.bucket === "adoration");
 
-  return `<div class="day-block">
-    <div class="day-header">
-      <h2>${label}</h2>
-      <span class="day-date">${escapeHTML(FRIENDLY_DAY(dateISO))}</span>
-    </div>
-    ${empty
-      ? `<div class="card"><div class="empty">No services listed for this day yet — newsletters may not cover this date.</div></div>`
-      : bucketSection("Masses", masses, "No masses listed.") +
-        bucketSection("Confessions", conf, "No confession times listed.") +
-        bucketSection("Adoration &amp; Other", ador, "No adoration / other listed.")
-    }
-  </div>`;
+  return [
+    bucketSection("Masses", masses, "No masses listed."),
+    bucketSection("Confessions", conf, "No confessions listed for this day."),
+    ador.length ? bucketSection("Adoration &amp; Other", ador, "") : "",
+  ].join("");
 }
 
 function render() {
   if (!DATA) return;
-  const all = flattenServices(DATA.parishes);
-  const today = todayISO();
-  const tomorrow = tomorrowISO();
 
-  const generated = new Date(DATA.generated_at).toLocaleString();
+  const generated = new Date(DATA.generated_at).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
   const parishCount = DATA.parishes.filter(p => !p.error).length;
-  $("meta").innerHTML = `<span>Last refreshed: ${escapeHTML(generated)}</span><span>•</span><span>${parishCount} parishes</span>`;
+  $("meta").innerHTML =
+    `<span>Refreshed ${escapeHTML(generated)}</span>` +
+    `<span class="dot">·</span>` +
+    `<span>${parishCount} parishes</span>`;
 
-  const todays    = all.filter(s => s.date === today);
-  const tomorrows = all.filter(s => s.date === tomorrow);
+  $("subhead").textContent = FRIENDLY_DAY(selectedDate());
+  $("btnToday").classList.toggle("active",    SELECTED === "today");
+  $("btnTomorrow").classList.toggle("active", SELECTED === "tomorrow");
 
-  $("dayContainer").innerHTML =
-    dayBlock("Today",    today,    todays) +
-    dayBlock("Tomorrow", tomorrow, tomorrows);
+  const all = flattenServices(DATA.parishes);
+  const services = all.filter(s => s.date === selectedDate());
+  $("dayContainer").innerHTML = dayBlock(selectedLabel(), selectedDate(), services);
 }
 
+/* ---------- Share / Copy ---------- */
+
 function plainTextForDay(label, dateISO, services) {
-  const masses = services.filter(s => s.bucket === "mass").sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99"));
-  const conf   = services.filter(s => s.bucket === "confession").sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99"));
-  const ador   = services.filter(s => s.bucket === "adoration").sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99"));
+  const masses = services.filter(s => s.bucket === "mass").sort((a,b)=>timeKey(a.time).localeCompare(timeKey(b.time)));
+  const conf   = services.filter(s => s.bucket === "confession").sort((a,b)=>timeKey(a.time).localeCompare(timeKey(b.time)));
+  const ador   = services.filter(s => s.bucket === "adoration").sort((a,b)=>timeKey(a.time).localeCompare(timeKey(b.time)));
 
   const fmt = (s) => {
-    const t = s.time || "—";
+    const t = formatTime(s.time);
     const lang = s.language ? ` (${s.language})` : "";
     const place = placeName(s);
     const where = place.secondary ? `${place.primary}, ${place.secondary}` : place.primary;
@@ -363,18 +533,13 @@ function plainTextForDay(label, dateISO, services) {
 
 function buildShareText() {
   const all = flattenServices(DATA.parishes);
-  const today = todayISO();
-  const tomorrow = tomorrowISO();
-  const todays    = all.filter(s => s.date === today);
-  const tomorrows = all.filter(s => s.date === tomorrow);
-
-  const out = [];
-  out.push(plainTextForDay("Today",    today,    todays));
-  out.push("");
-  out.push(plainTextForDay("Tomorrow", tomorrow, tomorrows));
-  out.push("");
-  out.push(`Source: ${location.origin}${location.pathname}`);
-  return out.join("\n");
+  const date = selectedDate();
+  const services = all.filter(s => s.date === date);
+  return [
+    plainTextForDay(selectedLabel(), date, services),
+    "",
+    `Source: ${location.origin}${location.pathname}`,
+  ].join("\n");
 }
 
 async function copyText() {
@@ -382,19 +547,19 @@ async function copyText() {
   try {
     await navigator.clipboard.writeText(text);
     const b = $("copyBtn");
-    const original = b.textContent;
-    b.textContent = "✓ Copied";
+    const original = b.innerHTML;
+    b.innerHTML = "✓ Copied";
     b.classList.add("copied");
-    setTimeout(() => { b.textContent = original; b.classList.remove("copied"); }, 1800);
+    setTimeout(() => { b.innerHTML = original; b.classList.remove("copied"); }, 1800);
   } catch (e) {
     const w = window.open("", "_blank");
-    w.document.write("<pre style='white-space:pre-wrap;font:14px monospace'>" + text.replace(/[<>&]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;"})[c]) + "</pre>");
+    w.document.write("<pre style='white-space:pre-wrap;font:14px monospace'>" +
+      text.replace(/[<>&]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;"}[c])) + "</pre>");
   }
 }
 
 function shareWhatsApp() {
-  const text = buildShareText();
-  window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener");
+  window.open("https://wa.me/?text=" + encodeURIComponent(buildShareText()), "_blank", "noopener");
 }
 
 async function load() {
@@ -410,6 +575,8 @@ async function load() {
 
 $("copyBtn").addEventListener("click", copyText);
 $("shareWa").addEventListener("click", shareWhatsApp);
+$("btnToday").addEventListener("click", () => { SELECTED = "today"; render(); });
+$("btnTomorrow").addEventListener("click", () => { SELECTED = "tomorrow"; render(); });
 
 load();
 </script>

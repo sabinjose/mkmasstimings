@@ -35,6 +35,12 @@ Return ONLY a JSON object matching this schema (no prose, no markdown fences):
       "day": string,                       // "Sunday", "Monday", ... or "Daily"
       "time": string,                      // 24h "HH:MM", or "varies" if unspecified
       "type": string,                      // "Mass", "Vigil Mass", "Confession", "Adoration", "Rosary", etc.
+      "church": string | null,             // SPECIFIC church/building name when the newsletter
+                                           // covers multiple sites (e.g. "St Bernardine's", "St Martin's",
+                                           // "St Francis de Sales", "St Mary Magdalene"). Null if the
+                                           // newsletter only covers one church or doesn't say.
+      "church_location": string | null,    // The town/area for `church` if disambiguated, e.g. "Buckingham"
+                                           // when church="St Bernardine's", "Brackley" for "St Martin's"
       "language": string | null,           // e.g. "Polish", null for English
       "notes": string | null               // feast day name, "no mass this week", etc.
     }
@@ -55,6 +61,17 @@ SYSTEM_PROMPT = (
     "Adoracja → 'Adoration', Różaniec → 'Rosary', Koronka → 'Chaplet'). Set the "
     "`language` field on each service to the language the liturgy is celebrated in "
     "(e.g. 'Polish' for a Polish-language parish; null for English).\n\n"
+    "MULTI-CHURCH NEWSLETTERS: some parishes cover two or more churches in one bulletin "
+    "(e.g. 'St Bernardine's at Buckingham AND St Martin's at Brackley', or 'St Francis "
+    "de Sales (Wolverton) AND St Mary Magdalene (Stony Stratford)'). The schedule is "
+    "often laid out as parallel columns or a table with one column per church, sometimes "
+    "with the day on the left. When this is the case, populate the `church` and "
+    "`church_location` fields on EACH service so the reader knows which building to go "
+    "to. If a Mass time is in the column under 'St Martin's', that service has "
+    "church='St Martin's' and church_location='Brackley'. Be careful: in PDFs the "
+    "columns may have been linearized into one stream — use cues like the column "
+    "header, the church name in the text, or the time pattern (e.g. some churches have "
+    "consistent times like 9:00 vs 11:00).\n\n"
     "DATE HANDLING — read carefully:\n"
     "1. Find the newsletter's own date heading (e.g. 'Sunday 3rd May 2026', '5th Sunday of "
     "Easter, 3rd May 2026'). That is the `week_of` Sunday — set it to that ISO date and "
@@ -76,6 +93,7 @@ def extract_mass_times(
     parish_name: str,
     text: str,
     *,
+    hints: str = "",
     model: str = DEFAULT_MODEL,
     max_chars: int = 30_000,
 ) -> dict[str, Any]:
@@ -84,9 +102,11 @@ def extract_mass_times(
         text = text[:max_chars]
 
     today = date.today().isoformat()
+    hints_block = f"\nKNOWN-SCHEDULE HINTS (authoritative — use these to disambiguate):\n{hints}\n" if hints else ""
     user_msg = (
         f"Parish: {parish_name}\n"
-        f"Today's date: {today} (use this year if the newsletter has no explicit year)\n\n"
+        f"Today's date: {today} (use this year if the newsletter has no explicit year)\n"
+        f"{hints_block}\n"
         f"Newsletter / page content follows between <<<>>>:\n\n"
         f"<<<\n{text}\n>>>\n\n"
         f"{JSON_SCHEMA_HINT}"

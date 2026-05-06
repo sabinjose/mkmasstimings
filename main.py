@@ -99,7 +99,7 @@ def process(parish: Parish, verbose: bool = False) -> dict[str, Any]:
             file=sys.stderr,
         )
     try:
-        data = extract_mass_times(parish.name, text)
+        data = extract_mass_times(parish.name, text, hints=parish.hints)
     except Exception as e:
         if verbose:
             traceback.print_exc(file=sys.stderr)

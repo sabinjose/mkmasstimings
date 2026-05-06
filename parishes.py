@@ -21,6 +21,9 @@ class Parish:
     source_url: str
     strategy: str
     location: str = ""
+    # Optional ground-truth hint passed to the LLM. Use for multi-church parishes
+    # where column layout in the PDF is too ambiguous to disambiguate from text alone.
+    hints: str = ""
 
 
 PARISHES: list[Parish] = [
@@ -41,6 +44,17 @@ PARISHES: list[Parish] = [
         source_url="https://www.stfrancisandmary.org/newsletter",
         strategy="drive",
         location="Wolverton / Stony Stratford",
+        hints=(
+            "This parish has two churches. The newsletter lays them out in two "
+            "columns; column extraction is unreliable. Use this regular schedule "
+            "to assign each service its church/church_location:\n"
+            "- St Mary Magdalene (Stony Stratford): Sunday 9:15am Mass.\n"
+            "- St Francis de Sales (Wolverton): Saturday 6:30pm Vigil, Sunday "
+            "11:30am Mass, weekday Masses (Mon/Tue/Wed/Fri 12:00pm, Thu 10:00am, "
+            "Sat morning 10:00am), Wednesday 12:30pm Adoration, Saturday morning "
+            "Confessions.\n"
+            "If a service doesn't match the regular pattern, note it in `notes`."
+        ),
     ),
     Parish(
         name="Our Lady of Lourdes",

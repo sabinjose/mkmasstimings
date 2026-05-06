@@ -37,10 +37,15 @@ def html_to_text(html: str) -> str:
 
 
 def pdf_to_text(pdf_bytes: bytes) -> str:
+    """Extract text preserving column layout — important for parishes whose
+    bulletins use a multi-column schedule (one column per church)."""
     chunks: list[str] = []
     with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
         for page in pdf.pages:
-            chunks.append(page.extract_text() or "")
+            try:
+                chunks.append(page.extract_text(layout=True) or "")
+            except Exception:
+                chunks.append(page.extract_text() or "")
     return "\n".join(chunks)
 
 

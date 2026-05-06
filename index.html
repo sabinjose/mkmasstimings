@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MK Mass Times</title>
+<meta name="description" content="Catholic mass times across Milton Keynes and the surrounding area, refreshed from parish newsletters.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%E2%9C%9D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #555;
+    --rule: #ececec;
+    --accent: #6a3e2e;
+    --whatsapp: #25D366;
+    --pill-bg: #efe8de;
+    --pill-ink: #6a3e2e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14130f;
+      --card: #1d1c18;
+      --ink: #f1eee7;
+      --ink-soft: #a09a8e;
+      --rule: #2b2a25;
+      --accent: #d8b594;
+      --pill-bg: #2c241c;
+      --pill-ink: #d8b594;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    padding: max(env(safe-area-inset-top), 16px) 16px max(env(safe-area-inset-bottom), 32px);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  header { padding: 8px 0 16px; }
+  h1 {
+    font-size: 1.4rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .subhead { color: var(--ink-soft); font-size: 0.95rem; }
+  .meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0 24px;
+    flex-wrap: wrap;
+  }
+  button {
+    font: inherit;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--rule);
+    background: var(--card);
+    color: var(--ink);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  button:active { transform: translateY(1px); }
+  button.primary {
+    background: var(--whatsapp);
+    color: white;
+    border-color: var(--whatsapp);
+  }
+  button.copied { background: var(--pill-bg); color: var(--pill-ink); border-color: var(--pill-bg); }
+
+  section { margin: 24px 0; }
+  section h2 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 12px;
+    padding: 12px 14px;
+    border-top: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .row:first-child { border-top: 0; }
+  .time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .where {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .parish { font-weight: 500; }
+  .loc { color: var(--ink-soft); font-size: 0.9rem; }
+  .note { color: var(--ink-soft); font-size: 0.85rem; display: block; margin-top: 2px; }
+  .pill {
+    display: inline-block;
+    background: var(--pill-bg);
+    color: var(--pill-ink);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+
+  .empty {
+    color: var(--ink-soft);
+    font-style: italic;
+    padding: 14px;
+  }
+
+  footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+  }
+  footer a { color: var(--ink-soft); }
+
+  .day-nav {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin: 12px 0 8px;
+  }
+  .day-nav button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    border-radius: 999px;
+  }
+  .day-nav button.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  .skeleton { color: var(--ink-soft); padding: 14px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mass Times — Milton Keynes &amp; Area</h1>
+  <div class="subhead" id="dayLabel">Loading…</div>
+  <div class="meta" id="meta"></div>
+</header>
+
+<div class="day-nav" id="dayNav"></div>
+
+<div class="actions">
+  <button class="primary" id="shareWa">📲 Share on WhatsApp</button>
+  <button id="copyBtn">📋 Copy as text</button>
+</div>
+
+<section>
+  <h2>Masses</h2>
+  <div class="card" id="masses"><div class="skeleton">Loading…</div></div>
+</section>
+
+<section>
+  <h2>Confessions</h2>
+  <div class="card" id="confessions"><div class="skeleton">Loading…</div></div>
+</section>
+
+<section>
+  <h2>Adoration &amp; Other</h2>
+  <div class="card" id="adoration"><div class="skeleton">Loading…</div></div>
+</section>
+
+<footer>
+  <p>Data extracted from parish newsletters by AI. Always confirm with the parish before travelling.<br>
+  Source: <a href="https://github.com/sabinjose/mkmasstimings" target="_blank" rel="noopener">github.com/sabinjose/mkmasstimings</a></p>
+</footer>
+
+<script>
+const MASS_TYPES = ["mass", "vigil mass", "service of word", "divine mercy"];
+const CONFESSION_TYPES = ["confession"];
+const ADORATION_TYPES = ["adoration", "silent adoration", "exposition", "rosary", "benediction", "holy hour", "chaplet"];
+
+const $ = (id) => document.getElementById(id);
+const FRIENDLY_DAY = (iso) => new Date(iso + "T00:00:00").toLocaleDateString(undefined, {
+  weekday: "long", day: "numeric", month: "long", year: "numeric"
+});
+const SHORT_DAY = (iso) => new Date(iso + "T00:00:00").toLocaleDateString(undefined, {
+  weekday: "short", day: "numeric", month: "short"
+});
+
+let DATA = null;
+let SELECTED_DATE = null;
+
+function classify(svc) {
+  const t = (svc.type || "").toLowerCase();
+  if (CONFESSION_TYPES.some(x => t.includes(x))) return "confession";
+  if (ADORATION_TYPES.some(x => t.includes(x))) return "adoration";
+  if (MASS_TYPES.some(x => t.includes(x))) return "mass";
+  return "adoration"; // unknowns fall into "Other"
+}
+
+function flattenServices(parishes) {
+  const out = [];
+  for (const p of parishes) {
+    if (p.error) continue;
+    for (const s of p.services || []) {
+      out.push({
+        ...s,
+        parish: p.parish,
+        location: p.location,
+        bucket: classify(s),
+      });
+    }
+  }
+  return out;
+}
+
+function todayISO() {
+  const d = new Date();
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+
+function buildDayNav(allServices) {
+  const dates = Array.from(new Set(allServices.map(s => s.date).filter(Boolean))).sort();
+  const today = todayISO();
+  const future = dates.filter(d => d >= today).slice(0, 7);
+  const display = future.length ? future : dates.slice(-7);
+  const nav = $("dayNav");
+  nav.innerHTML = "";
+  display.forEach(d => {
+    const b = document.createElement("button");
+    b.textContent = SHORT_DAY(d);
+    b.dataset.date = d;
+    if (d === SELECTED_DATE) b.classList.add("active");
+    b.addEventListener("click", () => {
+      SELECTED_DATE = d;
+      render();
+    });
+    nav.appendChild(b);
+  });
+}
+
+function row(svc) {
+  const time = svc.time || "—";
+  const lang = svc.language ? `<span class="pill">${svc.language}</span>` : "";
+  const note = svc.notes ? `<span class="note">${svc.notes}</span>` : "";
+  const loc = svc.location ? `<span class="loc">${svc.location}</span>` : "";
+  return `<div class="row">
+    <div class="time">${time}</div>
+    <div>
+      <div class="where">
+        <span class="parish">${svc.parish}</span>${loc}${lang}
+      </div>
+      ${note}
+    </div>
+  </div>`;
+}
+
+function fillSection(id, services, label) {
+  const el = $(id);
+  if (!services.length) {
+    el.innerHTML = `<div class="empty">No ${label} listed for this day.</div>`;
+    return;
+  }
+  services.sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
+  el.innerHTML = services.map(row).join("");
+}
+
+function render() {
+  if (!DATA) return;
+  const all = flattenServices(DATA.parishes);
+
+  if (!SELECTED_DATE) {
+    const today = todayISO();
+    const dates = Array.from(new Set(all.map(s => s.date).filter(Boolean))).sort();
+    SELECTED_DATE = dates.includes(today) ? today : (dates.find(d => d >= today) || dates[dates.length - 1]);
+  }
+
+  buildDayNav(all);
+
+  $("dayLabel").textContent = FRIENDLY_DAY(SELECTED_DATE);
+  const generated = new Date(DATA.generated_at).toLocaleString();
+  const parishCount = DATA.parishes.filter(p => !p.error).length;
+  $("meta").innerHTML = `<span>Last refreshed: ${generated}</span><span>•</span><span>${parishCount} parishes</span>`;
+
+  const todays = all.filter(s => s.date === SELECTED_DATE);
+  fillSection("masses",     todays.filter(s => s.bucket === "mass"),       "masses");
+  fillSection("confessions",todays.filter(s => s.bucket === "confession"), "confessions");
+  fillSection("adoration",  todays.filter(s => s.bucket === "adoration"),  "adoration / other");
+}
+
+function buildShareText() {
+  const all = flattenServices(DATA.parishes).filter(s => s.date === SELECTED_DATE);
+  const masses = all.filter(s => s.bucket === "mass").sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99"));
+  const conf = all.filter(s => s.bucket === "confession").sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99"));
+  const ador = all.filter(s => s.bucket === "adoration").sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99"));
+
+  const fmt = (s) => {
+    const t = s.time || "—";
+    const lang = s.language ? ` (${s.language})` : "";
+    const where = s.location ? `${s.parish}, ${s.location}` : s.parish;
+    return `• ${t}  ${where}${lang}`;
+  };
+
+  const lines = [];
+  lines.push(`*Mass Times — ${FRIENDLY_DAY(SELECTED_DATE)}*`);
+  lines.push("");
+  if (masses.length) {
+    lines.push("*Masses*");
+    masses.forEach(s => lines.push(fmt(s)));
+  }
+  if (conf.length) {
+    lines.push("");
+    lines.push("*Confessions*");
+    conf.forEach(s => lines.push(fmt(s)));
+  }
+  if (ador.length) {
+    lines.push("");
+    lines.push("*Adoration & Other*");
+    ador.forEach(s => lines.push(fmt(s)));
+  }
+  lines.push("");
+  lines.push(`Source: ${location.origin}${location.pathname}`);
+  return lines.join("\n");
+}
+
+async function copyText() {
+  const text = buildShareText();
+  try {
+    await navigator.clipboard.writeText(text);
+    const b = $("copyBtn");
+    const original = b.textContent;
+    b.textContent = "✓ Copied";
+    b.classList.add("copied");
+    setTimeout(() => { b.textContent = original; b.classList.remove("copied"); }, 1800);
+  } catch (e) {
+    // Fallback: open a window with the text selectable
+    const w = window.open("", "_blank");
+    w.document.write("<pre style='white-space:pre-wrap;font:14px monospace'>" + text.replace(/[<>&]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;"})[c]) + "</pre>");
+  }
+}
+
+function shareWhatsApp() {
+  const text = buildShareText();
+  const url = "https://wa.me/?text=" + encodeURIComponent(text);
+  window.open(url, "_blank", "noopener");
+}
+
+async function load() {
+  try {
+    const r = await fetch("data/latest.json", { cache: "no-cache" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    DATA = await r.json();
+    render();
+  } catch (e) {
+    document.body.innerHTML = `<div style="padding:24px"><h1>Couldn't load mass times</h1><p style="color:#888">${e.message}</p></div>`;
+  }
+}
+
+$("copyBtn").addEventListener("click", copyText);
+$("shareWa").addEventListener("click", shareWhatsApp);
+
+load();
+</script>
+</body>
+</html>

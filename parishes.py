@@ -10,9 +10,95 @@ Each parish describes:
       - "blog_pdf"    : blog/archive listing where each entry links to a PDF
       - "gdoc"        : source_url has a link to a Google Doc newsletter
       - "mailchimp"   : Mailchimp campaign archive listing email campaigns
+
+The CHURCHES registry below is a flat list of every individual church we
+know about (typically the building, not the canonical parish). Multi-church
+parishes such as the Barnabas Cluster (Mailchimp digest) cover several
+churches; main.py looks each service up here to attach an `area` and
+`postcode` for display.
 """
 
 from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class Church:
+    name: str       # display name e.g. "St. Augustine"
+    area: str       # neighbourhood / town shown to the user
+    postcode: str
+
+
+# Master list. Order doesn't matter; lookups are by (name, area).
+CHURCHES: list[Church] = [
+    # Barnabas Cluster (covered by the Mailchimp digest)
+    Church(name="Christ the Cornerstone",     area="Central MK",          postcode="MK9 2ES"),
+    Church(name="Our Lady of Lourdes",        area="Coffee Hall",         postcode="MK6 5NA"),
+    Church(name="St. Edward the Confessor",   area="Shenley Church End",  postcode="MK5 6DX"),
+    Church(name="Christ the King",            area="Kents Hill",          postcode="MK7 6HG"),
+    Church(name="St. Bede",                   area="Newport Pagnell",     postcode="MK16 8EN"),
+    Church(name="St. Mary's",                 area="Woburn Sands",        postcode="MK17 8NN"),
+    # Standalone parishes around MK
+    Church(name="St. Augustine",              area="Heelands",            postcode="MK13 7PL"),
+    Church(name="All Saints",                 area="Bletchley",           postcode="MK3 6AN"),
+    Church(name="St. Thomas Aquinas",         area="Bletchley",           postcode="MK2 2JE"),
+    Church(name="St. Francis de Sales",       area="Wolverton",           postcode="MK12 5LJ"),
+    Church(name="St. Mary Magdalene",         area="Stony Stratford",     postcode="MK11 1AT"),
+    # Outside MK
+    Church(name="Our Lady Help of Christians & St. Lawrence", area="Olney", postcode="MK46 5HH"),
+    Church(name="St. Bernardine of Siena",    area="Buckingham",          postcode="MK18 1AL"),
+    Church(name="St. Martin of Tours",        area="Brackley",            postcode="NN13 6AN"),
+    Church(name="St. Joseph's",               area="Bedford",             postcode="MK40 1HU"),
+    Church(name="Catholic Church of our Lady",area="Kempston",            postcode="MK42 8QB"),
+    Church(name="St. Alban's Chapel",         area="Winslow",             postcode="MK18 3AB"),
+    Church(name="Sacred Heart Catholic Church", area="Leighton Buzzard",  postcode="LU7 1HZ"),
+    Church(name="Sacred Heart Catholic Church", area="Flitwick",          postcode="MK45 1JP"),
+    Church(name="St. Mary's",                 area="Dunstable",           postcode="LU6 3SP"),
+]
+
+
+def _normalize(s: str) -> str:
+    """Lowercase + strip punctuation so 'St. Augustine' matches 'St Augustine'."""
+    return "".join(ch for ch in s.lower() if ch.isalnum() or ch.isspace()).strip()
+
+
+def find_church(name: str | None, area: str | None) -> Church | None:
+    """Best-effort lookup of a church by (name, area).
+
+    Area is the more specific axis (postcodes are 1:1 with area, not name —
+    we have multiple "Sacred Heart Catholic Church" entries). Name match
+    is fuzzy: case + punctuation insensitive, partial allowed.
+    """
+    if not (name or area):
+        return None
+    n = _normalize(name) if name else ""
+    a = _normalize(area) if area else ""
+    # Apply parish-location-to-area alias when the area looks like a
+    # parish-level label (e.g. St Augustine's lives in "Milton Keynes" the
+    # parish, but the CHURCH is in "Heelands").
+    if a and a in _PARISH_LOCATION_ALIASES:
+        a = _PARISH_LOCATION_ALIASES[a]
+    if a:
+        in_area = [c for c in CHURCHES if _normalize(c.area) == a]
+        if len(in_area) == 1:
+            return in_area[0]
+        if n:
+            for c in in_area:
+                cn = _normalize(c.name)
+                if cn == n or n in cn or cn in n:
+                    return c
+    if n:
+        candidates = [c for c in CHURCHES if _normalize(c.name) == n]
+        if len(candidates) == 1:
+            return candidates[0]
+    return None
+
+
+# parish.location strings that don't exactly match any Church.area entry.
+# Keys/values are normalised (lowercase, punctuation stripped).
+_PARISH_LOCATION_ALIASES: dict[str, str] = {
+    "milton keynes": "heelands",         # St Augustine's
+    "dunstable polish": "dunstable",     # Polska Parafia (location: "Dunstable (Polish)")
+}
 
 
 @dataclass(frozen=True)

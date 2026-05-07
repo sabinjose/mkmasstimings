@@ -23,7 +23,7 @@ from dotenv import load_dotenv
 
 import fetcher
 from extractor import extract_mass_times
-from parishes import PARISHES, Parish
+from parishes import PARISHES, Parish, find_church
 
 load_dotenv()
 
@@ -257,6 +257,7 @@ def process(
         # Ensure outside_mk is current with parishes.py — old JSONs from
         # before this field existed wouldn't carry it through the reuse path.
         old_parish["outside_mk"] = parish.outside_mk  # type: ignore[index]
+        enrich_with_church_meta(old_parish, parish)
         return old_parish  # type: ignore[return-value]
 
     if verbose:
@@ -341,7 +342,43 @@ def process(
     # Surface outside_mk so the frontend can hide faraway parishes by default
     # and only include them when their Masses fill a time-bucket gap.
     new_data["outside_mk"] = parish.outside_mk
+    enrich_with_church_meta(new_data, parish)
     return new_data
+
+
+def enrich_with_church_meta(parish_data: dict, parish: Parish) -> None:
+    """Attach `area` and `postcode` to every service entry in-place.
+
+    Looks up each service against the CHURCHES registry using its `church`
+    name + `church_location`. For single-church parishes the LLM often
+    leaves both blank, so we fall back to matching by `parish.location`
+    (which can be a multi-area string like "Wolverton / Stony Stratford"
+    — in that case only one church will match cleanly and we leave the
+    others alone).
+    """
+    for svc in parish_data.get("services") or []:
+        name = svc.get("church")
+        area = svc.get("church_location")
+        ch = find_church(name, area)
+        if ch is None and not name and not area:
+            # Single-church parish — try the parish's location verbatim.
+            ch = find_church(None, parish.location)
+        if ch is None:
+            # Multi-area parish_location like "Buckingham / Brackley":
+            # try each part.
+            for part in (parish.location or "").split("/"):
+                ch = find_church(None, part.strip())
+                if ch:
+                    break
+        if ch is not None:
+            svc["area"] = ch.area
+            svc["postcode"] = ch.postcode
+            # Only fill in the church name when the LLM didn't already
+            # set one — don't overwrite specific names like "St Bernardine's".
+            if not svc.get("church"):
+                svc["church"] = ch.name
+            if not svc.get("church_location"):
+                svc["church_location"] = ch.area
 
 
 def main() -> int:

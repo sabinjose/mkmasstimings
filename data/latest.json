@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T21:08:26.279545+00:00",
+  "generated_at": "2026-05-07T21:50:25.985808+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -571,7 +571,7 @@
       "notes": null,
       "location": "Olney",
       "source_url": "https://www.ourladysolney.co.uk/wp-content/uploads/2026/05/3rd-May.pdf",
-      "outside_mk": true
+      "outside_mk": false
     },
     {
       "parish": "St Mary's",
@@ -1027,7 +1027,7 @@
       "notes": null,
       "location": "Flitwick",
       "source_url": "http://sacredheartflitwick.co.uk/wp/wp-content/uploads/2026/05/Bulletin-10.05.26.pdf",
-      "outside_mk": true
+      "outside_mk": false
     },
     {
       "parish": "Sacred Heart",
@@ -1607,93 +1607,8 @@
     },
     {
       "parish": "St Joseph's & Our Lady's",
-      "week_of": "2026-05-03",
-      "source_date": null,
+      "week_of": null,
       "services": [
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "08:15",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null,
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "09:30",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null,
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null,
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "18:30",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null,
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-05-04",
-          "day": "Monday",
-          "time": "10:45",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": "The English Martyrs",
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-05-05",
-          "day": "Tuesday",
-          "time": "10:45",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": "Feria",
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-05-06",
-          "day": "Wednesday",
-          "time": "10:45",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": "Feria",
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
         {
           "date": "2026-05-07",
           "day": "Thursday",
@@ -1779,10 +1694,10 @@
           "postcode": "MK42 8QB"
         }
       ],
-      "confidence": "high",
-      "notes": null,
+      "confidence": "low",
+      "notes": "JSON parse failed: Unterminated string starting at: line 547 column 7 (char 13625). Raw model output: {\n  \"parish\": \"St Joseph's & Our Lady's\",\n  \"week_of\": \"2026-05-10\",\n  \"source_date\": null,\n  \"services\": [\n    {\n      \"date\": \"2026-05-10\",\n      \"day\": \"Sunday\",\n      \"time\": \"08:15\",\n      \"type\": \"Mass\",\n      \"church\": \"St Joseph's\",\n      \"church_location\": \"Bedford\",\n      \"language\": null,\n      \"notes\": null\n    },\n    {\n      \"date\": \"2026-05-10\",\n      \"day\": \"Sunday\",\n      \"time\": \"09:30\",\n      \"type\": \"Mass\",\n      \"church\": \"St Joseph's\",\n      \"church_location\": \"Bedford\",\n   ",
       "location": "Bedford / Kempston",
-      "source_url": "https://www.stjosephsbedford.org/wp-content/uploads/2026/04/03-May-2026-Newsletter.pdf",
+      "source_url": "https://www.stjosephsbedford.org/wp-content/uploads/2026/05/10-May-2026-Newsletter.pdf",
       "outside_mk": true
     },
     {

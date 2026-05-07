@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T13:05:50.681333+00:00",
+  "generated_at": "2026-05-07T13:35:39.855356+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -47,60 +47,10 @@
           "notes": null
         },
         {
-          "date": "2026-05-04",
-          "day": "Monday",
-          "time": "08:45",
-          "type": "Adoration",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Rosary"
-        },
-        {
-          "date": "2026-05-04",
-          "day": "Monday",
-          "time": "09:30",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Feast of the English Martyrs"
-        },
-        {
-          "date": "2026-05-05",
-          "day": "Tuesday",
-          "time": "08:45",
-          "type": "Adoration",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Silent"
-        },
-        {
-          "date": "2026-05-05",
-          "day": "Tuesday",
-          "time": "09:30",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-06",
-          "day": "Wednesday",
-          "time": "08:45",
-          "type": "Adoration",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Morning Prayer (Lauds)"
-        },
-        {
-          "date": "2026-05-06",
-          "day": "Wednesday",
-          "time": "09:30",
-          "type": "Mass",
+          "date": "2026-05-03",
+          "day": "Sunday",
+          "time": "10:55",
+          "type": "Rosary",
           "church": null,
           "church_location": null,
           "language": null,
@@ -124,7 +74,17 @@
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Confession"
+          "notes": null
+        },
+        {
+          "date": "2026-05-08",
+          "day": "Friday",
+          "time": "17:30",
+          "type": "Confession",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": null
         },
         {
           "date": "2026-05-08",
@@ -144,7 +104,17 @@
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Rosary"
+          "notes": null
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "08:15",
+          "type": "Rosary",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": null
         },
         {
           "date": "2026-05-09",
@@ -165,16 +135,6 @@
           "church_location": null,
           "language": "Polish",
           "notes": null
-        },
-        {
-          "date": "2026-05-10",
-          "day": "Sunday",
-          "time": "10:55",
-          "type": "Rosary",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": null
         }
       ],
       "confidence": "high",
@@ -183,7 +143,7 @@
       "source_url": "https://www.st-augustinesmk.org.uk/web/newsletter/"
     },
     {
-      "parish": "Catholic Bletchley (Holy Family / St Thomas Aquinas)",
+      "parish": "Catholic Bletchley (All Saints / St Thomas Aquinas)",
       "week_of": "2026-05-03",
       "source_date": null,
       "services": [
@@ -288,24 +248,74 @@
           "notes": "Pro Populo"
         },
         {
-          "date": "2026-05-03",
-          "day": "Daily",
-          "time": null,
-          "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "09:00",
+          "type": "Mass",
+          "church": "All Saints",
+          "church_location": "Bletchley",
           "language": null,
-          "notes": "Daily, 30mins before morning Mass"
+          "notes": "Bernie Owens, RIP"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": "All Saints",
+          "church_location": "Bletchley",
+          "language": null,
+          "notes": "Charley John Sheriden, RIP; Ody Kelvin Igweani, RIP"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "18:30",
+          "type": "Mass",
+          "church": "St Thomas Aquinas",
+          "church_location": "Bletchley",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-04",
+          "day": "Daily",
+          "time": "09:30",
+          "type": "Rosary",
+          "church": "All Saints",
+          "church_location": "Bletchley",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-06",
+          "day": "Daily",
+          "time": "09:30",
+          "type": "Rosary",
+          "church": "All Saints",
+          "church_location": "Bletchley",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-07",
+          "day": "Daily",
+          "time": "09:30",
+          "type": "Rosary",
+          "church": "All Saints",
+          "church_location": "Bletchley",
+          "language": null,
+          "notes": null
         },
         {
           "date": "2026-05-09",
-          "day": "Daily",
-          "time": null,
+          "day": "Saturday",
+          "time": "10:00",
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "All Saints",
+          "church_location": "Bletchley",
           "language": null,
-          "notes": "After 9.30am Mass"
+          "notes": null
         }
       ],
       "confidence": "high",
@@ -396,7 +406,7 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
-          "notes": "Sinnett Family *"
+          "notes": "L B W Robinson"
         },
         {
           "date": "2026-05-08",
@@ -437,26 +447,6 @@
           "church_location": "Wolverton",
           "language": null,
           "notes": "Pro Populo"
-        },
-        {
-          "date": "2026-05-10",
-          "day": "Sunday",
-          "time": "09:15",
-          "type": "Mass",
-          "church": "St Mary Magdalene",
-          "church_location": "Stony Stratford",
-          "language": null,
-          "notes": "Peter Kelly RIP"
-        },
-        {
-          "date": "2026-05-10",
-          "day": "Sunday",
-          "time": "11:30",
-          "type": "Mass",
-          "church": "St Francis de Sales",
-          "church_location": "Wolverton",
-          "language": null,
-          "notes": "Brian & the O’Neill Family"
         }
       ],
       "confidence": "high",
@@ -568,56 +558,6 @@
           "church_location": null,
           "language": null,
           "notes": "(Kenn Sheridan RIP)"
-        },
-        {
-          "date": "2026-05-08",
-          "day": "Friday",
-          "time": "10:00",
-          "type": "Service of Word & Holy Communion",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "12:00",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "(Anne Harris RIP)"
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "18:00",
-          "type": "Confession",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "18:30",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "(Pro Populo)"
-        },
-        {
-          "date": "2026-05-10",
-          "day": "Sunday",
-          "time": "10:30",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "(Gerry Knott, Gareth Reilly & Peter Bovenzi – Healing)"
         }
       ],
       "confidence": "high",
@@ -683,7 +623,7 @@
         {
           "date": "2026-05-05",
           "day": "Tuesday",
-          "time": null,
+          "time": "varies",
           "type": "Rosary",
           "church": null,
           "church_location": null,
@@ -769,16 +709,6 @@
           "church_location": null,
           "language": null,
           "notes": "Agnes Fahy (Ann) RIP"
-        },
-        {
-          "date": "2026-05-04",
-          "day": "Monday",
-          "time": "19:00",
-          "type": "Prayer Group",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "With Sr Josephine"
         }
       ],
       "confidence": "high",
@@ -788,23 +718,43 @@
     },
     {
       "parish": "Sacred Heart",
-      "week_of": "2026-05-03",
+      "week_of": "2026-05-10",
       "source_date": null,
       "services": [
         {
-          "date": "2026-05-02",
+          "date": "2026-05-09",
           "day": "Saturday",
           "time": "17:00",
           "type": "Mass",
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Alan Wright, RIP"
+          "notes": "Christina Traynor, 11th Anniversary, RIP"
         },
         {
-          "date": "2026-05-03",
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": null,
+          "type": "Confession",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "Before Mass on Saturday or on request."
+        },
+        {
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "09:00",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "In Thanksgiving"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "11:00",
           "type": "Mass",
           "church": null,
           "church_location": null,
@@ -812,58 +762,58 @@
           "notes": "Jim Egan, 6th Anniversary, RIP"
         },
         {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "David Petersen and Aaron Powditch, RIP"
-        },
-        {
-          "date": "2026-05-05",
+          "date": "2026-05-12",
           "day": "Tuesday",
           "time": "19:00",
           "type": "Mass",
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Vika and Malila Ofahulu, RIP"
+          "notes": "Private Intentions"
         },
         {
-          "date": "2026-05-06",
+          "date": "2026-05-13",
           "day": "Wednesday",
           "time": "09:30",
           "type": "Mass",
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Francie Lawrence Who Died in an Accident, RIP"
+          "notes": "Private Intentions"
         },
         {
-          "date": "2026-05-07",
+          "date": "2026-05-14",
           "day": "Thursday",
           "time": "09:30",
           "type": "Mass",
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Vlas, Silvia and Michael Lakomy, RIP"
+          "notes": "People of the Parish"
         },
         {
-          "date": "2026-05-08",
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "19:00",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "People of the Parish"
+        },
+        {
+          "date": "2026-05-15",
           "day": "Friday",
           "time": "10:00",
           "type": "Mass",
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Thanksgiving Mass for Blessings Received from the Hills Family, Robert Hills, 9th Anniversary, RIP"
+          "notes": "Maureen Herlihy, Anniversary RIP"
         },
         {
-          "date": "2026-05-06",
-          "day": "Daily",
+          "date": "2026-05-10",
+          "day": "Sunday",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -872,8 +822,8 @@
           "notes": "30 minutes before Mass"
         },
         {
-          "date": "2026-05-07",
-          "day": "Daily",
+          "date": "2026-05-12",
+          "day": "Tuesday",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -882,8 +832,28 @@
           "notes": "30 minutes before Mass"
         },
         {
-          "date": "2026-05-08",
-          "day": "Daily",
+          "date": "2026-05-13",
+          "day": "Wednesday",
+          "time": null,
+          "type": "Rosary",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "30 minutes before Mass"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": null,
+          "type": "Rosary",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "30 minutes before Mass"
+        },
+        {
+          "date": "2026-05-15",
+          "day": "Friday",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -895,7 +865,7 @@
       "confidence": "high",
       "notes": null,
       "location": "Flitwick",
-      "source_url": "http://sacredheartflitwick.co.uk/wp/wp-content/uploads/2026/04/Bulletin-3.05.26.pdf"
+      "source_url": "http://sacredheartflitwick.co.uk/wp/wp-content/uploads/2026/05/Bulletin-10.05.26.pdf"
     },
     {
       "parish": "Sacred Heart",
@@ -910,7 +880,7 @@
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "John Lawlor RIP"
+          "notes": "5th of Easter"
         },
         {
           "date": "2026-05-03",
@@ -920,7 +890,7 @@
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Rosemary Terleckyj anniv"
+          "notes": "5th of Easter"
         },
         {
           "date": "2026-05-04",
@@ -930,7 +900,7 @@
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Benny Sorgente anniv"
+          "notes": "English Martyrs"
         },
         {
           "date": "2026-05-07",
@@ -940,7 +910,7 @@
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Maria Pompa RIP"
+          "notes": "Feria"
         },
         {
           "date": "2026-05-08",
@@ -960,27 +930,17 @@
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": "Willie Quilligan RIP"
+          "notes": "Feria"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
-          "time": "10:00",
-          "type": "Benediction",
+          "time": "11:00",
+          "type": "Mass",
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "17:45",
-          "type": "Confession",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": null
+          "notes": "Northampton Diocesan Mission Mass"
         }
       ],
       "confidence": "high",
@@ -1001,7 +961,7 @@
           "church": null,
           "church_location": null,
           "language": "Polish",
-          "notes": "St. Florian"
+          "notes": "Feast of St. Florian"
         },
         {
           "date": "2026-05-05",
@@ -1011,7 +971,7 @@
           "church": null,
           "church_location": null,
           "language": "Polish",
-          "notes": "St. Stanislaus Kazimierczyk"
+          "notes": "Feast of St. Stanislaus Kazimierczyk"
         },
         {
           "date": "2026-05-06",
@@ -1021,7 +981,7 @@
           "church": null,
           "church_location": null,
           "language": "Polish",
-          "notes": "St. Apostles Philip and James"
+          "notes": "Feast of St. Philip and St. James, Apostles"
         },
         {
           "date": "2026-05-07",
@@ -1031,7 +991,7 @@
           "church": null,
           "church_location": null,
           "language": "Polish",
-          "notes": "Our Lady, Mother of Grace"
+          "notes": "Feast of the Blessed Virgin Mary, Mother of Grace"
         },
         {
           "date": "2026-05-09",
@@ -1042,6 +1002,76 @@
           "church_location": null,
           "language": "Polish",
           "notes": null
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "08:30",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": "Polish",
+          "notes": null
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": "Polish",
+          "notes": null
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "14:00",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": "Polish",
+          "notes": null
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "19:00",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": "Polish",
+          "notes": null
+        },
+        {
+          "date": "2026-05-06",
+          "day": "Wednesday",
+          "time": null,
+          "type": "Adoration",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "Litania Loretańska during Adoration"
+        },
+        {
+          "date": "2026-05-07",
+          "day": "Thursday",
+          "time": null,
+          "type": "Adoration",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "Litania Loretańska during Adoration"
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": null,
+          "type": "Adoration",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "Litania Loretańska during Adoration"
         }
       ],
       "confidence": "high",
@@ -1099,8 +1129,8 @@
           "day": "Monday",
           "time": null,
           "type": "Mass",
-          "church": "St Bernardine's",
-          "church_location": "Buckingham",
+          "church": null,
+          "church_location": null,
           "language": null,
           "notes": "No Mass"
         },
@@ -1235,9 +1265,19 @@
           "notes": "6 Sunday of Easter"
         },
         {
-          "date": "2026-05-06",
-          "day": "Wednesday",
+          "date": "2026-05-01",
+          "day": "Daily",
           "time": "18:00",
+          "type": "Rosary",
+          "church": "St Bernardine's",
+          "church_location": "Buckingham",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-02",
+          "day": "Daily",
+          "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
@@ -1249,6 +1289,168 @@
       "notes": null,
       "location": "Buckingham / Brackley",
       "source_url": "https://docs.google.com/document/d/1nFLiyOpGJQDcLDLBZ7bu8KAY_i1ovVDcwGTmwx8sbzg/export?format=txt"
+    },
+    {
+      "parish": "St Joseph's & Our Lady's",
+      "week_of": "2026-05-03",
+      "source_date": null,
+      "services": [
+        {
+          "date": "2026-05-03",
+          "day": "Sunday",
+          "time": "08:15",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-03",
+          "day": "Sunday",
+          "time": "09:30",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-03",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-03",
+          "day": "Sunday",
+          "time": "18:30",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-07",
+          "day": "Thursday",
+          "time": "10:45",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-08",
+          "day": "Friday",
+          "time": "10:45",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "10:45",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "18:00",
+          "type": "Vigil Mass",
+          "church": "Our Lady's",
+          "church_location": "Kempston",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "11:30",
+          "type": "Confession",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        }
+      ],
+      "confidence": "high",
+      "notes": null,
+      "location": "Bedford / Kempston",
+      "source_url": "https://www.stjosephsbedford.org/sacramental-preparation/liturgy-prayer-timetable/"
+    },
+    {
+      "parish": "St Alban's",
+      "week_of": "2026-05-03",
+      "source_date": null,
+      "services": [
+        {
+          "date": "2026-05-02",
+          "day": "Saturday",
+          "time": "18:00",
+          "type": "Vigil Mass",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "Fifth Sunday of Easter"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "Sixth Sunday of Easter"
+        },
+        {
+          "date": "2026-05-13",
+          "day": "Thursday",
+          "time": "18:00",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "The Ascension of the Lord"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "Seventh Sunday of Easter"
+        },
+        {
+          "date": "2026-05-02",
+          "day": "Saturday",
+          "time": "17:30",
+          "type": "Confession",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "before Mass"
+        }
+      ],
+      "confidence": "high",
+      "notes": null,
+      "location": "Winslow",
+      "source_url": "https://www.stalbanswinslow.org.uk/newsletters/view/Parish_Newsletter_2nd_May_2026.pdf"
     },
     {
       "parish": "MK Parishes",
@@ -1328,12 +1530,12 @@
         {
           "date": "2026-05-04",
           "day": "Monday",
-          "time": "12:30",
+          "time": null,
           "type": "Mass",
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
-          "notes": null
+          "notes": "No Mass"
         },
         {
           "date": "2026-05-05",
@@ -1354,21 +1556,11 @@
           "church_location": "Shenley Church End",
           "language": null,
           "notes": "Fr Stephen McGuinness Anniversary"
-        },
-        {
-          "date": "2026-05-08",
-          "day": "Friday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "St Bede's",
-          "church_location": "Newport Pagnell",
-          "language": null,
-          "notes": null
         }
       ],
       "confidence": "high",
       "notes": null,
-      "location": "Milton Keynes (multi-parish)",
+      "location": "St Barnabas Cluster",
       "source_url": "http://eepurl.com/gnT2JcBFV0"
     }
   ]

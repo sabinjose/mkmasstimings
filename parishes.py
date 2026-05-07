@@ -160,7 +160,6 @@ PARISHES: list[Parish] = [
         source_url="https://www.ourladysolney.co.uk/blog/",
         strategy="blog_pdf",
         location="Olney",
-        outside_mk=True,
     ),
     Parish(
         name="St Mary's",
@@ -174,7 +173,6 @@ PARISHES: list[Parish] = [
         source_url="https://sacredheartflitwick.co.uk/newsletters/",
         strategy="pdf_archive",
         location="Flitwick",
-        outside_mk=True,
     ),
     Parish(
         name="Sacred Heart",

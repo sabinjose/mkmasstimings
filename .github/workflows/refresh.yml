@@ -49,3 +49,16 @@ jobs:
           git add data/
           git commit -m "refresh: $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
+
+      - name: Stage Pages dist (index.html + data/latest.json only)
+        run: |
+          mkdir -p dist/data
+          cp index.html dist/
+          cp data/latest.json dist/data/
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=mkmasstimings --branch=main --commit-dirty=true

@@ -32,8 +32,8 @@ jobs:
           # var present (litellm imports check env at module load time)
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-      - name: Extract (LLM call per parish)
-        run: uv run main.py --pretty > data/latest.json
+      - name: Extract (LLM call only when source URL changed)
+        run: uv run main.py --pretty --out data/latest.json
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MASSTIMINGS_MODEL: openai/gpt-4o-mini

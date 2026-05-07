@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T14:43:36.971816+00:00",
+  "generated_at": "2026-05-07T15:21:19.925895+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -57,16 +57,6 @@
           "notes": null
         },
         {
-          "date": "2026-05-05",
-          "day": "Tuesday",
-          "time": "09:30",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Mass celebrated for survivors of abuse"
-        },
-        {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "19:00",
@@ -111,16 +101,6 @@
           "day": "Saturday",
           "time": "08:15",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "08:15",
-          "type": "Rosary",
           "church": null,
           "church_location": null,
           "language": null,
@@ -240,16 +220,6 @@
         {
           "date": "2026-05-09",
           "day": "Saturday",
-          "time": null,
-          "type": "Mass",
-          "church": "St Thomas Aquinas",
-          "church_location": "Bletchley",
-          "language": null,
-          "notes": "No morning Mass"
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
           "time": "18:00",
           "type": "Mass",
           "church": "St Thomas Aquinas",
@@ -260,42 +230,22 @@
         {
           "date": "2026-05-03",
           "day": "Daily",
-          "time": "30:00",
+          "time": null,
           "type": "Rosary",
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-06",
-          "day": "Daily",
-          "time": "30:00",
-          "type": "Rosary",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-07",
-          "day": "Daily",
-          "time": "30:00",
-          "type": "Rosary",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": null
+          "notes": "Daily, 30mins before morning Mass"
         },
         {
           "date": "2026-05-09",
           "day": "Daily",
-          "time": "30:00",
+          "time": null,
           "type": "Rosary",
           "church": null,
           "church_location": null,
           "language": null,
-          "notes": null
+          "notes": "After 9:30am Mass"
         }
       ],
       "confidence": "high",
@@ -308,16 +258,6 @@
       "week_of": "2026-05-03",
       "source_date": null,
       "services": [
-        {
-          "date": "2026-05-02",
-          "day": "Saturday",
-          "time": "18:30",
-          "type": "Vigil Mass",
-          "church": "St Francis de Sales",
-          "church_location": "Wolverton",
-          "language": null,
-          "notes": "Pro Populo"
-        },
         {
           "date": "2026-05-03",
           "day": "Sunday",
@@ -333,8 +273,8 @@
           "day": "Sunday",
           "time": "11:30",
           "type": "Mass",
-          "church": "St Francis de Sales",
-          "church_location": "Wolverton",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
           "language": null,
           "notes": "Anna Kearns"
         },
@@ -386,7 +326,7 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
-          "notes": "Sinnett Family *"
+          "notes": "L B W Robinson"
         },
         {
           "date": "2026-05-08",
@@ -435,7 +375,7 @@
       "source_url": "https://drive.google.com/uc?export=download&id=1Ho6MI_Kc8ZUl27pUT75n-uma61wfVBXv"
     },
     {
-      "parish": "Our Lady of Lourdes",
+      "parish": "Our Lady Help of Christians & St Lawrence",
       "week_of": "2026-05-03",
       "source_date": "2026-05-03",
       "services": [
@@ -603,7 +543,7 @@
         {
           "date": "2026-05-05",
           "day": "Tuesday",
-          "time": "varies",
+          "time": "null",
           "type": "Rosary",
           "church": null,
           "church_location": null,
@@ -792,8 +732,18 @@
           "notes": "Maureen Herlihy, Anniversary RIP"
         },
         {
+          "date": "2026-05-08",
+          "day": "Daily",
+          "time": null,
+          "type": "Rosary",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "notes": "30 minutes before Mass"
+        },
+        {
           "date": "2026-05-09",
-          "day": "Saturday",
+          "day": "Daily",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -803,7 +753,7 @@
         },
         {
           "date": "2026-05-10",
-          "day": "Sunday",
+          "day": "Daily",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -813,7 +763,7 @@
         },
         {
           "date": "2026-05-11",
-          "day": "Monday",
+          "day": "Daily",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -823,7 +773,7 @@
         },
         {
           "date": "2026-05-12",
-          "day": "Tuesday",
+          "day": "Daily",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -833,7 +783,7 @@
         },
         {
           "date": "2026-05-13",
-          "day": "Wednesday",
+          "day": "Daily",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -843,7 +793,7 @@
         },
         {
           "date": "2026-05-14",
-          "day": "Thursday",
+          "day": "Daily",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -853,7 +803,7 @@
         },
         {
           "date": "2026-05-15",
-          "day": "Friday",
+          "day": "Daily",
           "time": null,
           "type": "Rosary",
           "church": null,
@@ -951,36 +901,6 @@
           "church_location": null,
           "language": null,
           "notes": null
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "18:15",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Karl Staines RIP"
-        },
-        {
-          "date": "2026-05-10",
-          "day": "Sunday",
-          "time": "09:00",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Eilish Farrell intention"
-        },
-        {
-          "date": "2026-05-10",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Costas Kyprianou anniv"
         }
       ],
       "confidence": "high",
@@ -1021,7 +941,7 @@
           "church": null,
           "church_location": null,
           "language": "Polish",
-          "notes": "Feast of St. Philip and St. James"
+          "notes": "Feast of St. Philip and St. James, Apostles"
         },
         {
           "date": "2026-05-07",
@@ -1082,36 +1002,6 @@
           "church_location": null,
           "language": "Polish",
           "notes": null
-        },
-        {
-          "date": "2026-05-06",
-          "day": "Wednesday",
-          "time": null,
-          "type": "Adoration",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Litania Loretańska during Adoration"
-        },
-        {
-          "date": "2026-05-07",
-          "day": "Thursday",
-          "time": null,
-          "type": "Adoration",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Litania Loretańska during Adoration"
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": null,
-          "type": "Adoration",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Litania Loretańska during Adoration"
         }
       ],
       "confidence": "high",
@@ -1326,6 +1216,46 @@
         },
         {
           "date": "2026-05-03",
+          "day": "Daily",
+          "time": "18:30",
+          "type": "Rosary",
+          "church": "St Bernardine's",
+          "church_location": "Buckingham",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-04",
+          "day": "Daily",
+          "time": "18:30",
+          "type": "Rosary",
+          "church": "St Bernardine's",
+          "church_location": "Buckingham",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-05",
+          "day": "Daily",
+          "time": "18:30",
+          "type": "Rosary",
+          "church": "St Bernardine's",
+          "church_location": "Buckingham",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-06",
+          "day": "Daily",
+          "time": "18:30",
+          "type": "Rosary",
+          "church": "St Bernardine's",
+          "church_location": "Buckingham",
+          "language": null,
+          "notes": null
+        },
+        {
+          "date": "2026-05-07",
           "day": "Daily",
           "time": "18:30",
           "type": "Rosary",
@@ -1580,12 +1510,12 @@
         {
           "date": "2026-05-04",
           "day": "Monday",
-          "time": "12:30",
+          "time": null,
           "type": "Mass",
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
-          "notes": null
+          "notes": "No Mass"
         },
         {
           "date": "2026-05-05",

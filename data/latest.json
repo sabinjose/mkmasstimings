@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T20:21:00.079829+00:00",
+  "generated_at": "2026-05-07T20:24:56.132994+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -643,8 +643,8 @@
     },
     {
       "parish": "Sacred Heart",
-      "week_of": "2026-05-10",
-      "source_date": null,
+      "location": "Flitwick",
+      "source_url": "https://sacredheartflitwick.co.uk/newsletters/",
       "services": [
         {
           "date": "2026-05-07",
@@ -847,47 +847,13 @@
           "notes": "Maureen Herlihy, Anniversary RIP"
         }
       ],
-      "confidence": "high",
-      "notes": null,
-      "location": "Flitwick",
-      "source_url": "http://sacredheartflitwick.co.uk/wp/wp-content/uploads/2026/05/Bulletin-10.05.26.pdf",
       "outside_mk": true
     },
     {
       "parish": "Sacred Heart",
-      "week_of": "2026-05-03",
-      "source_date": null,
+      "location": "Leighton Buzzard",
+      "source_url": "https://www.sacredheartlb.org.uk/service-times/",
       "services": [
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "09:00",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "John Lawlor RIP"
-        },
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Rosemary Terleckyj anniv"
-        },
-        {
-          "date": "2026-05-04",
-          "day": "Monday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "notes": "Benny Sorgente anniv"
-        },
         {
           "date": "2026-05-07",
           "day": "Thursday",
@@ -939,10 +905,6 @@
           "notes": null
         }
       ],
-      "confidence": "high",
-      "notes": null,
-      "location": "Leighton Buzzard",
-      "source_url": "http://www.sacredheartlb.org.uk/wp-content/uploads/5th-Sunday-of-Easter-3rd-May-2026.pdf",
       "outside_mk": true
     },
     {
@@ -1311,79 +1273,9 @@
     },
     {
       "parish": "St Joseph's & Our Lady's",
-      "week_of": "2026-05-03",
-      "source_date": null,
+      "location": "Bedford / Kempston",
+      "source_url": "https://www.stjosephsbedford.org/category/church/",
       "services": [
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "08:15",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "09:30",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "18:30",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null
-        },
-        {
-          "date": "2026-05-04",
-          "day": "Monday",
-          "time": "10:45",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": "The English Martyrs"
-        },
-        {
-          "date": "2026-05-05",
-          "day": "Tuesday",
-          "time": "10:45",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": "Feria"
-        },
-        {
-          "date": "2026-05-06",
-          "day": "Wednesday",
-          "time": "10:45",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": "Feria"
-        },
         {
           "date": "2026-05-07",
           "day": "Thursday",
@@ -1455,10 +1347,6 @@
           "notes": null
         }
       ],
-      "confidence": "high",
-      "notes": null,
-      "location": "Bedford / Kempston",
-      "source_url": "https://www.stjosephsbedford.org/wp-content/uploads/2026/04/03-May-2026-Newsletter.pdf",
       "outside_mk": true
     },
     {

@@ -646,24 +646,30 @@ function plainTextForDay(label, dateISO, services) {
   const conf   = services.filter(s => s.bucket === "confession").sort((a,b)=>timeKey(a.time).localeCompare(timeKey(b.time)));
   const ador   = services.filter(s => s.bucket === "adoration").sort((a,b)=>timeKey(a.time).localeCompare(timeKey(b.time)));
 
+  // WhatsApp/Telegram-friendly: bold via *…*, strikethrough via ~…~,
+  // single-line rows with " · " separator (which renders nicely as a
+  // mid-dot in plain text). Cancellations use a strikethrough + tail
+  // marker so they read at a glance.
   const fmt = (s) => {
-    const t = s.cancelled ? "—" : formatTime(s.time);
-    const lang = s.language ? ` (${s.language})` : "";
     const m = placeMeta(s);
-    const tail = m.postcode ? `${m.church}, ${m.postcode}` : m.church;
-    const cancel = s.cancelled ? "  [No Mass]" : "";
-    return `• ${t}  ${m.area}  ${tail}${lang}${cancel}`;
+    const place = m.postcode ? `${m.church}, ${m.postcode}` : m.church;
+    const lang = s.language ? ` · ${s.language}` : "";
+    if (s.cancelled) {
+      return `— · ${m.area} · ~${place}~ · No Mass`;
+    }
+    return `${formatTime(s.time)} · ${m.area} · ${place}${lang}`;
   };
 
   const lines = [];
-  lines.push(`*${label} — ${FRIENDLY_DAY(dateISO)}*`);
+  lines.push(`*Mass Times — ${label}, ${FRIENDLY_DAY(dateISO)}*`);
   if (!services.length) {
-    lines.push("(no services listed)");
+    lines.push("");
+    lines.push("_(no services listed)_");
     return lines.join("\n");
   }
-  if (masses.length) { lines.push(""); lines.push("*Holy Mass*"); masses.forEach(s => lines.push(fmt(s))); }
-  if (conf.length)   { lines.push(""); lines.push("*Confession*"); conf.forEach(s => lines.push(fmt(s))); }
-  if (ador.length)   { lines.push(""); lines.push("*Adoration*"); ador.forEach(s => lines.push(fmt(s))); }
+  if (masses.length) { lines.push(""); lines.push("*🟠 Holy Mass*"); masses.forEach(s => lines.push(fmt(s))); }
+  if (conf.length)   { lines.push(""); lines.push("*🔵 Confession*"); conf.forEach(s => lines.push(fmt(s))); }
+  if (ador.length)   { lines.push(""); lines.push("*🟣 Adoration*"); ador.forEach(s => lines.push(fmt(s))); }
   return lines.join("\n");
 }
 
@@ -673,10 +679,11 @@ function buildShareText() {
   const dayServices = all.filter(s => s.date === date);
   const visible = buildVisibilityFilter(dayServices, INCLUDE_NEARBY);
   const services = dayServices.filter(visible);
+  const host = (location.host || "mkmasstimings.pages.dev").replace(/^www\./, "");
   return [
     plainTextForDay(selectedLabel(), date, services),
     "",
-    `Source: ${location.origin}${location.pathname}`,
+    `🔗 ${host}`,
   ].join("\n");
 }
 

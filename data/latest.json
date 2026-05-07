@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T20:40:42.944693+00:00",
+  "generated_at": "2026-05-07T20:55:19.153135+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -11,120 +11,144 @@
           "day": "Sunday",
           "time": "08:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-03",
           "day": "Sunday",
           "time": "09:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-03",
           "day": "Sunday",
           "time": "11:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-03",
           "day": "Sunday",
           "time": "18:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-03",
           "day": "Sunday",
           "time": "10:55",
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "19:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": "Polish",
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": "17:30",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": "17:30",
           "type": "Confession",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": "19:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "08:15",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "09:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "14:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Augustine",
+          "church_location": "Heelands",
           "language": "Polish",
-          "notes": null
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
         }
       ],
       "confidence": "high",
@@ -146,7 +170,9 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "Mr Nicola Martuccio, Anniv. RIP"
+          "notes": "Mr Nicola Martuccio, Anniv. RIP",
+          "area": "Bletchley",
+          "postcode": "MK2 2JE"
         },
         {
           "date": "2026-05-03",
@@ -156,7 +182,9 @@
           "church": "All Saints",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "Bernadette Thompson, RIP"
+          "notes": "Bernadette Thompson, RIP",
+          "area": "Bletchley",
+          "postcode": "MK3 6AN"
         },
         {
           "date": "2026-05-03",
@@ -166,7 +194,9 @@
           "church": "All Saints",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "Carmela Pozzuto, Anniv. RIP; Angelo & Libera Pozzuto, RIP"
+          "notes": "Carmela Pozzuto, Anniv. RIP; Angelo & Libera Pozzuto, RIP",
+          "area": "Bletchley",
+          "postcode": "MK3 6AN"
         },
         {
           "date": "2026-05-03",
@@ -176,7 +206,9 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "Pro Populo"
+          "notes": "Pro Populo",
+          "area": "Bletchley",
+          "postcode": "MK2 2JE"
         },
         {
           "date": "2026-05-04",
@@ -186,7 +218,9 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "No Mass today"
+          "notes": "No Mass today",
+          "area": "Bletchley",
+          "postcode": "MK2 2JE"
         },
         {
           "date": "2026-05-05",
@@ -196,7 +230,9 @@
           "church": "All Saints",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "No Mass today"
+          "notes": "No Mass today",
+          "area": "Bletchley",
+          "postcode": "MK3 6AN"
         },
         {
           "date": "2026-05-07",
@@ -206,7 +242,9 @@
           "church": "All Saints",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "No Mass today"
+          "notes": "No Mass today",
+          "area": "Bletchley",
+          "postcode": "MK3 6AN"
         },
         {
           "date": "2026-05-08",
@@ -216,7 +254,9 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "No Mass today"
+          "notes": "No Mass today",
+          "area": "Bletchley",
+          "postcode": "MK2 2JE"
         },
         {
           "date": "2026-05-09",
@@ -226,7 +266,9 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
-          "notes": "Pro Populo"
+          "notes": "Pro Populo",
+          "area": "Bletchley",
+          "postcode": "MK2 2JE"
         },
         {
           "date": "2026-05-03",
@@ -268,7 +310,9 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
-          "notes": "Alan Mason"
+          "notes": "Alan Mason",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-03",
@@ -278,7 +322,9 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
-          "notes": "Anna Kearns"
+          "notes": "Anna Kearns",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-04",
@@ -288,7 +334,9 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
-          "notes": "Raymond Rooney & Family"
+          "notes": "Raymond Rooney & Family",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-05",
@@ -298,7 +346,9 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
-          "notes": "Fr Bernard Barrett"
+          "notes": "Fr Bernard Barrett",
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
         },
         {
           "date": "2026-05-06",
@@ -308,7 +358,9 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
-          "notes": "Gill Family RIP"
+          "notes": "Gill Family RIP",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-06",
@@ -318,7 +370,9 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-07",
@@ -328,7 +382,9 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
-          "notes": "L B W Robinson"
+          "notes": "L B W Robinson",
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
         },
         {
           "date": "2026-05-08",
@@ -338,7 +394,9 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
-          "notes": "Lorenzo & Lauren Federici"
+          "notes": "Lorenzo & Lauren Federici",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-09",
@@ -348,7 +406,9 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
-          "notes": "Linda Lawless & Family"
+          "notes": "Linda Lawless & Family",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-09",
@@ -358,7 +418,9 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-09",
@@ -368,7 +430,9 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
-          "notes": "Pro Populo"
+          "notes": "Pro Populo",
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
         }
       ],
       "confidence": "high",
@@ -387,100 +451,120 @@
           "day": "Saturday",
           "time": "18:00",
           "type": "Confession",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-02",
           "day": "Saturday",
           "time": "18:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "(Pro Populo)"
+          "notes": "(Pro Populo)",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-03",
           "day": "Sunday",
           "time": "10:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "(Anthony & Eddie Bagg RIP)"
+          "notes": "(Anthony & Eddie Bagg RIP)",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-04",
           "day": "Monday",
           "time": "09:15",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "with Confession"
+          "notes": "with Confession",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-04",
           "day": "Monday",
           "time": "10:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "(K C George Mannathukaran RIP)"
+          "notes": "(K C George Mannathukaran RIP)",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-05",
           "day": "Tuesday",
           "time": "09:15",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "with Confession"
+          "notes": "with Confession",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-05",
           "day": "Tuesday",
           "time": "10:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "(Jane Medlicott RIP)"
+          "notes": "(Jane Medlicott RIP)",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-06",
           "day": "Wednesday",
           "time": null,
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "No Parish Mass today"
+          "notes": "No Parish Mass today",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "18:00",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "with Confession"
+          "notes": "with Confession",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "18:45",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
           "language": null,
-          "notes": "(Kenn Sheridan RIP)"
+          "notes": "(Kenn Sheridan RIP)",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
         }
       ],
       "confidence": "high",
@@ -499,140 +583,168 @@
           "day": "Sunday",
           "time": "09:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "Thanksgiving for Ministry, Fr Rufus Pereira & Family RIP"
+          "notes": "Thanksgiving for Ministry, Fr Rufus Pereira & Family RIP",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-03",
           "day": "Sunday",
           "time": "11:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "For Parish"
+          "notes": "For Parish",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-04",
           "day": "Monday",
           "time": "10:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "Philip Logan RIP, Stefan & Stefania Bojczuk"
+          "notes": "Philip Logan RIP, Stefan & Stefania Bojczuk",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-05",
           "day": "Tuesday",
           "time": "08:45",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-05",
           "day": "Tuesday",
           "time": "09:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "Tommy Kehoe (Ann) RIP"
+          "notes": "Tommy Kehoe (Ann) RIP",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-05",
           "day": "Tuesday",
           "time": "null",
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-06",
           "day": "Wednesday",
           "time": null,
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "No Mass"
+          "notes": "No Mass",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "08:45",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "09:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "Denise Donnelly RIP"
+          "notes": "Denise Donnelly RIP",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": "08:45",
           "type": "Adoration",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": "09:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "Ighlis Ivanov RIP"
+          "notes": "Ighlis Ivanov RIP",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "17:00",
           "type": "Confession",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "17:30",
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "in the Lady Chapel"
+          "notes": "in the Lady Chapel",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "18:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": null,
-          "notes": "Agnes Fahy (Ann) RIP"
+          "notes": "Agnes Fahy (Ann) RIP",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         }
       ],
       "confidence": "high",
@@ -651,220 +763,264 @@
           "day": "Thursday",
           "time": null,
           "type": "Confession",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "Before Mass"
+          "notes": "Before Mass",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass."
+          "notes": "30 minutes before Mass.",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "09:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass."
+          "notes": "30 minutes before Mass.",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": "10:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": null,
           "type": "Confession",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "Before Mass on Saturday or on request."
+          "notes": "Before Mass on Saturday or on request.",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-09",
           "day": "Daily",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass"
+          "notes": "30 minutes before Mass",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "17:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "Christina Traynor, 11th Anniversary, RIP"
+          "notes": "Christina Traynor, 11th Anniversary, RIP",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "17:00",
           "type": "Confession",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass"
+          "notes": "30 minutes before Mass",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "09:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "In Thanksgiving"
+          "notes": "In Thanksgiving",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "Jim Egan, 6th Anniversary, RIP"
+          "notes": "Jim Egan, 6th Anniversary, RIP",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-11",
           "day": "Daily",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass"
+          "notes": "30 minutes before Mass",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-12",
           "day": "Tuesday",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass"
+          "notes": "30 minutes before Mass",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-12",
           "day": "Tuesday",
           "time": "19:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "Private Intentions"
+          "notes": "Private Intentions",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-13",
           "day": "Wednesday",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass"
+          "notes": "30 minutes before Mass",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-13",
           "day": "Wednesday",
           "time": "09:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "Private Intentions"
+          "notes": "Private Intentions",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-14",
           "day": "Thursday",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass"
+          "notes": "30 minutes before Mass",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-14",
           "day": "Thursday",
           "time": "09:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "People of the Parish"
+          "notes": "People of the Parish",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-14",
           "day": "Thursday",
           "time": "19:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "People of the Parish"
+          "notes": "People of the Parish",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-15",
           "day": "Friday",
           "time": null,
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "30 minutes before Mass"
+          "notes": "30 minutes before Mass",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         },
         {
           "date": "2026-05-15",
           "day": "Friday",
           "time": "10:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Flitwick",
           "language": null,
-          "notes": "Maureen Herlihy, Anniversary RIP"
+          "notes": "Maureen Herlihy, Anniversary RIP",
+          "area": "Flitwick",
+          "postcode": "MK45 1JP"
         }
       ],
       "confidence": "high",
@@ -883,110 +1039,132 @@
           "day": "Sunday",
           "time": "09:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": "John Lawlor RIP"
+          "notes": "John Lawlor RIP",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-03",
           "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": "Rosemary Terleckyj anniv"
+          "notes": "Rosemary Terleckyj anniv",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-04",
           "day": "Monday",
           "time": "10:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": "Benny Sorgente anniv"
+          "notes": "Benny Sorgente anniv",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "10:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": "Maria Pompa RIP"
+          "notes": "Maria Pompa RIP",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": "09:30",
           "type": "Rosary",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-08",
           "day": "Friday",
           "time": "10:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": "Willie Quilligan RIP"
+          "notes": "Willie Quilligan RIP",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "10:00",
           "type": "Benediction",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "17:45",
           "type": "Confession",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "18:15",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": "Karl Staines RIP"
+          "notes": "Karl Staines RIP",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "09:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": "Eilish Farrell intention"
+          "notes": "Eilish Farrell intention",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
           "language": null,
-          "notes": "Costas Kyprianou anniv"
+          "notes": "Costas Kyprianou anniv",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         }
       ],
       "confidence": "high",
@@ -1005,90 +1183,108 @@
           "day": "Monday",
           "time": "07:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": "Feast of St. Florian"
+          "notes": "Feast of St. Florian",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-05",
           "day": "Tuesday",
           "time": "07:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": "Feast of St. Stanislaus Kazimierczyk"
+          "notes": "Feast of St. Stanislaus Kazimierczyk",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-06",
           "day": "Wednesday",
           "time": "19:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": "Feast of St. Philip and St. James, Apostles"
+          "notes": "Feast of St. Philip and St. James, Apostles",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "19:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": "Feast of the Blessed Virgin Mary, Mother of Grace"
+          "notes": "Feast of the Blessed Virgin Mary, Mother of Grace",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "18:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "08:30",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "14:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "19:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
           "language": "Polish",
-          "notes": null
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
         }
       ],
       "confidence": "high",
@@ -1110,7 +1306,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-02",
@@ -1120,7 +1318,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-03",
@@ -1130,7 +1330,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-03",
@@ -1140,7 +1342,9 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
-          "notes": "Int Arthuro P Dally RIP"
+          "notes": "Int Arthuro P Dally RIP",
+          "area": "Brackley",
+          "postcode": "NN13 6AN"
         },
         {
           "date": "2026-05-04",
@@ -1150,7 +1354,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": "No Mass"
+          "notes": "No Mass",
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-05",
@@ -1160,7 +1366,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": "Int Rillu (Goodhealth)"
+          "notes": "Int Rillu (Goodhealth)",
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-06",
@@ -1170,7 +1378,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-06",
@@ -1180,7 +1390,9 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Brackley",
+          "postcode": "NN13 6AN"
         },
         {
           "date": "2026-05-06",
@@ -1190,7 +1402,9 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
-          "notes": "Int Vance Vaz (B-Day) & Maurice Lillis RIP"
+          "notes": "Int Vance Vaz (B-Day) & Maurice Lillis RIP",
+          "area": "Brackley",
+          "postcode": "NN13 6AN"
         },
         {
           "date": "2026-05-07",
@@ -1200,7 +1414,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-08",
@@ -1210,7 +1426,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": "Divine Mercy Chaplet & confessions"
+          "notes": "Divine Mercy Chaplet & confessions",
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-08",
@@ -1220,7 +1438,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-08",
@@ -1230,7 +1450,9 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
-          "notes": "Divine Mercy Chaplet"
+          "notes": "Divine Mercy Chaplet",
+          "area": "Brackley",
+          "postcode": "NN13 6AN"
         },
         {
           "date": "2026-05-08",
@@ -1240,7 +1462,9 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Brackley",
+          "postcode": "NN13 6AN"
         },
         {
           "date": "2026-05-09",
@@ -1250,7 +1474,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-09",
@@ -1260,7 +1486,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": "Int Joan Cole RIP"
+          "notes": "Int Joan Cole RIP",
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-10",
@@ -1270,7 +1498,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": "6 Sunday of Easter"
+          "notes": "6 Sunday of Easter",
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-10",
@@ -1280,7 +1510,9 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
-          "notes": "6 Sunday of Easter"
+          "notes": "6 Sunday of Easter",
+          "area": "Brackley",
+          "postcode": "NN13 6AN"
         },
         {
           "date": "2026-05-01",
@@ -1290,7 +1522,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-02",
@@ -1300,7 +1534,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-03",
@@ -1310,7 +1546,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-04",
@@ -1320,7 +1558,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-05",
@@ -1330,7 +1570,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-06",
@@ -1340,7 +1582,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-07",
@@ -1350,7 +1594,9 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
         }
       ],
       "confidence": "high",
@@ -1372,7 +1618,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-03",
@@ -1382,7 +1630,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-03",
@@ -1392,7 +1642,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-03",
@@ -1402,7 +1654,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-04",
@@ -1412,7 +1666,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": "The English Martyrs"
+          "notes": "The English Martyrs",
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-05",
@@ -1422,7 +1678,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": "Feria"
+          "notes": "Feria",
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-06",
@@ -1432,7 +1690,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": "Feria"
+          "notes": "Feria",
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-07",
@@ -1442,7 +1702,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-07",
@@ -1452,7 +1714,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": "Feria"
+          "notes": "Feria",
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-07",
@@ -1462,7 +1726,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-08",
@@ -1472,7 +1738,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": "Feria"
+          "notes": "Feria",
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-09",
@@ -1482,7 +1750,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": "Feria"
+          "notes": "Feria",
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-09",
@@ -1492,7 +1762,9 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-09",
@@ -1502,7 +1774,9 @@
           "church": "Our Lady's",
           "church_location": "Kempston",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Kempston",
+          "postcode": "MK42 8QB"
         }
       ],
       "confidence": "high",
@@ -1521,50 +1795,60 @@
           "day": "Saturday",
           "time": "18:00",
           "type": "Vigil Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
           "language": null,
-          "notes": "Fifth Sunday of Easter"
+          "notes": "Fifth Sunday of Easter",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
         },
         {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
           "language": null,
-          "notes": "Sixth Sunday of Easter"
+          "notes": "Sixth Sunday of Easter",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
         },
         {
           "date": "2026-05-13",
           "day": "Thursday",
           "time": "18:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
           "language": null,
-          "notes": "The Ascension of the Lord"
+          "notes": "The Ascension of the Lord",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
         },
         {
           "date": "2026-05-17",
           "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
-          "church": null,
-          "church_location": null,
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
           "language": null,
-          "notes": "Seventh Sunday of Easter"
+          "notes": "Seventh Sunday of Easter",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
         },
         {
           "date": "2026-05-02",
           "day": "Saturday",
           "time": "17:30",
           "type": "Confession",
-          "church": null,
-          "church_location": null,
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
           "language": null,
-          "notes": "before Mass"
+          "notes": "before Mass",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
         }
       ],
       "confidence": "high",
@@ -1586,7 +1870,9 @@
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Central MK",
+          "postcode": "MK9 2ES"
         },
         {
           "date": "2026-05-02",
@@ -1596,7 +1882,9 @@
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Central MK",
+          "postcode": "MK9 2ES"
         },
         {
           "date": "2026-05-03",
@@ -1606,7 +1894,9 @@
           "church": "St Bede's",
           "church_location": "Newport Pagnell",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Newport Pagnell",
+          "postcode": "MK16 8EN"
         },
         {
           "date": "2026-05-03",
@@ -1616,7 +1906,9 @@
           "church": "Our Lady of Lourdes",
           "church_location": "Leadenhall",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Coffee Hall",
+          "postcode": "MK6 5NA"
         },
         {
           "date": "2026-05-03",
@@ -1626,7 +1918,9 @@
           "church": "St Edward's",
           "church_location": "Shenley Church End",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Shenley Church End",
+          "postcode": "MK5 6DX"
         },
         {
           "date": "2026-05-03",
@@ -1636,7 +1930,9 @@
           "church": "St Mary's",
           "church_location": "Woburn Sands",
           "language": null,
-          "notes": "Lilian Morris RIP"
+          "notes": "Lilian Morris RIP",
+          "area": "Woburn Sands",
+          "postcode": "MK17 8NN"
         },
         {
           "date": "2026-05-03",
@@ -1646,7 +1942,9 @@
           "church": "Christ the King",
           "church_location": "Kents Hill",
           "language": null,
-          "notes": null
+          "notes": null,
+          "area": "Kents Hill",
+          "postcode": "MK7 6HG"
         },
         {
           "date": "2026-05-04",
@@ -1656,7 +1954,9 @@
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
-          "notes": "No Mass"
+          "notes": "No Mass",
+          "area": "Central MK",
+          "postcode": "MK9 2ES"
         },
         {
           "date": "2026-05-05",
@@ -1666,7 +1966,9 @@
           "church": "St Mary's",
           "church_location": "Woburn Sands",
           "language": null,
-          "notes": "Charles Brunt RIP"
+          "notes": "Charles Brunt RIP",
+          "area": "Woburn Sands",
+          "postcode": "MK17 8NN"
         },
         {
           "date": "2026-05-07",
@@ -1676,7 +1978,9 @@
           "church": "St Edward's",
           "church_location": "Shenley Church End",
           "language": null,
-          "notes": "Fr Stephen McGuinness Anniversary"
+          "notes": "Fr Stephen McGuinness Anniversary",
+          "area": "Shenley Church End",
+          "postcode": "MK5 6DX"
         }
       ],
       "confidence": "high",

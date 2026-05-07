@@ -244,27 +244,59 @@ def find_latest_drive_pdf(page_url: str) -> list[str]:
 
 
 def find_google_doc_export_url(page_url: str) -> str | None:
-    """Find a Google Docs link on a page and return its plain-text export URL."""
+    """Find a Google Docs link on a page and return its HTML export URL.
+
+    HTML preserves table structure (<tr>/<td>) which is essential for
+    multi-column timetables — plain-text export interleaves cells.
+    """
     r = http_get(page_url)
     soup = BeautifulSoup(r.text, "lxml")
     for a in soup.find_all("a", href=True):
         href = a["href"]
         m = re.search(r"docs\.google\.com/document/d/([a-zA-Z0-9_\-]+)", href)
         if m:
-            return f"https://docs.google.com/document/d/{m.group(1)}/export?format=txt"
+            return f"https://docs.google.com/document/d/{m.group(1)}/export?format=html"
     # iframe fallback
     for f in soup.find_all("iframe"):
         src = f.get("src") or ""
         m = re.search(r"docs\.google\.com/document/d/([a-zA-Z0-9_\-]+)", src)
         if m:
-            return f"https://docs.google.com/document/d/{m.group(1)}/export?format=txt"
+            return f"https://docs.google.com/document/d/{m.group(1)}/export?format=html"
     return None
 
 
 def fetch_gdoc_text(url: str) -> str:
-    """Fetch a Google Docs export-as-txt URL."""
+    """Fetch a Google Docs HTML-export URL and return cleaned body HTML.
+
+    The HTML structure (<table>/<tr>/<td>) disambiguates multi-column
+    timetables that the plain-text export interleaves. We strip Google's
+    cosmetic noise — class/style/id attributes, default colspan/rowspan,
+    and <span>/<p> wrappers around plain text — to keep the payload
+    LLM-friendly without losing semantic structure.
+    """
     r = http_get(url)
-    return r.content.decode("utf-8", errors="replace")
+    html = r.content.decode("utf-8", errors="replace")
+    soup = BeautifulSoup(html, "lxml")
+    # Strip cosmetic attributes everywhere.
+    for tag in soup.find_all(True):
+        for attr in ("class", "style", "id"):
+            tag.attrs.pop(attr, None)
+        # colspan/rowspan="1" are defaults — drop them.
+        for attr in ("colspan", "rowspan"):
+            if tag.attrs.get(attr) == "1":
+                tag.attrs.pop(attr, None)
+    # Unwrap span / p — they only add bulk; whitespace already separates text.
+    for tag in soup.find_all(["span"]):
+        tag.unwrap()
+    for tag in soup.find_all("p"):
+        tag.insert_after("\n")
+        tag.unwrap()
+    body = soup.body or soup
+    out = str(body)
+    # Collapse runs of whitespace inside tags (Google emits long blank padding).
+    out = re.sub(r"[ \t]+", " ", out)
+    out = re.sub(r"\n{3,}", "\n\n", out)
+    return out
 
 
 def find_latest_mailchimp_campaign(archive_url: str) -> str | None:

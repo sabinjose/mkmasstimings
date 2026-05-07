@@ -45,15 +45,24 @@ PARISHES: list[Parish] = [
         strategy="drive",
         location="Wolverton / Stony Stratford",
         hints=(
-            "This parish has two churches. The newsletter lays them out in two "
-            "columns; column extraction is unreliable. Use this regular schedule "
-            "to assign each service its church/church_location:\n"
-            "- St Mary Magdalene (Stony Stratford): Sunday 9:15am Mass.\n"
-            "- St Francis de Sales (Wolverton): Saturday 6:30pm Vigil, Sunday "
-            "11:30am Mass, weekday Masses (Mon/Tue/Wed/Fri 12:00pm, Thu 10:00am, "
-            "Sat morning 10:00am), Wednesday 12:30pm Adoration, Saturday morning "
-            "Confessions.\n"
-            "If a service doesn't match the regular pattern, note it in `notes`."
+            "This parish has two churches. The newsletter is a two-column "
+            "timetable but plain-text column extraction is unreliable, so use "
+            "the schedule below ONLY to set church/church_location.\n"
+            "\n"
+            "The newsletter remains authoritative for everything else: extract "
+            "times, dates, service types, intentions/notes, and cancellations "
+            "exactly as printed. Include cancellations (e.g. 'No Mass') as "
+            "services with time=null. Include one-off / special services even "
+            "if not in the schedule below — match them to whichever church "
+            "they appear in.\n"
+            "\n"
+            "Regular church assignment (use to populate church/"
+            "church_location only):\n"
+            "- St Francis de Sales (Wolverton): Saturday evening Vigil Mass, "
+            "Sunday late-morning Mass, Tuesday Mass, Thursday Mass.\n"
+            "- St Mary Magdalene (Stony Stratford): Sunday morning Mass, "
+            "Monday Mass, Wednesday Mass + Adoration, Friday Mass, Saturday "
+            "morning Mass + Confessions."
         ),
     ),
     Parish(
@@ -91,6 +100,13 @@ PARISHES: list[Parish] = [
         source_url="https://stbernardines.org/latest-parish-newsletter/",
         strategy="gdoc",
         location="Buckingham / Brackley",
+        hints=(
+            "This parish has two churches. The newsletter is rendered as a "
+            "3-column HTML table: column 1 is the date, column 2 is "
+            "St Bernardine's (Buckingham), column 3 is St Martin's (Brackley). "
+            "Use each <td> cell's column position to set church/"
+            "church_location for any services it contains."
+        ),
     ),
     Parish(
         name="St Joseph's & Our Lady's",
@@ -99,10 +115,12 @@ PARISHES: list[Parish] = [
         location="Bedford / Kempston",
         hints=(
             "This parish has two churches listed inline on the timetable page. "
-            "Use these locations to assign each service its church/church_location:\n"
-            "- St Joseph's (Bedford): Sunday Masses and weekday Masses (Mon–Sat).\n"
-            "- Our Lady's (Kempston): Saturday vigil only.\n"
-            "If a service doesn't match the regular pattern, note it in `notes`."
+            "Use the heading each service appears under to set its church/"
+            "church_location:\n"
+            "- 'St Joseph's' heading → church='St Joseph's', "
+            "church_location='Bedford'.\n"
+            "- 'Our Lady's' heading → church='Our Lady's', "
+            "church_location='Kempston'."
         ),
     ),
     Parish(

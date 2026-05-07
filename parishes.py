@@ -110,16 +110,17 @@ PARISHES: list[Parish] = [
     ),
     Parish(
         name="St Joseph's & Our Lady's",
-        source_url="https://www.stjosephsbedford.org/sacramental-preparation/liturgy-prayer-timetable/",
-        strategy="page",
+        source_url="https://www.stjosephsbedford.org/category/church/",
+        strategy="pdf_archive",
         location="Bedford / Kempston",
         hints=(
-            "This parish has two churches listed inline on the timetable page. "
-            "Use the heading each service appears under to set its church/"
+            "This parish has two churches and the weekly newsletter labels "
+            "Mass times under two clearly named sections. Use the section "
+            "heading each service appears under to set its church/"
             "church_location:\n"
-            "- 'St Joseph's' heading → church='St Joseph's', "
+            "- 'Mass Times – St Joseph's, Bedford' → church='St Joseph's', "
             "church_location='Bedford'.\n"
-            "- 'Our Lady's' heading → church='Our Lady's', "
+            "- 'Mass Times – Our Lady's, Kempston' → church='Our Lady's', "
             "church_location='Kempston'."
         ),
     ),

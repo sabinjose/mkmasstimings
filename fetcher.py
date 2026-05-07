@@ -68,12 +68,22 @@ DATE_IN_FILENAME = re.compile(r"(\d{1,2})[.\-_](\d{1,2})[.\-_](\d{2,4})")
 def _score_pdf_link(href: str, text: str) -> tuple[datetime, str] | None:
     """Try to extract a date from a PDF link; return (date, href) or None.
 
-    Tries, in order: ISO-ish in URL, dd-mm-yy in filename, English "3rd May 2026"
-    in the link text or filename (after replacing dashes/underscores with spaces).
+    Order matters because URL paths often encode the *upload* month, not
+    the bulletin date. We try the English form ("3rd May 2026", month
+    name spelt out) first because a month name in a filename is a strong
+    signal that the filename itself encodes the bulletin date — for
+    example St Joseph's Bedford uploads `…/2026/04/03-May-2026.pdf` for
+    the May 3 newsletter; matching `2026/04/03` from the path would
+    misdate it as April 3. The numeric URL/filename patterns are tried
+    only when no month name is present.
     """
     for cand in (href, text):
         if not cand:
             continue
+        normalized = cand.replace("-", " ").replace("_", " ").replace("/", " ")
+        d = _parse_english_date(normalized)
+        if d:
+            return d, href
         m = DATE_IN_URL.search(cand)
         if m:
             y, mo, d = (int(x) for x in m.groups())
@@ -90,10 +100,6 @@ def _score_pdf_link(href: str, text: str) -> tuple[datetime, str] | None:
                 return datetime(y, mo, d), href
             except ValueError:
                 pass
-        normalized = cand.replace("-", " ").replace("_", " ").replace("/", " ")
-        d = _parse_english_date(normalized)
-        if d:
-            return d, href
     return None
 
 

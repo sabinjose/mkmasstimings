@@ -105,6 +105,43 @@ def discover_source(parish: Parish) -> str | None:
     return None
 
 
+def discover_fallback_source(parish: Parish) -> str | None:
+    """Return the SECOND-most-recent source URL for strategies that list
+    historical bulletins (pdf_archive, drive, blog_pdf).
+
+    Used to bridge today/tomorrow when the latest bulletin's coverage
+    starts after today (e.g., parish publishes next week's bulletin a
+    few days early). Returns None when no previous bulletin is listed
+    or the strategy doesn't support history.
+    """
+    s = parish.strategy
+    try:
+        if s == "pdf_archive":
+            urls = fetcher.find_latest_pdf_links(parish.source_url)
+        elif s == "drive":
+            urls = fetcher.find_latest_drive_pdf(parish.source_url)
+        elif s == "blog_pdf":
+            urls = fetcher.find_latest_blog_post_pdf(parish.source_url)
+        else:
+            return None
+        return urls[1] if len(urls) > 1 else None
+    except Exception:
+        return None
+
+
+def coverage_starts_after_today(services: list[dict], today_str: str) -> bool:
+    """True when every dated service in `services` is strictly after today.
+
+    Signals that a parish has published their next bulletin early and the
+    current extraction doesn't cover today/tomorrow — triggering a
+    fallback fetch of the previous bulletin to bridge the gap.
+    """
+    dates = [s.get("date") or "" for s in services if s.get("date")]
+    if not dates:
+        return False
+    return min(dates) > today_str
+
+
 def parish_key(p: Parish | dict) -> str:
     """Stable key for matching old/new parish entries.
 
@@ -180,6 +217,30 @@ def merge_services(
     )
 
 
+def _extract_url(parish: Parish, url: str, verbose: bool) -> dict[str, Any]:
+    """Fetch + extract a specific source URL for the parish. Returns a
+    services-shaped dict (with `error` set on failure)."""
+    try:
+        if parish.strategy in ("pdf_archive", "drive", "blog_pdf"):
+            text = fetcher.fetch_pdf_text(url)
+        elif parish.strategy == "gdoc":
+            text = fetcher.fetch_gdoc_text(url)
+        elif parish.strategy in ("page", "mailchimp"):
+            text = fetcher.fetch_page_text(url)
+        else:
+            text = ""
+    except Exception as e:
+        return {"services": [], "error": f"fallback fetch failed: {e}"}
+    if not text.strip():
+        return {"services": [], "error": "fallback no content"}
+    try:
+        return extract_mass_times(parish.name, text, hints=parish.hints)
+    except Exception as e:
+        if verbose:
+            traceback.print_exc(file=sys.stderr)
+        return {"services": [], "error": f"fallback extract failed: {e}"}
+
+
 def process(
     parish: Parish,
     old_parish: dict | None,
@@ -237,6 +298,26 @@ def process(
             else:
                 new_data["location"] = parish.location
                 new_data["source_url"] = source
+
+    # Bridge: if the latest bulletin's coverage starts strictly after today
+    # (parish published next week's bulletin early), fetch the previous
+    # bulletin too so today/tomorrow services aren't missing on first
+    # contact — even when there's no useful old_parish to merge from.
+    services_now = new_data.get("services") or []
+    if services_now and coverage_starts_after_today(services_now, today_str):
+        fallback_url = discover_fallback_source(parish)
+        if fallback_url:
+            if verbose:
+                print(
+                    f"  bridging {parish.name} (latest covers future only) "
+                    f"with previous bulletin: {fallback_url}",
+                    file=sys.stderr,
+                )
+            fb = _extract_url(parish, fallback_url, verbose=verbose)
+            if fb.get("services"):
+                new_data["services"] = merge_services(
+                    fb["services"], services_now, today_str
+                )
 
     # Merge with old future-dated services so a failed/early-rolled bulletin
     # doesn't drop today/tomorrow data we already have.

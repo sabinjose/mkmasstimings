@@ -93,6 +93,25 @@ PARISHES: list[Parish] = [
         location="Buckingham / Brackley",
     ),
     Parish(
+        name="St Joseph's & Our Lady's",
+        source_url="https://www.stjosephsbedford.org/sacramental-preparation/liturgy-prayer-timetable/",
+        strategy="page",
+        location="Bedford / Kempston",
+        hints=(
+            "This parish has two churches listed inline on the timetable page. "
+            "Use these locations to assign each service its church/church_location:\n"
+            "- St Joseph's (Bedford): Sunday Masses and weekday Masses (Mon–Sat).\n"
+            "- Our Lady's (Kempston): Saturday vigil only.\n"
+            "If a service doesn't match the regular pattern, note it in `notes`."
+        ),
+    ),
+    Parish(
+        name="St Alban's",
+        source_url="https://www.stalbanswinslow.org.uk/newsletters/",
+        strategy="pdf_archive",
+        location="Winslow",
+    ),
+    Parish(
         name="MK Parishes Newsletter (Mailchimp)",
         source_url="https://us19.campaign-archive.com/home/?u=24790f2492cfb4670c635f745&id=2ebd0e3fcd",
         strategy="mailchimp",

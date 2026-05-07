@@ -419,35 +419,45 @@ function timeOfDay(t) {
   return "evening";
 }
 
-// Given the day's services, return the set of parish_keys that should be
-// shown. MK parishes always pass. Outside-MK parishes pass only when one
-// of their Masses fills a time-bucket the MK parishes don't cover — but
-// once a parish passes, all its services (Mass / Confession / Adoration)
-// come along. The user toggle bypasses the gap rule and includes every
-// outside-MK parish wholesale.
-function visibleParishKeys(services, includeNearby) {
-  const keys = new Set();
-  const mkMassBuckets = new Set();
+// Given the day's services, return a predicate (s -> bool) for inclusion.
+//
+// Rules when the user toggle is OFF:
+// - MK parishes: always shown.
+// - Outside-MK Mass: shown only when its time-of-day bucket (morning /
+//   afternoon / evening) is NOT covered by an MK Mass that day.
+// - Outside-MK Confession / Adoration: shown only when its parish has
+//   at least one Mass that passed the gap rule above. Other Masses of
+//   the same parish that DON'T fill a gap stay hidden — e.g. if MK has
+//   a 7pm Mass already, an outside 7pm Mass from a parish whose 10am
+//   Mass admitted the parish doesn't tag along.
+//
+// Toggle ON: every outside-MK service is included, no gap check.
+function buildVisibilityFilter(services, includeNearby) {
+  if (includeNearby) return () => true;
 
+  const mkMassBuckets = new Set();
   for (const s of services) {
-    if (!s.outside_mk) {
-      keys.add(s.parish_key);
-      if (s.bucket === "mass" && !s.cancelled) {
-        mkMassBuckets.add(timeOfDay(s.time));
-      }
+    if (!s.outside_mk && s.bucket === "mass" && !s.cancelled && s.time) {
+      mkMassBuckets.add(timeOfDay(s.time));
     }
   }
+
+  const massGapFillers = new WeakSet();
+  const massGapParishes = new Set();
   for (const s of services) {
     if (!s.outside_mk) continue;
-    if (includeNearby) {
-      keys.add(s.parish_key);
-      continue;
-    }
-    if (s.bucket === "mass" && !s.cancelled && !mkMassBuckets.has(timeOfDay(s.time))) {
-      keys.add(s.parish_key);
+    if (s.bucket !== "mass" || s.cancelled || !s.time) continue;
+    if (!mkMassBuckets.has(timeOfDay(s.time))) {
+      massGapFillers.add(s);
+      massGapParishes.add(s.parish_key);
     }
   }
-  return keys;
+
+  return (s) => {
+    if (!s.outside_mk) return true;
+    if (s.bucket === "mass") return massGapFillers.has(s);
+    return massGapParishes.has(s.parish_key);
+  };
 }
 
 function escapeHTML(s) {
@@ -573,8 +583,8 @@ function render() {
 
   const all = flattenServices(DATA.parishes);
   const dayServices = all.filter(s => s.date === selectedDate());
-  const allowed = visibleParishKeys(dayServices, INCLUDE_NEARBY);
-  const services = dayServices.filter(s => allowed.has(s.parish_key));
+  const visible = buildVisibilityFilter(dayServices, INCLUDE_NEARBY);
+  const services = dayServices.filter(visible);
   $("dayContainer").innerHTML = dayBlock(selectedLabel(), selectedDate(), services);
   $("btnNearby").setAttribute("aria-pressed", INCLUDE_NEARBY ? "true" : "false");
 }
@@ -610,8 +620,8 @@ function buildShareText() {
   const all = flattenServices(DATA.parishes);
   const date = selectedDate();
   const dayServices = all.filter(s => s.date === date);
-  const allowed = visibleParishKeys(dayServices, INCLUDE_NEARBY);
-  const services = dayServices.filter(s => allowed.has(s.parish_key));
+  const visible = buildVisibilityFilter(dayServices, INCLUDE_NEARBY);
+  const services = dayServices.filter(visible);
   return [
     plainTextForDay(selectedLabel(), date, services),
     "",

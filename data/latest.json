@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T16:55:48.155977+00:00",
+  "generated_at": "2026-05-07T20:21:00.079829+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -130,7 +130,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Milton Keynes",
-      "source_url": "https://www.st-augustinesmk.org.uk/web/newsletter/"
+      "source_url": "https://www.st-augustinesmk.org.uk/web/newsletter/",
+      "outside_mk": false
     },
     {
       "parish": "Catholic Bletchley (All Saints / St Thomas Aquinas)",
@@ -251,7 +252,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Bletchley",
-      "source_url": "https://catholic-bletchley.com/wp-content/uploads/2026/05/2026.05.03.pdf"
+      "source_url": "https://catholic-bletchley.com/wp-content/uploads/2026/05/2026.05.03.pdf",
+      "outside_mk": false
     },
     {
       "parish": "Francis de Sales & Mary Magdalene",
@@ -372,7 +374,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Wolverton / Stony Stratford",
-      "source_url": "https://drive.google.com/uc?export=download&id=1Ho6MI_Kc8ZUl27pUT75n-uma61wfVBXv"
+      "source_url": "https://drive.google.com/uc?export=download&id=1Ho6MI_Kc8ZUl27pUT75n-uma61wfVBXv",
+      "outside_mk": false
     },
     {
       "parish": "Our Lady Help of Christians & St Lawrence",
@@ -483,7 +486,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Olney",
-      "source_url": "https://www.ourladysolney.co.uk/wp-content/uploads/2026/05/3rd-May.pdf"
+      "source_url": "https://www.ourladysolney.co.uk/wp-content/uploads/2026/05/3rd-May.pdf",
+      "outside_mk": true
     },
     {
       "parish": "St Mary's",
@@ -634,7 +638,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Dunstable",
-      "source_url": "https://www.stmarys-dunstable.org/home/newsletter"
+      "source_url": "https://www.stmarys-dunstable.org/home/newsletter",
+      "outside_mk": true
     },
     {
       "parish": "Sacred Heart",
@@ -845,7 +850,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Flitwick",
-      "source_url": "http://sacredheartflitwick.co.uk/wp/wp-content/uploads/2026/05/Bulletin-10.05.26.pdf"
+      "source_url": "http://sacredheartflitwick.co.uk/wp/wp-content/uploads/2026/05/Bulletin-10.05.26.pdf",
+      "outside_mk": true
     },
     {
       "parish": "Sacred Heart",
@@ -936,7 +942,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Leighton Buzzard",
-      "source_url": "http://www.sacredheartlb.org.uk/wp-content/uploads/5th-Sunday-of-Easter-3rd-May-2026.pdf"
+      "source_url": "http://www.sacredheartlb.org.uk/wp-content/uploads/5th-Sunday-of-Easter-3rd-May-2026.pdf",
+      "outside_mk": true
     },
     {
       "parish": "Polska Parafia (Matki Bożej Częstochowskiej)",
@@ -1037,7 +1044,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Dunstable (Polish)",
-      "source_url": "https://parafiadunstable.co.uk/attachments/article/80/Biuletyn%20Parafilany%2003.05.2026.pdf"
+      "source_url": "https://parafiadunstable.co.uk/attachments/article/80/Biuletyn%20Parafilany%2003.05.2026.pdf",
+      "outside_mk": true
     },
     {
       "parish": "St Bernardine's & St Martin's",
@@ -1298,7 +1306,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Buckingham / Brackley",
-      "source_url": "https://docs.google.com/document/d/1nFLiyOpGJQDcLDLBZ7bu8KAY_i1ovVDcwGTmwx8sbzg/export?format=html"
+      "source_url": "https://docs.google.com/document/d/1nFLiyOpGJQDcLDLBZ7bu8KAY_i1ovVDcwGTmwx8sbzg/export?format=html",
+      "outside_mk": true
     },
     {
       "parish": "St Joseph's & Our Lady's",
@@ -1449,7 +1458,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Bedford / Kempston",
-      "source_url": "https://www.stjosephsbedford.org/wp-content/uploads/2026/04/03-May-2026-Newsletter.pdf"
+      "source_url": "https://www.stjosephsbedford.org/wp-content/uploads/2026/04/03-May-2026-Newsletter.pdf",
+      "outside_mk": true
     },
     {
       "parish": "St Alban's",
@@ -1510,7 +1520,8 @@
       "confidence": "high",
       "notes": null,
       "location": "Winslow",
-      "source_url": "https://www.stalbanswinslow.org.uk/newsletters/view/Parish_Newsletter_2nd_May_2026.pdf"
+      "source_url": "https://www.stalbanswinslow.org.uk/newsletters/view/Parish_Newsletter_2nd_May_2026.pdf",
+      "outside_mk": true
     },
     {
       "parish": "MK Parishes",
@@ -1621,7 +1632,8 @@
       "confidence": "high",
       "notes": null,
       "location": "St Barnabas Cluster",
-      "source_url": "http://eepurl.com/gnT2JcBFV0"
+      "source_url": "http://eepurl.com/gnT2JcBFV0",
+      "outside_mk": false
     }
   ]
 }

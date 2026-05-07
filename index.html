@@ -99,6 +99,20 @@
   @media (prefers-color-scheme: dark) {
     .day-toggle button.active { color: #1a1410; }
   }
+  /* Toggle for including outside-MK parishes — sits in the toolbar.
+     Default is off; pressed state matches the day-toggle accent. */
+  .scope-btn {
+    flex: 0 0 auto;
+    color: var(--ink-2);
+  }
+  .scope-btn[aria-pressed="true"] {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  @media (prefers-color-scheme: dark) {
+    .scope-btn[aria-pressed="true"] { color: #1a1410; }
+  }
   .actions { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
   .actions-bottom {
     margin: 18px 0 4px;
@@ -285,6 +299,9 @@
     <button id="btnToday" class="active" type="button" role="tab">Today</button>
     <button id="btnTomorrow" type="button" role="tab">Tomorrow</button>
   </div>
+  <button id="btnNearby" class="btn scope-btn" type="button" aria-pressed="false" title="Include parishes outside Milton Keynes when their Masses fill a time-of-day gap">
+    + Nearby
+  </button>
 </div>
 
 <div id="dayContainer">
@@ -341,6 +358,14 @@ const timeKey = (t) => t || "99:99";
 
 let DATA = null;
 let SELECTED = "today";
+// Whether to include parishes outside MK regardless of Mass-gap fallback.
+// When false, outside-MK parishes appear only when their Masses fill a time
+// bucket (morning / afternoon / evening) that no MK Mass covers — and once
+// included, the entire parish (Mass + Confession + Adoration) is shown.
+let INCLUDE_NEARBY = (() => {
+  try { return localStorage.getItem("include_nearby") === "1"; }
+  catch { return false; }
+})();
 
 function classify(svc) {
   const t = (svc.type || "").toLowerCase();
@@ -370,12 +395,59 @@ function flattenServices(parishes) {
         parish: p.parish,
         location: p.location,
         source_url: p.source_url || "",
+        outside_mk: !!p.outside_mk,
+        // Stable parish key for parish-level inclusion decisions.
+        parish_key: p.location || p.parish || "",
         bucket: isCancellation(s) ? "mass" : classify(s),
         cancelled: isCancellation(s),
       });
     }
   }
   return out;
+}
+
+// Coarse time-of-day buckets. Used to decide when an outside-MK parish's
+// Mass fills a gap left by MK parishes — e.g. if MK has a 9am Mass but no
+// evening one, an outside-MK 7pm Mass surfaces.
+function timeOfDay(t) {
+  if (!t) return "anytime";
+  const m = /^(\d{1,2}):/.exec(t);
+  if (!m) return "anytime";
+  const h = parseInt(m[1], 10);
+  if (h < 12) return "morning";
+  if (h < 17) return "afternoon";
+  return "evening";
+}
+
+// Given the day's services, return the set of parish_keys that should be
+// shown. MK parishes always pass. Outside-MK parishes pass only when one
+// of their Masses fills a time-bucket the MK parishes don't cover — but
+// once a parish passes, all its services (Mass / Confession / Adoration)
+// come along. The user toggle bypasses the gap rule and includes every
+// outside-MK parish wholesale.
+function visibleParishKeys(services, includeNearby) {
+  const keys = new Set();
+  const mkMassBuckets = new Set();
+
+  for (const s of services) {
+    if (!s.outside_mk) {
+      keys.add(s.parish_key);
+      if (s.bucket === "mass" && !s.cancelled) {
+        mkMassBuckets.add(timeOfDay(s.time));
+      }
+    }
+  }
+  for (const s of services) {
+    if (!s.outside_mk) continue;
+    if (includeNearby) {
+      keys.add(s.parish_key);
+      continue;
+    }
+    if (s.bucket === "mass" && !s.cancelled && !mkMassBuckets.has(timeOfDay(s.time))) {
+      keys.add(s.parish_key);
+    }
+  }
+  return keys;
 }
 
 function escapeHTML(s) {
@@ -500,8 +572,11 @@ function render() {
   $("btnTomorrow").classList.toggle("active", SELECTED === "tomorrow");
 
   const all = flattenServices(DATA.parishes);
-  const services = all.filter(s => s.date === selectedDate());
+  const dayServices = all.filter(s => s.date === selectedDate());
+  const allowed = visibleParishKeys(dayServices, INCLUDE_NEARBY);
+  const services = dayServices.filter(s => allowed.has(s.parish_key));
   $("dayContainer").innerHTML = dayBlock(selectedLabel(), selectedDate(), services);
+  $("btnNearby").setAttribute("aria-pressed", INCLUDE_NEARBY ? "true" : "false");
 }
 
 /* ---------- Share / Copy ---------- */
@@ -534,7 +609,9 @@ function plainTextForDay(label, dateISO, services) {
 function buildShareText() {
   const all = flattenServices(DATA.parishes);
   const date = selectedDate();
-  const services = all.filter(s => s.date === date);
+  const dayServices = all.filter(s => s.date === date);
+  const allowed = visibleParishKeys(dayServices, INCLUDE_NEARBY);
+  const services = dayServices.filter(s => allowed.has(s.parish_key));
   return [
     plainTextForDay(selectedLabel(), date, services),
     "",
@@ -577,6 +654,11 @@ $("copyBtn").addEventListener("click", copyText);
 $("shareWa").addEventListener("click", shareWhatsApp);
 $("btnToday").addEventListener("click", () => { SELECTED = "today"; render(); });
 $("btnTomorrow").addEventListener("click", () => { SELECTED = "tomorrow"; render(); });
+$("btnNearby").addEventListener("click", () => {
+  INCLUDE_NEARBY = !INCLUDE_NEARBY;
+  try { localStorage.setItem("include_nearby", INCLUDE_NEARBY ? "1" : "0"); } catch {}
+  render();
+});
 
 load();
 </script>

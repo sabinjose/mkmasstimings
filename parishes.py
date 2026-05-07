@@ -24,6 +24,10 @@ class Parish:
     # Optional ground-truth hint passed to the LLM. Use for multi-church parishes
     # where column layout in the PDF is too ambiguous to disambiguate from text alone.
     hints: str = ""
+    # True when the parish is outside Milton Keynes / its immediate suburbs.
+    # The frontend hides outside-MK services by default and exposes a toggle
+    # at the top of the page to include them on demand.
+    outside_mk: bool = False
 
 
 PARISHES: list[Parish] = [
@@ -70,36 +74,42 @@ PARISHES: list[Parish] = [
         source_url="https://www.ourladysolney.co.uk/blog/",
         strategy="blog_pdf",
         location="Olney",
+        outside_mk=True,
     ),
     Parish(
         name="St Mary's",
         source_url="https://www.stmarys-dunstable.org/home/newsletter",
         strategy="page",
         location="Dunstable",
+        outside_mk=True,
     ),
     Parish(
         name="Sacred Heart",
         source_url="https://sacredheartflitwick.co.uk/newsletters/",
         strategy="pdf_archive",
         location="Flitwick",
+        outside_mk=True,
     ),
     Parish(
         name="Sacred Heart",
         source_url="https://www.sacredheartlb.org.uk/service-times/",
         strategy="pdf_archive",
         location="Leighton Buzzard",
+        outside_mk=True,
     ),
     Parish(
         name="Polska Parafia (Matki Bożej Częstochowskiej)",
         source_url="https://parafiadunstable.co.uk/informacje/biuletyn-parafialny",
         strategy="pdf_archive",
         location="Dunstable (Polish)",
+        outside_mk=True,
     ),
     Parish(
         name="St Bernardine's & St Martin's",
         source_url="https://stbernardines.org/latest-parish-newsletter/",
         strategy="gdoc",
         location="Buckingham / Brackley",
+        outside_mk=True,
         hints=(
             "This parish has two churches. The newsletter is rendered as a "
             "3-column HTML table: column 1 is the date, column 2 is "
@@ -113,6 +123,7 @@ PARISHES: list[Parish] = [
         source_url="https://www.stjosephsbedford.org/category/church/",
         strategy="pdf_archive",
         location="Bedford / Kempston",
+        outside_mk=True,
         hints=(
             "This parish has two churches and the weekly newsletter labels "
             "Mass times under two clearly named sections. Use the section "
@@ -129,6 +140,7 @@ PARISHES: list[Parish] = [
         source_url="https://www.stalbanswinslow.org.uk/newsletters/",
         strategy="pdf_archive",
         location="Winslow",
+        outside_mk=True,
     ),
     Parish(
         name="MK Parishes Newsletter (Mailchimp)",

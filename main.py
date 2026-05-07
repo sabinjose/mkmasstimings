@@ -254,6 +254,9 @@ def process(
                 f"  reusing {parish.name} (source unchanged: {discovered})",
                 file=sys.stderr,
             )
+        # Ensure outside_mk is current with parishes.py — old JSONs from
+        # before this field existed wouldn't carry it through the reuse path.
+        old_parish["outside_mk"] = parish.outside_mk  # type: ignore[index]
         return old_parish  # type: ignore[return-value]
 
     if verbose:
@@ -334,6 +337,10 @@ def process(
             # and surfacing it as an error confuses the frontend.
             if new_data.get("error") and merged:
                 new_data.pop("error", None)
+
+    # Surface outside_mk so the frontend can hide faraway parishes by default
+    # and only include them when their Masses fill a time-bucket gap.
+    new_data["outside_mk"] = parish.outside_mk
     return new_data
 
 

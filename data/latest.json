@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T16:23:12.951855+00:00",
+  "generated_at": "2026-05-07T16:55:48.155977+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -1346,10 +1346,60 @@
           "notes": null
         },
         {
+          "date": "2026-05-04",
+          "day": "Monday",
+          "time": "10:45",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": "The English Martyrs"
+        },
+        {
+          "date": "2026-05-05",
+          "day": "Tuesday",
+          "time": "10:45",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": "Feria"
+        },
+        {
+          "date": "2026-05-06",
+          "day": "Wednesday",
+          "time": "10:45",
+          "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": "Feria"
+        },
+        {
+          "date": "2026-05-07",
+          "day": "Thursday",
+          "time": "10:20",
+          "type": "Rosary",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": null
+        },
+        {
           "date": "2026-05-07",
           "day": "Thursday",
           "time": "10:45",
           "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": "Feria"
+        },
+        {
+          "date": "2026-05-07",
+          "day": "Thursday",
+          "time": "11:30",
+          "type": "Adoration",
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
@@ -1363,13 +1413,23 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null
+          "notes": "Feria"
         },
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "10:45",
           "type": "Mass",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "notes": "Feria"
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "11:30",
+          "type": "Confession",
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
@@ -1384,22 +1444,12 @@
           "church_location": "Kempston",
           "language": null,
           "notes": null
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "11:30",
-          "type": "Confession",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null
         }
       ],
       "confidence": "high",
       "notes": null,
       "location": "Bedford / Kempston",
-      "source_url": "https://www.stjosephsbedford.org/sacramental-preparation/liturgy-prayer-timetable/"
+      "source_url": "https://www.stjosephsbedford.org/wp-content/uploads/2026/04/03-May-2026-Newsletter.pdf"
     },
     {
       "parish": "St Alban's",

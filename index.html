@@ -634,7 +634,11 @@ function render() {
   const all = flattenServices(DATA.parishes);
   const dayServices = all.filter(s => s.date === selectedDate());
   const visible = buildVisibilityFilter(dayServices, INCLUDE_NEARBY);
-  const services = dayServices.filter(visible);
+  // Cancellations are useful for the gap-fallback rule (a cancelled MK
+  // Mass shouldn't count as "covered"), but we don't render them — they
+  // were noisy in the schedule. visibility filter saw them; display
+  // doesn't.
+  const services = dayServices.filter(visible).filter(s => !s.cancelled);
   $("dayContainer").innerHTML = dayBlock(selectedLabel(), selectedDate(), services);
   $("btnNearby").setAttribute("aria-pressed", INCLUDE_NEARBY ? "true" : "false");
 }
@@ -642,21 +646,19 @@ function render() {
 /* ---------- Share / Copy ---------- */
 
 function plainTextForDay(label, dateISO, services) {
+  // Cancellations are useful on the page (so users see "no mass at X
+  // today") but noisy in copied/shared text — drop them.
+  services = services.filter(s => !s.cancelled);
   const masses = services.filter(s => s.bucket === "mass").sort((a,b)=>timeKey(a.time).localeCompare(timeKey(b.time)));
   const conf   = services.filter(s => s.bucket === "confession").sort((a,b)=>timeKey(a.time).localeCompare(timeKey(b.time)));
   const ador   = services.filter(s => s.bucket === "adoration").sort((a,b)=>timeKey(a.time).localeCompare(timeKey(b.time)));
 
-  // WhatsApp/Telegram-friendly: bold via *…*, strikethrough via ~…~,
-  // single-line rows with " · " separator (which renders nicely as a
-  // mid-dot in plain text). Cancellations use a strikethrough + tail
-  // marker so they read at a glance.
+  // WhatsApp/Telegram-friendly: bold via *…*, single-line rows with " · "
+  // separator (renders nicely as a mid-dot in plain text).
   const fmt = (s) => {
     const m = placeMeta(s);
     const place = m.postcode ? `${m.church}, ${m.postcode}` : m.church;
     const lang = s.language ? ` · ${s.language}` : "";
-    if (s.cancelled) {
-      return `— · ${m.area} · ~${place}~ · No Mass`;
-    }
     return `${formatTime(s.time)} · ${m.area} · ${place}${lang}`;
   };
 
@@ -678,7 +680,7 @@ function buildShareText() {
   const date = selectedDate();
   const dayServices = all.filter(s => s.date === date);
   const visible = buildVisibilityFilter(dayServices, INCLUDE_NEARBY);
-  const services = dayServices.filter(visible);
+  const services = dayServices.filter(visible).filter(s => !s.cancelled);
   const host = (location.host || "mkmasstimings.pages.dev").replace(/^www\./, "");
   return [
     plainTextForDay(selectedLabel(), date, services),

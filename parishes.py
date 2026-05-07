@@ -34,7 +34,7 @@ PARISHES: list[Parish] = [
         location="Milton Keynes",
     ),
     Parish(
-        name="Catholic Bletchley (Holy Family / St Thomas Aquinas)",
+        name="Catholic Bletchley (All Saints / St Thomas Aquinas)",
         source_url="https://catholic-bletchley.com/",
         strategy="pdf_archive",
         location="Bletchley",
@@ -96,6 +96,6 @@ PARISHES: list[Parish] = [
         name="MK Parishes Newsletter (Mailchimp)",
         source_url="https://us19.campaign-archive.com/home/?u=24790f2492cfb4670c635f745&id=2ebd0e3fcd",
         strategy="mailchimp",
-        location="Milton Keynes (multi-parish)",
+        location="St Barnabas Cluster",
     ),
 ]

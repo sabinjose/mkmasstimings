@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T21:50:25.985808+00:00",
+  "generated_at": "2026-05-08T05:06:27.735665+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -563,6 +563,18 @@
           "church_location": "Olney",
           "language": null,
           "notes": "(Kenn Sheridan RIP)",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
+        },
+        {
+          "date": "2026-05-08",
+          "day": "Friday",
+          "time": "10:00",
+          "type": "Service of Word & Holy Communion",
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
+          "language": null,
+          "notes": null,
           "area": "Olney",
           "postcode": "MK46 5HH"
         }
@@ -1864,12 +1876,12 @@
         {
           "date": "2026-05-04",
           "day": "Monday",
-          "time": null,
+          "time": "12:30",
           "type": "Mass",
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
-          "notes": "No Mass",
+          "notes": null,
           "area": "Central MK",
           "postcode": "MK9 2ES"
         },
@@ -1896,6 +1908,18 @@
           "notes": "Fr Stephen McGuinness Anniversary",
           "area": "Shenley Church End",
           "postcode": "MK5 6DX"
+        },
+        {
+          "date": "2026-05-08",
+          "day": "Friday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "St Bede's",
+          "church_location": "Newport Pagnell",
+          "language": null,
+          "notes": null,
+          "area": "Newport Pagnell",
+          "postcode": "MK16 8EN"
         }
       ],
       "confidence": "high",

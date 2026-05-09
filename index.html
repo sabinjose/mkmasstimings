@@ -430,11 +430,17 @@ function classify(svc) {
   return "adoration";
 }
 
+// Service types we never render — Rosary collides visually with Adoration
+// when both are scheduled at the same time + place (e.g. St Augustine's
+// 'Adoration/ Rosary' splits into two same-time same-church rows).
+const HIDDEN_TYPES = new Set(["rosary"]);
+
 function flattenServices(parishes) {
   const out = [];
   for (const p of parishes) {
     if (p.error) continue;
     for (const s of p.services || []) {
+      if (HIDDEN_TYPES.has((s.type || "").toLowerCase())) continue;
       const cancelled = !!s.cancelled;
       out.push({
         ...s,

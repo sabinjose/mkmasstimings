@@ -1,6 +1,7 @@
 import { fetchData, flattenServices, todayISO, tomorrowISO, urlDateOverride } from "./flatten";
 import { buildVisibilityFilter } from "./visibility";
 import { formatTime, friendlyDay, friendlyGenerated } from "./format";
+import { copyText, shareWhatsApp, saveAsImage } from "./share";
 import type { Service } from "./types";
 
 type Day = "today" | "tomorrow";
@@ -150,6 +151,29 @@ async function init() {
   $("btnNearby")?.addEventListener("click", () => {
     STATE.includeNearby = !STATE.includeNearby;
     render();
+  });
+
+  // Share / Copy / Save image
+  function shareCtx() {
+    if (!STATE.data) return null;
+    return {
+      data: STATE.data,
+      date: selectedDate(),
+      label: STATE.selected === "tomorrow" ? "Tomorrow" as const : "Today" as const,
+      includeNearby: STATE.includeNearby,
+    };
+  }
+  $("btnShare")?.addEventListener("click", () => {
+    const ctx = shareCtx();
+    if (ctx) shareWhatsApp(ctx);
+  });
+  $("btnCopy")?.addEventListener("click", (e) => {
+    const ctx = shareCtx();
+    if (ctx) copyText(ctx, e.currentTarget as HTMLElement);
+  });
+  $("btnSaveImage")?.addEventListener("click", (e) => {
+    const ctx = shareCtx();
+    if (ctx) saveAsImage(ctx, e.currentTarget as HTMLButtonElement);
   });
 }
 

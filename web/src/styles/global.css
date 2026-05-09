@@ -80,3 +80,17 @@ body {
   margin: 0 !important;
   text-indent: 0 !important;
 }
+
+/* Reading body: each verse / paragraph ships as its own <div>. Spread
+   them out so text doesn't squash, and override Universalis' em-based
+   hanging-indent (which scales weirdly on big font sizes — creates
+   visible gaps between psalm lines) with a fixed-rem version that
+   stays consistent across A− / A / A+. */
+.reading-text > div { margin: 0 0 0.55em; }
+.reading-text > div:last-child { margin-bottom: 0; }
+.reading-text [style*="text-indent"][style*="margin-left"] {
+  text-indent: -1.6rem !important;
+  margin-left: 1.6rem !important;
+  margin-top: 0.15em !important;
+  margin-bottom: 0.15em !important;
+}

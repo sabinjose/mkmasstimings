@@ -81,8 +81,39 @@ body {
   text-indent: 0 !important;
 }
 
-/* Reading body: each verse / paragraph ships as its own <div>. Spread
-   them out so text doesn't squash. */
+/* Reading sections: the parent section sets font-size from the user's
+   A− / A / A+ choice, and every child is em-based so the section
+   label, scripture citation, pull-quote and body scale together. */
+.reading-section {
+  font-size: var(--reading-fs, 1.05rem);
+}
+.reading-label {
+  font-size: 0.66em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-ink-3);
+  margin: 0 0 0.4em;
+  font-weight: 700;
+}
+.reading-source {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.88em;
+  margin: 0 0 0.6em;
+}
+.reading-heading {
+  font-style: italic;
+  color: var(--color-ink-2);
+  font-size: 0.95em;
+  line-height: 1.4;
+  margin: 0 0 0.7em;
+}
+.reading-text {
+  font-size: 1em;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+/* Each verse / paragraph ships as its own <div>; space them out. */
 .reading-text > div { margin: 0 0 0.55em; }
 .reading-text > div:last-child { margin-bottom: 0; }
 /* Universalis ships the prose `<div style="text-align:justify;">`. At

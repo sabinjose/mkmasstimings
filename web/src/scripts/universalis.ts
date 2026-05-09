@@ -57,20 +57,22 @@ function initFontSize() {
 
 function readingSection(title: string, payload?: ReadingPayload): string {
   if (!payload) return "";
+  // Everything inside `.reading-section` is em-based so the user's A−
+  // / A / A+ choice scales the section heading, source citation,
+  // pull-quote, and body together — not just the body. Sizes set in
+  // global.css.
   const heading = payload.heading
-    ? `<div class="italic text-ink-2 text-[1rem] mb-3 leading-snug">${payload.heading}</div>`
+    ? `<div class="reading-heading">${payload.heading}</div>`
     : "";
   const source = payload.source
-    ? `<div class="text-accent font-semibold text-[0.92rem] mb-2.5">${payload.source}</div>`
+    ? `<div class="reading-source">${payload.source}</div>`
     : "";
   return `
-    <section class="universalis-html bg-surface border border-rule rounded-xl p-4 sm:p-5 mb-3.5">
-      <h2 class="text-[0.7rem] uppercase tracking-[0.12em] text-ink-3 m-0 mb-1.5 font-bold">${title}</h2>
+    <section class="reading-section universalis-html bg-surface border border-rule rounded-xl p-4 sm:p-5 mb-3.5">
+      <h2 class="reading-label">${title}</h2>
       ${source}
       ${heading}
-      <div class="reading-text leading-[1.7] text-ink" style="font-size: var(--reading-fs, 1.05rem);">
-        ${payload.text || ""}
-      </div>
+      <div class="reading-text">${payload.text || ""}</div>
     </section>`;
 }
 

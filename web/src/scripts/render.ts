@@ -129,8 +129,11 @@ function render(): void {
       : "/readings";
   }
 
-  // Reveal share actions only after first successful render
+  // Reveal share actions + footer only after first successful render
+  // (kills the brief flash where the footer paints near the top of an
+  // empty-ish skeleton page before the rows fill in).
   $("actions")?.classList.remove("hidden");
+  $("pageFooter")?.classList.remove("hidden");
 }
 
 async function init() {

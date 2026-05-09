@@ -161,6 +161,15 @@
   section.reading .text i, section.reading .text em {
     font-style: italic;
   }
+  /* Universalis ships inline color:#800000 (maroon) for cue text like
+     "or: Alleluia". That value is fine on light backgrounds but invisible
+     on the dark theme — recolour it to our accent so the cue stays
+     visible. The attribute selector targets every inline style that hard-
+     codes that maroon, including any nested span. */
+  @media (prefers-color-scheme: dark) {
+    section.reading [style*="800000"] { color: var(--accent) !important; }
+    footer.attribution [style*="800000"] { color: var(--accent) !important; }
+  }
 
   /* Loading + error states */
   .loading, .error {

@@ -41,7 +41,7 @@ function renderRow(s: Service): string {
     ? `<span class="ml-1 inline-block bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300 rounded px-1.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide">No Mass</span>`
     : "";
   const link = s.source_url
-    ? `<a href="${escapeAttr(s.source_url)}" target="_blank" rel="noopener" title="Open parish newsletter" aria-label="Open parish newsletter" class="ml-1 text-ink-3 hover:text-accent no-underline">↗</a>`
+    ? `<a href="${escapeAttr(s.source_url)}" target="_blank" rel="noopener" title="Open parish newsletter" aria-label="Open parish newsletter" class="ml-1 text-accent no-underline">↗</a>`
     : "";
   const placeClass = cancelled ? "line-through text-ink-3" : "";
   const timeClass = cancelled ? "text-ink-3" : "text-accent";

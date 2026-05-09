@@ -50,10 +50,11 @@ jobs:
           git commit -m "refresh: $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
 
-      - name: Stage Pages dist (index.html + data/latest.json only)
+      - name: Stage Pages dist (index.html + readings.html + data/latest.json)
         run: |
           mkdir -p dist/data
           cp index.html dist/
+          cp readings.html dist/
           cp data/latest.json dist/data/
 
       - name: Deploy to Cloudflare Pages

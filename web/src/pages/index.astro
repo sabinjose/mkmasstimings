@@ -1,0 +1,50 @@
+---
+import Layout from "../components/Layout.astro";
+import Toolbar from "../components/Toolbar.astro";
+import ShareActions from "../components/ShareActions.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="MK Mass Times">
+  <header class="my-1 mb-2.5">
+    <h1 class="text-[1.15rem] font-bold tracking-tight leading-tight m-0 mb-0.5">
+      Mass Times — Milton Keynes &amp; Area
+    </h1>
+    <div id="subhead" class="text-ink-2 text-[0.92rem] font-medium">Loading…</div>
+    <div id="meta" class="flex gap-1.5 flex-wrap text-[0.72rem] text-ink-3 mt-1"></div>
+  </header>
+
+  <Toolbar />
+
+  <div id="dayContainer">
+    <!-- Skeleton: three bucket sections with shimmering rows so the page
+         feels populated during load and the footer stays below the fold. -->
+    {[
+      { label: "Holy Mass", rows: 6 },
+      { label: "Confession", rows: 2 },
+      { label: "Adoration", rows: 1 },
+    ].map((b) => (
+      <section class="my-3.5">
+        <h3 class="flex items-center gap-1.5 text-[0.7rem] uppercase tracking-[0.1em] text-ink-3 m-0 mb-1.5 font-bold">
+          {b.label}
+        </h3>
+        <div class="bg-surface border border-rule rounded-[10px] overflow-hidden">
+          {Array.from({ length: b.rows }).map(() => (
+            <div class="grid grid-cols-[64px_minmax(0,1.1fr)_minmax(0,2fr)] gap-x-2.5 px-3 py-3 border-t border-rule first:border-t-0 items-baseline">
+              <div class="h-3.5 w-12 bg-rule rounded shimmer"></div>
+              <div class="h-3.5 w-3/4 bg-rule rounded shimmer"></div>
+              <div class="h-3.5 w-full bg-rule rounded shimmer"></div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <ShareActions />
+  <Footer />
+
+  <script>
+    import "../scripts/render.ts";
+  </script>
+</Layout>

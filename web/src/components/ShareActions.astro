@@ -1,0 +1,16 @@
+---
+// Hidden by default — JS reveals once data is loaded. Kills the FOUC
+// where WhatsApp green sat at the top of an empty page on slow loads.
+---
+
+<div id="actions" class="flex gap-1.5 mt-4 flex-wrap hidden">
+  <button id="btnShare" type="button"
+    class="inline-flex items-center gap-1.5 py-2.5 px-4 rounded-lg border border-whatsapp bg-whatsapp text-white cursor-pointer font-medium text-[0.92rem] active:translate-y-px"
+  >📲 Share on WhatsApp</button>
+  <button id="btnCopy" type="button"
+    class="inline-flex items-center gap-1.5 py-2.5 px-4 rounded-lg border border-rule bg-surface text-ink cursor-pointer font-medium text-[0.92rem] active:translate-y-px"
+  >📋 Copy</button>
+  <button id="btnSaveImage" type="button"
+    class="inline-flex items-center gap-1.5 py-2.5 px-4 rounded-lg border border-rule bg-surface text-ink cursor-pointer font-medium text-[0.92rem] active:translate-y-px"
+  >🖼️ Save image</button>
+</div>

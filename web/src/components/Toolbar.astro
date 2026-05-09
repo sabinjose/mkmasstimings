@@ -1,0 +1,20 @@
+---
+import DayToggle from "./DayToggle.astro";
+---
+
+<div class="flex items-center gap-2 flex-wrap my-2.5">
+  <DayToggle />
+  <button
+    id="btnNearby"
+    type="button"
+    aria-pressed="false"
+    title="Include parishes outside Milton Keynes when their Masses fill a time-of-day gap"
+    class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg border border-rule bg-surface text-ink-2 cursor-pointer font-medium text-[0.82rem] active:translate-y-px aria-pressed:bg-accent aria-pressed:text-on-accent aria-pressed:border-accent"
+  >+ Nearby</button>
+  <a
+    id="btnReadings"
+    href="/readings"
+    title="Today's Mass readings (Diocese of Northampton)"
+    class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg border border-rule bg-surface text-ink no-underline cursor-pointer font-medium text-[0.82rem] active:translate-y-px"
+  >📖 Readings</a>
+</div>

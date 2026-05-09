@@ -1,0 +1,29 @@
+---
+// Today / Tomorrow toggle — purely cosmetic shell. The accompanying
+// client script in index.astro flips `data-day` on <body> and manages
+// the .active class.
+---
+
+<div class="day-toggle inline-flex bg-surface border border-rule rounded-full p-0.5 shrink-0" role="tablist" aria-label="Day">
+  <button
+    id="btnToday"
+    type="button"
+    role="tab"
+    class="day-btn day-btn-active border-0 bg-transparent text-ink-2 py-1.5 px-3.5 rounded-full font-medium text-[0.85rem] cursor-pointer"
+    data-day="today"
+  >Today</button>
+  <button
+    id="btnTomorrow"
+    type="button"
+    role="tab"
+    class="day-btn border-0 bg-transparent text-ink-2 py-1.5 px-3.5 rounded-full font-medium text-[0.85rem] cursor-pointer"
+    data-day="tomorrow"
+  >Tomorrow</button>
+</div>
+
+<style is:global>
+  .day-btn-active {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+</style>

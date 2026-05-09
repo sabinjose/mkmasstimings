@@ -1,0 +1,56 @@
+---
+import type { Service } from "../scripts/types";
+import { formatTime } from "../scripts/format";
+
+interface Props {
+  service: Service;
+}
+
+const { service: s } = Astro.props;
+const time = s.cancelled ? "—" : formatTime(s.time);
+const place = s.postcode ? `${s.church || s.area || ""}, ${s.postcode}` : (s.church || s.area || "");
+const cancelled = s.cancelled;
+---
+
+<div
+  class:list={[
+    "grid grid-cols-[64px_minmax(0,1.1fr)_minmax(0,2fr)] gap-x-2.5 px-3 py-2 border-t border-rule first:border-t-0 items-baseline",
+    cancelled && "row-cancelled",
+  ]}
+>
+  <div class:list={[
+    "tabular-nums font-bold text-[0.95rem] leading-snug whitespace-nowrap",
+    cancelled ? "text-ink-3" : "text-accent",
+  ]}>
+    {time}
+  </div>
+  <div class:list={[
+    "font-semibold break-words",
+    cancelled ? "text-ink-3" : "text-ink",
+  ]}>
+    {s.area}
+  </div>
+  <div class="text-ink-2 break-words leading-snug min-w-0">
+    <span class:list={[cancelled && "line-through text-ink-3"]}>{place}</span>
+    {s.language && (
+      <span class="ml-1 inline-block bg-tag-bg text-tag-ink rounded px-1.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide">
+        {s.language}
+      </span>
+    )}
+    {cancelled && (
+      <span class="ml-1 inline-block bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300 rounded px-1.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide">
+        No Mass
+      </span>
+    )}
+    {s.source_url && (
+      <a
+        href={s.source_url}
+        target="_blank"
+        rel="noopener"
+        title="Open parish newsletter"
+        aria-label="Open parish newsletter"
+        class="ml-1 text-ink-3 hover:text-accent no-underline"
+      >↗</a>
+    )}
+  </div>
+</div>

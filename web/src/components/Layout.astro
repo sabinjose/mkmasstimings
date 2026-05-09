@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  favicon?: string;
+}
+
+const {
+  title,
+  description = "Catholic mass times across Milton Keynes and the surrounding area, refreshed from parish newsletters.",
+  favicon = "%E2%9C%9D%EF%B8%8F",  /* default: ✝️ */
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link
+    rel="icon"
+    href={`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E${favicon}%3C/text%3E%3C/svg%3E`}
+  />
+</head>
+<body class="bg-bg text-ink mx-auto max-w-[640px] px-3 sm:px-5"
+      style="padding-top: max(env(safe-area-inset-top), 12px); padding-bottom: max(env(safe-area-inset-bottom), 28px);">
+  <slot />
+</body>
+</html>

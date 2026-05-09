@@ -1,0 +1,26 @@
+---
+import type { Service } from "../scripts/types";
+import ServiceRow from "./ServiceRow.astro";
+
+interface Props {
+  title: string;
+  services: Service[];
+  emptyText?: string;
+}
+
+const { title, services, emptyText } = Astro.props;
+---
+
+<section class="my-3.5">
+  <h3 class="flex items-center gap-1.5 text-[0.7rem] uppercase tracking-[0.1em] text-ink-3 m-0 mb-1.5 font-bold">
+    {title}
+    {services.length > 0 && <span class="text-ink-3 font-medium text-[0.65rem]">{services.length}</span>}
+  </h3>
+  {services.length > 0 ? (
+    <div class="bg-surface border border-rule rounded-[10px] overflow-hidden">
+      {services.map((s) => <ServiceRow service={s} />)}
+    </div>
+  ) : (
+    emptyText && <div class="text-ink-3 text-[0.85rem] py-1">{emptyText}</div>
+  )}
+</section>

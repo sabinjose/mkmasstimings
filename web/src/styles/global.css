@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* Tailwind v4 auto-scans .astro / .html, but the row-rendering helpers
+   in scripts/render.ts emit Tailwind classes from string templates that
+   need to be picked up too. */
+@source "../scripts/**/*.ts";
+
+/* Warm parchment palette — same values as the v1 hand-rolled CSS so the
+   visual identity carries over. Tailwind v4 reads these as the colour
+   tokens (bg-bg, text-ink, etc.) and dark mode swaps them via prefers-
+   color-scheme media query at the :root level. */
+@theme {
+  --color-bg: #f7f3ec;
+  --color-surface: #ffffff;
+  --color-ink: #1a1816;
+  --color-ink-2: #4d4843;
+  --color-ink-3: #807a72;
+  --color-rule: #ebe5db;
+  --color-accent: #6a3e2e;
+  --color-tag-bg: #efe4d3;
+  --color-tag-ink: #6a3e2e;
+  --color-whatsapp: #25d366;
+  --color-on-accent: #ffffff;
+
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f0e0c;
+    --color-surface: #1b1916;
+    --color-ink: #f5f0e8;
+    --color-ink-2: #c4bdb1;
+    --color-ink-3: #8a8378;
+    --color-rule: #2a2722;
+    --color-accent: #e9b88f;
+    --color-tag-bg: #2c2218;
+    --color-tag-ink: #e9b88f;
+    --color-on-accent: #1a1410;
+  }
+}
+
+/* Don't reset body margin — `mx-auto` on body is what centres the
+   column. Tailwind preflight already zeroes html margin/padding. */
+html { background: var(--color-bg); }
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Skeleton shimmer — left-to-right gradient sweep across placeholder
+   blocks while data loads. Calmer than `animate-pulse` opacity strobe;
+   reads as "we're working on it". */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0;  }
+}
+.shimmer {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-rule) 0%,
+    color-mix(in srgb, var(--color-rule) 60%, var(--color-surface)) 50%,
+    var(--color-rule) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+/* Universalis injects HTML with inline styles — including a dark maroon
+   (#800000) that disappears on our dark theme. Recolour it to accent. */
+@media (prefers-color-scheme: dark) {
+  .universalis-html [style*="800000"] { color: var(--color-accent) !important; }
+}
+/* And neutralise Universalis' hanging-indent on single-line wrappers. */
+.day-line div, .day-line b {
+  display: inline;
+  margin: 0 !important;
+  text-indent: 0 !important;
+}

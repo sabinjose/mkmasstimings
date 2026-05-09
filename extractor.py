@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from datetime import date, timedelta
 from typing import Any
 
@@ -20,7 +21,7 @@ from litellm import completion
 # the chosen model rejects, so the same call works across providers.
 litellm.drop_params = True
 
-DEFAULT_MODEL = os.environ.get("MASSTIMINGS_MODEL", "openai/gpt-4o-mini")
+DEFAULT_MODEL = os.environ.get("MASSTIMINGS_MODEL", "openai/gpt-5")
 
 JSON_SCHEMA_HINT = """
 Return ONLY a JSON object matching this schema (no prose, no markdown fences):
@@ -72,12 +73,22 @@ SYSTEM_PROMPT = (
     "EVEN IF that day's entry in the dated schedule says 'No Mass' for the English "
     "service — recurring Polish or other-language Masses can still happen.\n\n"
     "COMBINED LITURGIES: when one newsletter line mentions multiple liturgies happening "
-    "at the same time (e.g. 'Rosary & Confessions', 'Adoration with Confession', "
-    "'Confession + Rosary', 'Exposition followed by Benediction'), emit a SEPARATE "
-    "service entry for EACH liturgy at the same time, NOT one row with the second "
-    "stuffed into `notes`. Reason: the website groups by `type` (Confessions, Adoration, "
-    "etc.) and a confession hidden inside a Rosary row's notes won't appear in the "
-    "Confessions section.\n\n"
+    "at the same time, emit a SEPARATE service entry for EACH liturgy at the same time, "
+    "NOT one row with the second stuffed into `notes`. The combinator can be ANY of "
+    "'&', 'and', 'with', '+', '/', 'followed by', '/ ' (slash plus space — common in "
+    "bulletins printed as 'Adoration/ Confession' or 'Adoration/ Rosary'). For each "
+    "such pair, emit BOTH liturgies as separate entries — never collapse them. "
+    "Examples that MUST split into two rows:\n"
+    "  - 'Rosary & Confessions' → Rosary + Confession\n"
+    "  - 'Adoration/ Confession' → Adoration + Confession\n"
+    "  - 'Adoration/ Rosary' → Adoration + Rosary\n"
+    "  - 'Adoration/ Morning Prayer (Lauds)' → Adoration + Rosary (treat Morning "
+    "    Prayer / Lauds as a Rosary-style devotion)\n"
+    "  - 'Confession + Rosary' → Confession + Rosary\n"
+    "  - 'Exposition followed by Benediction' → Adoration + Benediction\n"
+    "Reason: the website groups by `type` (Confessions, Adoration, etc.) and a "
+    "confession hidden inside a Rosary row's notes won't appear in the Confessions "
+    "section.\n\n"
     "CANCELLATIONS: emit a service entry ONLY when a specific LITURGY is cancelled "
     "(e.g. 'No Mass on Wednesday', 'Adoration cancelled this week', 'No Confessions "
     "Saturday'). For these set `cancelled` to true, `time` to null, and `notes` to "
@@ -130,6 +141,23 @@ SYSTEM_PROMPT = (
 )
 
 
+_COMBINED_LITURGY_RE = re.compile(
+    r"(\d{1,2}[:.]?\d{0,2}\s?(?:am|pm|AM|PM|noon)?)\s*"
+    r"(Adoration|Exposition|Rosary|Confession|Reconciliation)\s*"
+    r"/\s*"
+    r"(Adoration|Exposition|Rosary|Confession|Reconciliation|Morning\s+Prayer\s*\(?Lauds?\)?|Lauds|Benediction)",
+)
+
+
+def _split_slash_combined_liturgies(text: str) -> str:
+    """Rewrite 'TIME X/ Y' as two lines so the LLM doesn't have to recognise
+    a slash as a list separator. Handles bulletins (notably St Augustine's)
+    that print combined liturgies as 'Adoration/ Confession'."""
+    def repl(m: "re.Match[str]") -> str:
+        return f"{m.group(1)} {m.group(2)}\n{m.group(1)} {m.group(3)}"
+    return _COMBINED_LITURGY_RE.sub(repl, text)
+
+
 def extract_mass_times(
     parish_name: str,
     text: str,
@@ -139,6 +167,7 @@ def extract_mass_times(
     max_chars: int = 30_000,
 ) -> dict[str, Any]:
     """Call the configured LLM to turn raw newsletter text into structured data."""
+    text = _split_slash_combined_liturgies(text)
     if len(text) > max_chars:
         text = text[:max_chars]
 
@@ -167,14 +196,17 @@ def extract_mass_times(
             {"role": "user", "content": user_msg},
         ],
         "temperature": 0,
-        "max_tokens": 4000,
+        "max_tokens": 8000,
         "response_format": {"type": "json_object"},
     }
-    # gpt-5 reasoning models waste the token budget on reasoning by default.
-    # Disable reasoning so the budget goes to JSON output.
+    # gpt-5 family is a reasoning model that allocates output tokens to
+    # internal reasoning by default. 'medium' gives the model enough
+    # headroom to follow multi-step instructions consistently — extract
+    # both trailing-week and focal-week blocks, split combined liturgies,
+    # honour parish hints. Lower levels skip steps under load.
     if "gpt-5" in model:
-        kwargs["reasoning_effort"] = "none"
-        kwargs["max_tokens"] = 8000
+        kwargs["reasoning_effort"] = "medium"
+        kwargs["max_tokens"] = 16000
 
     resp = completion(**kwargs)
     content = resp.choices[0].message.content or ""

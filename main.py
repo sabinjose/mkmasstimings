@@ -145,13 +145,14 @@ def coverage_starts_after_today(services: list[dict], today_str: str) -> bool:
 def parish_key(p: Parish | dict) -> str:
     """Stable key for matching old/new parish entries.
 
-    `location` is set from config (we override the LLM's value in process)
-    and is unique across PARISHES, so it round-trips cleanly between runs
-    even when the model rewrites the parish name.
+    Built from (name, location) because location alone collides when two
+    distinct parishes share a town (e.g. English St Mary's Dunstable and
+    Polska Parafia Dunstable). The name is set from config and round-trips
+    cleanly between runs — `process()` writes `parish` from `parish.name`.
     """
     if isinstance(p, Parish):
-        return p.location
-    return p.get("location", "") or ""
+        return f"{p.name}|{p.location}"
+    return f"{p.get('parish','') or ''}|{p.get('location','') or ''}"
 
 
 def load_old(path: str) -> dict[str, dict]:

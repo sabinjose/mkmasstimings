@@ -272,37 +272,33 @@ def find_google_doc_export_url(page_url: str) -> str | None:
 
 
 def fetch_gdoc_text(url: str) -> str:
-    """Fetch a Google Docs HTML-export URL and return cleaned body HTML.
+    """Fetch a Google Docs HTML-export URL and return readable text.
 
-    The HTML structure (<table>/<tr>/<td>) disambiguates multi-column
-    timetables that the plain-text export interleaves. We strip Google's
-    cosmetic noise — class/style/id attributes, default colspan/rowspan,
-    and <span>/<p> wrappers around plain text — to keep the payload
-    LLM-friendly without losing semantic structure.
+    Multi-column timetables (e.g. one column per church) are converted to
+    pipe-separated text rows so the LLM doesn't have to parse raw HTML
+    table markup — gpt-4o-mini routinely hallucinates times when it tries.
+    Non-table content is returned as plain text.
     """
     r = http_get(url)
     html = r.content.decode("utf-8", errors="replace")
     soup = BeautifulSoup(html, "lxml")
-    # Strip cosmetic attributes everywhere.
-    for tag in soup.find_all(True):
-        for attr in ("class", "style", "id"):
-            tag.attrs.pop(attr, None)
-        # colspan/rowspan="1" are defaults — drop them.
-        for attr in ("colspan", "rowspan"):
-            if tag.attrs.get(attr) == "1":
-                tag.attrs.pop(attr, None)
-    # Unwrap span / p — they only add bulk; whitespace already separates text.
-    for tag in soup.find_all(["span"]):
-        tag.unwrap()
-    for tag in soup.find_all("p"):
-        tag.insert_after("\n")
-        tag.unwrap()
+    # Replace each <table> with a markdown-style grid so column structure
+    # survives once we drop the rest of the HTML.
+    for table in soup.find_all("table"):
+        rows_md = []
+        for row in table.find_all("tr"):
+            cells = [
+                " ".join(td.get_text(" ", strip=True).split())
+                for td in row.find_all(["td", "th"])
+            ]
+            rows_md.append("| " + " | ".join(cells) + " |")
+        table.replace_with("\n" + "\n".join(rows_md) + "\n")
     body = soup.body or soup
-    out = str(body)
-    # Collapse runs of whitespace inside tags (Google emits long blank padding).
-    out = re.sub(r"[ \t]+", " ", out)
-    out = re.sub(r"\n{3,}", "\n\n", out)
-    return out
+    text = body.get_text("\n", strip=False)
+    # Collapse whitespace runs (Google emits long padding) and blank lines.
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
 
 
 def find_latest_mailchimp_campaign(archive_url: str) -> str | None:

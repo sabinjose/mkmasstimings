@@ -36,7 +36,7 @@ jobs:
         run: uv run main.py --pretty --out data/latest.json
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          MASSTIMINGS_MODEL: openai/gpt-4o-mini
+          MASSTIMINGS_MODEL: openai/gpt-5
 
       - name: Commit refreshed data
         run: |

@@ -149,7 +149,15 @@ PARISHES: list[Parish] = [
             "\n"
             "Recurring services not in the dated grid: Polish Mass "
             "Thursday 19:00 and Sunday 14:00 — emit one entry per "
-            "matching day in the focal week."
+            "matching day in the focal week.\n"
+            "\n"
+            "Combined liturgies in the grid MUST be split into separate "
+            "service entries at the same time — e.g. 'Adoration/ "
+            "Confession' becomes one Adoration entry AND one Confession "
+            "entry; 'Adoration/ Rosary' becomes one Adoration entry "
+            "AND one Rosary entry; 'Adoration/ Morning Prayer (Lauds)' "
+            "becomes Adoration + Rosary (treat 'Morning Prayer/ Lauds' "
+            "as a Rosary-style devotion)."
         ),
     ),
     Parish(
@@ -181,6 +189,17 @@ PARISHES: list[Parish] = [
             "services with time=null. Include one-off / special services even "
             "if not in the schedule below — match them to whichever church "
             "they appear in.\n"
+            "\n"
+            "Saturdays in this bulletin commonly have multiple service "
+            "blocks (morning Mass + Confessions at one church AND an "
+            "evening Vigil Mass at the other). Read every line under the "
+            "Saturday heading and emit every printed time — don't stop "
+            "after the first Mass.\n"
+            "\n"
+            "Holy days of obligation (Ascension, Assumption, etc.) usually "
+            "have multiple Masses across both churches at different times "
+            "of day. Emit every Mass time printed under the feast — do "
+            "not collapse them into one.\n"
             "\n"
             "Regular church assignment (use to populate church/"
             "church_location only):\n"
@@ -225,6 +244,15 @@ PARISHES: list[Parish] = [
         strategy="pdf_archive",
         location="Leighton Buzzard",
         outside_mk=True,
+        hints=(
+            "Bulletin lists every weekday with a Mass intention beside "
+            "it. Holy days of obligation (e.g. 'The Ascension') still "
+            "have a Mass at the time printed in the bulletin — extract "
+            "it, don't skip it just because the day's heading reads as "
+            "a feast title rather than 'Mass'. Day-specific "
+            "cancellations such as 'No Mass today' on a particular "
+            "weekday must be emitted with cancelled=true."
+        ),
     ),
     Parish(
         name="Polska Parafia (Matki Bożej Częstochowskiej)",
@@ -294,5 +322,17 @@ PARISHES: list[Parish] = [
         source_url="https://us19.campaign-archive.com/home/?u=24790f2492cfb4670c635f745&id=2ebd0e3fcd",
         strategy="mailchimp",
         location="St Barnabas Cluster",
+        hints=(
+            "Each weekday in the schedule lists the daily Mass at one "
+            "or more churches in the cluster (Christ the Cornerstone, "
+            "Our Lady of Lourdes, St Edward's, Christ the King, St "
+            "Bede's, St Mary's Woburn Sands). EVERY printed time + "
+            "church entry under each weekday is a real Mass — do not "
+            "skip any. Set `church` to the church name and "
+            "`church_location` to its area (Coffee Hall / Shenley "
+            "Church End / Kents Hill / Newport Pagnell / Woburn Sands "
+            "/ Central MK). Cancellations like 'NO MORNING MASS' must "
+            "be emitted with cancelled=true."
+        ),
     ),
 ]

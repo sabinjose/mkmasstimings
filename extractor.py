@@ -158,6 +158,96 @@ def _split_slash_combined_liturgies(text: str) -> str:
     return _COMBINED_LITURGY_RE.sub(repl, text)
 
 
+VERIFICATION_PROMPT = (
+    "You are auditing a parish-bulletin extraction for missed liturgies. "
+    "Compare the bulletin text against the JSON list of already-extracted "
+    "services. Output a JSON object with a single key `missing_services`, "
+    "an array of full service objects (date, day, time, type, church, "
+    "church_location, language, cancelled, notes) for every Mass / Vigil "
+    "/ Confession / Adoration / Rosary / Benediction / cancellation that "
+    "IS in the bulletin but IS NOT in the extracted list.\n\n"
+    "PROCEDURE — go through the bulletin systematically:\n"
+    "1. Walk every weekday from the bulletin's earliest dated entry to "
+    "   its latest. For each day, list every printed time and confirm "
+    "   each is in the extracted list. Don't stop at the first miss.\n"
+    "2. Don't trust paragraph boundaries. The schedule may end abruptly "
+    "   and transition straight into body text (e-newsletter blurbs, "
+    "   announcements). Schedule entries adjacent to body text are still "
+    "   real services.\n"
+    "3. For multi-church bulletins (table or two-column layout), check "
+    "   every column independently for every day.\n"
+    "4. Feast-day headings ('The Ascension Mass 10am', 'Solemnity of …') "
+    "   describe a real Mass at the printed time. Emit them.\n"
+    "5. Weekday Masses without an intention (just 'Friday 15th 10am - "
+    "   St Bede's -') are still real Masses. The trailing dash means "
+    "   'no intention given', not 'no Mass'.\n\n"
+    "Be strict: only emit a service if the bulletin actually shows it "
+    "with a concrete clock time (or is an explicit cancellation). Don't "
+    "invent. Don't re-emit. If nothing is missing, return "
+    "{\"missing_services\": []}."
+)
+
+
+def _verify_completeness(
+    parish_name: str,
+    text: str,
+    extracted: list[dict],
+    *,
+    hints: str,
+    model: str,
+    calendar: str,
+) -> list[dict]:
+    """Second LLM pass: ask the model what the first pass missed."""
+    hints_block = (
+        f"\nKNOWN-SCHEDULE HINTS (authoritative — use these to disambiguate):\n{hints}\n"
+        if hints else ""
+    )
+    user_msg = (
+        f"Parish: {parish_name}\n"
+        f"\n"
+        f"CALENDAR REFERENCE (ISO date → weekday):\n{calendar}\n"
+        f"{hints_block}\n"
+        f"Already-extracted services (JSON):\n{json.dumps(extracted, ensure_ascii=False)}\n\n"
+        f"Bulletin text:\n<<<\n{text}\n>>>\n\n"
+        f"Return ONLY a JSON object: {{\"missing_services\": [...]}}"
+    )
+    kwargs: dict[str, Any] = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": VERIFICATION_PROMPT},
+            {"role": "user", "content": user_msg},
+        ],
+        "temperature": 0,
+        "max_tokens": 16000,
+        "response_format": {"type": "json_object"},
+    }
+    if "gpt-5" in model:
+        kwargs["reasoning_effort"] = "high"
+    try:
+        resp = completion(**kwargs)
+        content = resp.choices[0].message.content or "{}"
+        data = json.loads(content)
+        return data.get("missing_services") or []
+    except Exception:
+        return []
+
+
+def _merge_services(primary: list[dict], extras: list[dict]) -> list[dict]:
+    """Union of two services lists, deduping on (date, time, type, church)."""
+    seen = {
+        (s.get("date"), s.get("time"), s.get("type"), s.get("church"))
+        for s in primary
+    }
+    out = list(primary)
+    for s in extras:
+        key = (s.get("date"), s.get("time"), s.get("type"), s.get("church"))
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(s)
+    return out
+
+
 def extract_mass_times(
     parish_name: str,
     text: str,
@@ -200,17 +290,30 @@ def extract_mass_times(
         "response_format": {"type": "json_object"},
     }
     # gpt-5 family is a reasoning model that allocates output tokens to
-    # internal reasoning by default. 'medium' gives the model enough
-    # headroom to follow multi-step instructions consistently — extract
-    # both trailing-week and focal-week blocks, split combined liturgies,
-    # honour parish hints. Lower levels skip steps under load.
+    # internal reasoning by default. 'high' is what's needed to reliably
+    # capture every dated entry — at 'medium' the model still drops
+    # individual weekday Masses on busy bulletins (MK Parishes Tue/Fri,
+    # Sacred Heart LB feast-day, etc.). The cost premium pays for itself:
+    # missing a Mass is unacceptable, the bulletin already has it.
     if "gpt-5" in model:
-        kwargs["reasoning_effort"] = "medium"
-        kwargs["max_tokens"] = 16000
+        kwargs["reasoning_effort"] = "high"
+        kwargs["max_tokens"] = 24000
 
     resp = completion(**kwargs)
     content = resp.choices[0].message.content or ""
-    return _parse_json(content, parish_name)
+    parsed = _parse_json(content, parish_name)
+
+    # Verification pass: ask the model what the first pass missed. Catches
+    # systematic skips (feast-day Masses, weekday entries that don't match
+    # the most-common pattern, multi-church columns) that the model drops
+    # on its first read of the bulletin even at reasoning_effort=high.
+    services = parsed.get("services") or []
+    extras = _verify_completeness(
+        parish_name, text, services, hints=hints, model=model, calendar=calendar,
+    )
+    if extras:
+        parsed["services"] = _merge_services(services, extras)
+    return parsed
 
 
 def _build_calendar(today: date, *, days_back: int, days_forward: int) -> str:

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T14:47:34.639871+00:00",
+  "generated_at": "2026-05-09T15:12:48.035922+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -345,7 +345,7 @@
           "postcode": "MK13 7PL"
         },
         {
-          "date": "2026-05-17",
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "14:00",
           "type": "Mass",
@@ -354,6 +354,45 @@
           "language": "Polish",
           "cancelled": false,
           "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
+        },
+        {
+          "date": "2026-05-12",
+          "day": "Tuesday",
+          "time": "10:45",
+          "type": "Funeral",
+          "church": "St Augustine's",
+          "church_location": "Heelands",
+          "language": null,
+          "cancelled": false,
+          "notes": "Funeral for Alice Nora Coutts",
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
+        },
+        {
+          "date": "2026-05-13",
+          "day": "Wednesday",
+          "time": "12:15",
+          "type": "Funeral",
+          "church": "St Augustine's",
+          "church_location": "Heelands",
+          "language": null,
+          "cancelled": false,
+          "notes": "Funeral for Michael O’Connell",
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
+        },
+        {
+          "date": "2026-05-19",
+          "day": "Tuesday",
+          "time": "12:00",
+          "type": "Funeral",
+          "church": "St Augustine's",
+          "church_location": "Heelands",
+          "language": null,
+          "cancelled": false,
+          "notes": "Funeral for Cathy McSweeney",
           "area": "Heelands",
           "postcode": "MK13 7PL"
         }
@@ -420,6 +459,58 @@
           "notes": null,
           "area": "Bletchley",
           "postcode": "MK2 2JE"
+        },
+        {
+          "date": "2026-05-04",
+          "day": "Monday",
+          "time": null,
+          "type": "Mass Cancellation",
+          "church": "St Thomas Aquinas",
+          "church_location": "Bletchley",
+          "language": null,
+          "cancelled": true,
+          "notes": "No Mass today",
+          "area": "Bletchley",
+          "postcode": "MK2 2JE"
+        },
+        {
+          "date": "2026-05-05",
+          "day": "Tuesday",
+          "time": null,
+          "type": "Mass Cancellation",
+          "church": "All Saints",
+          "church_location": "Bletchley",
+          "language": null,
+          "cancelled": true,
+          "notes": "No Mass today",
+          "area": "Bletchley",
+          "postcode": "MK3 6AN"
+        },
+        {
+          "date": "2026-05-07",
+          "day": "Thursday",
+          "time": null,
+          "type": "Mass Cancellation",
+          "church": "All Saints",
+          "church_location": "Bletchley",
+          "language": null,
+          "cancelled": true,
+          "notes": "No Mass today",
+          "area": "Bletchley",
+          "postcode": "MK3 6AN"
+        },
+        {
+          "date": "2026-05-08",
+          "day": "Friday",
+          "time": null,
+          "type": "Mass Cancellation",
+          "church": "St Thomas Aquinas",
+          "church_location": "Bletchley",
+          "language": null,
+          "cancelled": true,
+          "notes": "No Mass today",
+          "area": "Bletchley",
+          "postcode": "MK2 2JE"
         }
       ],
       "confidence": "high",
@@ -464,26 +555,13 @@
           "day": "Sunday",
           "time": "11:30",
           "type": "Mass",
-          "church": "St Mary Magdalene",
-          "church_location": "Stony Stratford",
+          "church": "St Francis de Sales",
+          "church_location": "Wolverton",
           "language": null,
           "cancelled": false,
           "notes": "Brian & the O’Neill Family",
-          "area": "Stony Stratford",
-          "postcode": "MK11 1AT"
-        },
-        {
-          "date": "2026-05-10",
-          "day": "Sunday",
-          "time": "11:45",
-          "type": "Divine Mercy",
-          "church": "St Mary Magdalene",
-          "church_location": "Stony Stratford",
-          "language": null,
-          "cancelled": false,
-          "notes": null,
-          "area": "Stony Stratford",
-          "postcode": "MK11 1AT"
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
         },
         {
           "date": "2026-05-11",
@@ -588,6 +666,32 @@
           "notes": "James Brennan & Brennan Family RIP",
           "area": "Stony Stratford",
           "postcode": "MK11 1AT"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "St Francis de Sales",
+          "church_location": "Wolverton",
+          "language": null,
+          "cancelled": false,
+          "notes": "Mena Thornton RIP",
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
+          "time": "10:45",
+          "type": "Confession",
+          "church": "St Francis de Sales",
+          "church_location": "Wolverton",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
         }
       ],
       "confidence": "high",
@@ -597,7 +701,7 @@
       "outside_mk": false
     },
     {
-      "parish": "Our Lady Help of Christians & St Lawrence",
+      "parish": "Our Lady of Lourdes",
       "week_of": "2026-05-10",
       "source_date": "2026-05-10",
       "services": [
@@ -889,8 +993,8 @@
         {
           "date": "2026-05-05",
           "day": "Tuesday",
-          "time": "varies",
-          "type": "Rosary",
+          "time": "09:15",
+          "type": "Confession",
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
@@ -986,7 +1090,7 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": "in the Lady Chapel",
+          "notes": null,
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
@@ -1247,6 +1351,19 @@
           "notes": "7th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "The Ascension Mass",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         }
       ],
       "confidence": "high",
@@ -1264,6 +1381,71 @@
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "18:00",
+          "type": "Mass",
+          "church": "Matki Bożej Częstochowskiej",
+          "church_location": "Dunstable",
+          "language": "Polish",
+          "cancelled": false,
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3AZ"
+        },
+        {
+          "date": "2026-05-06",
+          "day": "Wednesday",
+          "time": "19:00",
+          "type": "Mass",
+          "church": "Matki Bożej Częstochowskiej",
+          "church_location": "Dunstable",
+          "language": "Polish",
+          "cancelled": false,
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3AZ"
+        },
+        {
+          "date": "2026-05-07",
+          "day": "Thursday",
+          "time": "19:00",
+          "type": "Mass",
+          "church": "Matki Bożej Częstochowskiej",
+          "church_location": "Dunstable",
+          "language": "Polish",
+          "cancelled": false,
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3AZ"
+        },
+        {
+          "date": "2026-05-04",
+          "day": "Monday",
+          "time": "07:00",
+          "type": "Mass",
+          "church": "Matki Bożej Częstochowskiej",
+          "church_location": "Dunstable",
+          "language": "Polish",
+          "cancelled": false,
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3AZ"
+        },
+        {
+          "date": "2026-05-05",
+          "day": "Tuesday",
+          "time": "07:00",
+          "type": "Mass",
+          "church": "Matki Bożej Częstochowskiej",
+          "church_location": "Dunstable",
+          "language": "Polish",
+          "cancelled": false,
+          "notes": null,
+          "area": "Dunstable",
+          "postcode": "LU6 3AZ"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "08:30",
           "type": "Mass",
           "church": "Matki Bożej Częstochowskiej",
           "church_location": "Dunstable",
@@ -1311,6 +1493,19 @@
           "notes": null,
           "area": "Dunstable",
           "postcode": "LU6 3AZ"
+        },
+        {
+          "date": "2026-05-08",
+          "day": "Friday",
+          "time": "19:00",
+          "type": "Mass",
+          "church": "Matki Bożej Częstochowskiej",
+          "church_location": "Dunstable",
+          "language": "Polish",
+          "cancelled": false,
+          "notes": "za ks. S. Strycharskiego w 60. urodziny",
+          "area": "Dunstable",
+          "postcode": "LU6 3AZ"
         }
       ],
       "confidence": "high",
@@ -1321,7 +1516,7 @@
     },
     {
       "parish": "St Bernardine's & St Martin's",
-      "week_of": "2026-05-10",
+      "week_of": "2026-05-09",
       "source_date": null,
       "services": [
         {
@@ -1463,7 +1658,20 @@
           "church_location": "Buckingham",
           "language": null,
           "cancelled": false,
-          "notes": "followed by Mass Int Sick & House Bound",
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "12:00",
+          "type": "Mass",
+          "church": "St Bernardine's",
+          "church_location": "Buckingham",
+          "language": null,
+          "cancelled": false,
+          "notes": "Int Sick & House Bound",
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
@@ -1489,7 +1697,20 @@
           "church_location": "Buckingham",
           "language": null,
           "cancelled": false,
-          "notes": "Divine Mercy Chaplet & confessions",
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
+        },
+        {
+          "date": "2026-05-15",
+          "day": "Friday",
+          "time": "18:30",
+          "type": "Confession",
+          "church": "St Bernardine's",
+          "church_location": "Buckingham",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
@@ -1515,7 +1736,7 @@
           "church_location": "Brackley",
           "language": null,
           "cancelled": false,
-          "notes": "Divine Mercy Chaplet",
+          "notes": null,
           "area": "Brackley",
           "postcode": "NN13 6AN"
         },
@@ -1557,6 +1778,32 @@
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": "St Bernardine's",
+          "church_location": "Buckingham",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Buckingham",
+          "postcode": "MK18 1AL"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "09:00",
+          "type": "Mass",
+          "church": "St Martin's",
+          "church_location": "Brackley",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Brackley",
+          "postcode": "NN13 6AN"
         }
       ],
       "confidence": "high",
@@ -1631,7 +1878,7 @@
           "church_location": "Bedford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Feria",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1644,7 +1891,7 @@
           "church_location": "Bedford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Feria",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1657,7 +1904,7 @@
           "church_location": "Bedford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Our Lady of Fatima",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1670,7 +1917,7 @@
           "church_location": "Bedford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "The Ascension of the Lord",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1683,7 +1930,7 @@
           "church_location": "Bedford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "The Ascension of the Lord",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1696,7 +1943,7 @@
           "church_location": "Bedford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "The Ascension of the Lord",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1709,7 +1956,7 @@
           "church_location": "Bedford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Feria",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1722,7 +1969,7 @@
           "church_location": "Bedford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Feria",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1757,6 +2004,19 @@
           "day": "Saturday",
           "time": "11:30",
           "type": "Confession",
+          "church": "St Joseph's",
+          "church_location": "Bedford",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Bedford",
+          "postcode": "MK40 1HU"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "11:30",
+          "type": "Adoration",
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
@@ -1838,7 +2098,46 @@
           "church_location": "Winslow",
           "language": null,
           "cancelled": false,
-          "notes": "Confessions before Mass each first Saturday of the month",
+          "notes": "before Mass each first Saturday of the month",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-05-15",
+          "day": "Friday",
+          "time": "10:30",
+          "type": "Coffee Morning",
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
+          "language": null,
+          "cancelled": false,
+          "notes": "Monthly Parish Coffee Morning",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-05-15",
+          "day": "Friday",
+          "time": "17:00",
+          "type": "Novena",
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
+          "language": null,
+          "cancelled": false,
+          "notes": "Parish Novena",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
+          "time": "17:30",
+          "type": "Confession",
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
+          "language": null,
+          "cancelled": false,
+          "notes": "before Mass each first Saturday of the month",
           "area": "Winslow",
           "postcode": "MK18 3AB"
         }
@@ -2020,6 +2319,32 @@
           "notes": "Feast of the Ascension of the Lord",
           "area": "Shenley Church End",
           "postcode": "MK5 6DX"
+        },
+        {
+          "date": "2026-05-12",
+          "day": "Tuesday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "St Mary's",
+          "church_location": "Woburn Sands",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Woburn Sands",
+          "postcode": "MK17 8NN"
+        },
+        {
+          "date": "2026-05-15",
+          "day": "Friday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "St Bede's",
+          "church_location": "Newport Pagnell",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Newport Pagnell",
+          "postcode": "MK16 8EN"
         }
       ],
       "confidence": "high",

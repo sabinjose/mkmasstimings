@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import date
+from datetime import date, timedelta
 from typing import Any
 
 import litellm
@@ -142,11 +142,18 @@ def extract_mass_times(
     if len(text) > max_chars:
         text = text[:max_chars]
 
-    today = date.today().isoformat()
+    today_dt = date.today()
+    today = today_dt.isoformat()
+    calendar = _build_calendar(today_dt, days_back=14, days_forward=28)
     hints_block = f"\nKNOWN-SCHEDULE HINTS (authoritative — use these to disambiguate):\n{hints}\n" if hints else ""
     user_msg = (
         f"Parish: {parish_name}\n"
         f"Today's date: {today} (use this year if the newsletter has no explicit year)\n"
+        f"\n"
+        f"CALENDAR REFERENCE — when the bulletin names a weekday under a 'w/c "
+        f"<date>' header (or any dated grid), look the weekday up in the table "
+        f"below to get the ISO date. Do NOT compute weekday arithmetic yourself.\n"
+        f"{calendar}\n"
         f"{hints_block}\n"
         f"Newsletter / page content follows between <<<>>>:\n\n"
         f"<<<\n{text}\n>>>\n\n"
@@ -172,6 +179,19 @@ def extract_mass_times(
     resp = completion(**kwargs)
     content = resp.choices[0].message.content or ""
     return _parse_json(content, parish_name)
+
+
+def _build_calendar(today: date, *, days_back: int, days_forward: int) -> str:
+    """Return an ISO-date → weekday lookup table the LLM can grep instead of
+    doing weekday arithmetic. Covers a window around today big enough for a
+    bulletin's prior-week trailing days plus its next two weeks of content."""
+    lines = []
+    start = today - timedelta(days=days_back)
+    for i in range(days_back + days_forward + 1):
+        d = start + timedelta(days=i)
+        marker = "  ← today" if d == today else ""
+        lines.append(f"  {d.isoformat()} {d.strftime('%A')}{marker}")
+    return "\n".join(lines)
 
 
 def _parse_json(content: str, parish_name: str) -> dict[str, Any]:

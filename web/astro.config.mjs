@@ -7,6 +7,9 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   build: {
-    inlineStylesheets: 'auto',
+    // Inline CSS into the HTML so first paint already has every rule.
+    // Without this the page renders unstyled briefly on cold loads
+    // ("vibrates" while the external CSS streams in).
+    inlineStylesheets: 'always',
   },
 });

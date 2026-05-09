@@ -430,21 +430,12 @@ function classify(svc) {
   return "adoration";
 }
 
-// "No Mass today" notices — keep them but render distinctly so users see
-// at a glance that the church is closed for that liturgy. Catches every
-// phrasing parishes use: "No Mass", "No Parish Mass", "No morning Mass",
-// "No public Mass", "no service today", "Mass cancelled", etc.
-const CANCELLATION_RE = /\b(no\s+(?:[a-z]+\s+){0,3}(?:mass|service|liturgy)|mass\s+cancelled)\b/i;
-function isCancellation(svc) {
-  return CANCELLATION_RE.test(svc.type || "") ||
-         CANCELLATION_RE.test(svc.notes || "");
-}
-
 function flattenServices(parishes) {
   const out = [];
   for (const p of parishes) {
     if (p.error) continue;
     for (const s of p.services || []) {
+      const cancelled = !!s.cancelled;
       out.push({
         ...s,
         parish: p.parish,
@@ -453,8 +444,10 @@ function flattenServices(parishes) {
         outside_mk: !!p.outside_mk,
         // Stable parish key for parish-level inclusion decisions.
         parish_key: p.location || p.parish || "",
-        bucket: isCancellation(s) ? "mass" : classify(s),
-        cancelled: isCancellation(s),
+        // Cancelled liturgies always render under the Masses heading
+        // alongside the service they replace.
+        bucket: cancelled ? "mass" : classify(s),
+        cancelled,
       });
     }
   }

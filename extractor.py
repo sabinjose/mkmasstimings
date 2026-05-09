@@ -33,7 +33,10 @@ Return ONLY a JSON object matching this schema (no prose, no markdown fences):
     {
       "date": string | null,               // ISO date (YYYY-MM-DD) if known, else null
       "day": string,                       // "Sunday", "Monday", ... or "Daily"
-      "time": string,                      // 24h "HH:MM", or "varies" if unspecified
+      "time": string | null,               // 24h "HH:MM" — REQUIRED for non-cancelled services.
+                                           // null ONLY when `cancelled` is true. "varies" allowed
+                                           // if (and only if) the bulletin literally says the
+                                           // time varies week-to-week.
       "type": string,                      // "Mass", "Vigil Mass", "Confession", "Adoration", "Rosary", etc.
       "church": string | null,             // SPECIFIC church/building name when the newsletter
                                            // covers multiple sites (e.g. "St Bernardine's", "St Martin's",
@@ -42,6 +45,10 @@ Return ONLY a JSON object matching this schema (no prose, no markdown fences):
       "church_location": string | null,    // The town/area for `church` if disambiguated, e.g. "Buckingham"
                                            // when church="St Bernardine's", "Brackley" for "St Martin's"
       "language": string | null,           // e.g. "Polish", null for English
+      "cancelled": boolean,                // true ONLY when this liturgy is cancelled
+                                           // ("No Mass today", "Adoration cancelled this week").
+                                           // When true, `time` MUST be null. When false (the
+                                           // normal case), `time` MUST be a concrete HH:MM.
       "notes": string | null               // feast day name, "no mass this week", etc.
     }
   ],
@@ -73,11 +80,13 @@ SYSTEM_PROMPT = (
     "Confessions section.\n\n"
     "CANCELLATIONS: emit a service entry ONLY when a specific LITURGY is cancelled "
     "(e.g. 'No Mass on Wednesday', 'Adoration cancelled this week', 'No Confessions "
-    "Saturday'). Set `time` to null and `notes` to the cancellation text (e.g. 'No "
-    "Mass today'). The frontend renders these distinctly. Do NOT emit cancellation "
-    "entries for non-liturgical events such as 'No Open House', 'Office closed', "
-    "'No coffee morning', 'No youth group', 'No bingo' — those aren't liturgies and "
-    "shouldn't appear on a mass-times page.\n\n"
+    "Saturday'). For these set `cancelled` to true, `time` to null, and `notes` to "
+    "the cancellation phrasing from the bulletin (e.g. 'No Mass today'). For every "
+    "non-cancelled service, `cancelled` MUST be false. The frontend uses this flag "
+    "directly — do NOT rely on `notes` text alone to communicate cancellation. Do "
+    "NOT emit cancellation entries for non-liturgical events such as 'No Open "
+    "House', 'Office closed', 'No coffee morning', 'No youth group', 'No bingo' — "
+    "those aren't liturgies and shouldn't appear on a mass-times page.\n\n"
     "OMIT WITHOUT TIME: every emitted service MUST have a concrete clock time "
     "(HH:MM, or 'varies' if the bulletin literally says the time varies). The "
     "following are NOT times and MUST cause the entry to be skipped entirely:\n"

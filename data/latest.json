@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T12:48:36.563305+00:00",
+  "generated_at": "2026-05-09T12:57:17.661519+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -14,6 +14,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -26,6 +27,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -38,6 +40,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -50,6 +53,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -62,6 +66,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -74,18 +79,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": "Polish",
-          "notes": null,
-          "area": "Heelands",
-          "postcode": "MK13 7PL"
-        },
-        {
-          "date": "2026-05-10",
-          "day": "Sunday",
-          "time": "14:00",
-          "type": "Mass",
-          "church": "St. Augustine",
-          "church_location": "Heelands",
-          "language": "Polish",
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -98,6 +92,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -110,6 +105,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -122,6 +118,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -134,6 +131,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -146,6 +144,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -158,7 +157,21 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
+        },
+        {
+          "date": "2026-05-13",
+          "day": "Wednesday",
+          "time": "12:00",
+          "type": "Mass",
+          "church": "St. Augustine",
+          "church_location": "Heelands",
+          "language": null,
+          "cancelled": false,
+          "notes": "Solemnity of the Ascension of the Lord",
           "area": "Heelands",
           "postcode": "MK13 7PL"
         },
@@ -170,6 +183,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -182,6 +196,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -194,6 +209,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -206,6 +222,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -218,6 +235,7 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -230,6 +248,20 @@
           "church": "St. Augustine",
           "church_location": "Heelands",
           "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Heelands",
+          "postcode": "MK13 7PL"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "14:00",
+          "type": "Mass",
+          "church": "St. Augustine",
+          "church_location": "Heelands",
+          "language": "Polish",
+          "cancelled": false,
           "notes": null,
           "area": "Heelands",
           "postcode": "MK13 7PL"
@@ -254,6 +286,7 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": false,
           "notes": "Mr Nicola Martuccio, Anniv. RIP",
           "area": "Bletchley",
           "postcode": "MK2 2JE"
@@ -266,6 +299,7 @@
           "church": "All Saints",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": false,
           "notes": "Bernadette Thompson, RIP",
           "area": "Bletchley",
           "postcode": "MK3 6AN"
@@ -278,6 +312,7 @@
           "church": "All Saints",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": false,
           "notes": "Carmela Pozzuto, Anniv. RIP; Angelo & Libera Pozzuto, RIP",
           "area": "Bletchley",
           "postcode": "MK3 6AN"
@@ -290,6 +325,7 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": false,
           "notes": "Pro Populo",
           "area": "Bletchley",
           "postcode": "MK2 2JE"
@@ -302,6 +338,7 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": true,
           "notes": "No Mass today",
           "area": "Bletchley",
           "postcode": "MK2 2JE"
@@ -314,6 +351,7 @@
           "church": "All Saints",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": true,
           "notes": "No Mass today",
           "area": "Bletchley",
           "postcode": "MK3 6AN"
@@ -326,6 +364,7 @@
           "church": "All Saints",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": true,
           "notes": "No Mass today",
           "area": "Bletchley",
           "postcode": "MK3 6AN"
@@ -338,6 +377,7 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": true,
           "notes": "No Mass today",
           "area": "Bletchley",
           "postcode": "MK2 2JE"
@@ -350,6 +390,7 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": true,
           "notes": "No morning Mass",
           "area": "Bletchley",
           "postcode": "MK2 2JE"
@@ -362,6 +403,7 @@
           "church": "St Thomas Aquinas",
           "church_location": "Bletchley",
           "language": null,
+          "cancelled": false,
           "notes": "Pro Populo",
           "area": "Bletchley",
           "postcode": "MK2 2JE"
@@ -386,6 +428,7 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
+          "cancelled": false,
           "notes": "Pro Populo",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
@@ -398,6 +441,7 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
+          "cancelled": false,
           "notes": "Peter Kelly RIP",
           "area": "Stony Stratford",
           "postcode": "MK11 1AT"
@@ -410,6 +454,7 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
+          "cancelled": false,
           "notes": "Brian & the O’Neill Family",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
@@ -422,6 +467,7 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
+          "cancelled": false,
           "notes": "Patience Maronga",
           "area": "Stony Stratford",
           "postcode": "MK11 1AT"
@@ -434,6 +480,7 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
+          "cancelled": false,
           "notes": "Lunt & Smithson Families, Living & Deceased",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
@@ -446,6 +493,7 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
@@ -458,6 +506,7 @@
           "church": "St Mary Magdalene",
           "church_location": "Stony Stratford",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Stony Stratford",
           "postcode": "MK11 1AT"
@@ -470,45 +519,10 @@
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
+          "cancelled": false,
           "notes": "Pro Populo",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
-        },
-        {
-          "date": "2026-05-14",
-          "day": "Thursday",
-          "time": "10:30",
-          "type": "Mass",
-          "church": "St Francis de Sales",
-          "church_location": "Wolverton",
-          "language": null,
-          "notes": "Alvah, Carol & Hottinger Family",
-          "area": "Wolverton",
-          "postcode": "MK12 5LJ"
-        },
-        {
-          "date": "2026-05-14",
-          "day": "Thursday",
-          "time": "19:30",
-          "type": "Mass",
-          "church": "St Francis de Sales",
-          "church_location": "Wolverton",
-          "language": null,
-          "notes": "Noreen Munnelly",
-          "area": "Wolverton",
-          "postcode": "MK12 5LJ"
-        },
-        {
-          "date": "2026-05-15",
-          "day": "Friday",
-          "time": "12:00",
-          "type": "Mass",
-          "church": "St Mary Magdalene",
-          "church_location": "Stony Stratford",
-          "language": null,
-          "notes": "James Brennan & Brennan Family RIP",
-          "area": "Stony Stratford",
-          "postcode": "MK11 1AT"
         }
       ],
       "confidence": "high",
@@ -530,6 +544,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -542,6 +557,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(Pro Populo)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -554,6 +570,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(Gerry Knott, Gareth Reilly & Peter Bovenzi – Healing)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -566,6 +583,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "with Confession",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -578,6 +596,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(Paddy Fitzsimons – Birthday Ints.)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -590,6 +609,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "with Confession",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -602,6 +622,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(Tom Barlow RIP)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -614,6 +635,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": true,
           "notes": "No Parish Mass today",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -626,6 +648,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(Phil Burrowes Int)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -638,6 +661,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(Private Intention)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -650,6 +674,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": true,
           "notes": "No Parish Mass today",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -662,6 +687,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "with Confession",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -674,6 +700,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(Nicolas Robertson RIP)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -686,6 +713,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -698,6 +726,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(Pro Populo)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -710,6 +739,7 @@
           "church": "Our Lady Help of Christians & St. Lawrence",
           "church_location": "Olney",
           "language": null,
+          "cancelled": false,
           "notes": "(McCarthy family – Ints)",
           "area": "Olney",
           "postcode": "MK46 5HH"
@@ -734,6 +764,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": "Thanksgiving for Ministry",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -746,6 +777,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": "For Parish",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -758,6 +790,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": "Philip Logan RIP",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -770,6 +803,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -782,6 +816,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": "Tommy Kehoe (Ann) RIP",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -794,6 +829,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -806,6 +842,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": true,
           "notes": "No Mass",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -818,6 +855,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -830,6 +868,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": "Denise Donnelly RIP",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -842,6 +881,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -854,6 +894,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": "Ighlis Ivanov RIP",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -866,6 +907,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -878,6 +920,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -890,6 +933,7 @@
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
+          "cancelled": false,
           "notes": "Agnes Fahy (Ann) RIP",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
@@ -914,6 +958,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Flitwick",
           "language": null,
+          "cancelled": false,
           "notes": "Christina Traynor, 11th Anniversary, RIP; Philip Gogarty, RIP",
           "area": "Flitwick",
           "postcode": "MK45 1JP"
@@ -926,6 +971,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Flitwick",
           "language": null,
+          "cancelled": false,
           "notes": "In Thanksgiving",
           "area": "Flitwick",
           "postcode": "MK45 1JP"
@@ -938,6 +984,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Flitwick",
           "language": null,
+          "cancelled": false,
           "notes": "Jim Egan, 6th Anniversary, RIP",
           "area": "Flitwick",
           "postcode": "MK45 1JP"
@@ -950,6 +997,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Flitwick",
           "language": null,
+          "cancelled": false,
           "notes": "Private Intentions",
           "area": "Flitwick",
           "postcode": "MK45 1JP"
@@ -962,7 +1010,8 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Flitwick",
           "language": null,
-          "notes": "Private Intentions; Our Lady of Fatima",
+          "cancelled": false,
+          "notes": "Private Intentions",
           "area": "Flitwick",
           "postcode": "MK45 1JP"
         },
@@ -974,7 +1023,8 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Flitwick",
           "language": null,
-          "notes": "People of the Parish; The Ascension of the Lord",
+          "cancelled": false,
+          "notes": "People of the Parish",
           "area": "Flitwick",
           "postcode": "MK45 1JP"
         },
@@ -986,7 +1036,8 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Flitwick",
           "language": null,
-          "notes": "People of the Parish; The Ascension of the Lord",
+          "cancelled": false,
+          "notes": "People of the Parish",
           "area": "Flitwick",
           "postcode": "MK45 1JP"
         },
@@ -998,6 +1049,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Flitwick",
           "language": null,
+          "cancelled": false,
           "notes": "Maureen Herlihy, Anniversary RIP",
           "area": "Flitwick",
           "postcode": "MK45 1JP"
@@ -1022,6 +1074,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": "6th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1034,6 +1087,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": "6th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1046,6 +1100,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": "6th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1058,6 +1113,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": "Feria Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1070,6 +1126,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": "The Ascension Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1082,6 +1139,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1094,6 +1152,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": "7th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1106,6 +1165,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": "7th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1118,6 +1178,7 @@
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
+          "cancelled": false,
           "notes": "7th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
@@ -1135,40 +1196,17 @@
       "source_date": null,
       "services": [
         {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "17:00",
-          "type": "Confession",
-          "church": "St. Mary's",
-          "church_location": "Dunstable",
-          "language": null,
-          "notes": null,
-          "area": "Dunstable",
-          "postcode": "LU6 3SP"
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "17:30",
-          "type": "Rosary",
-          "church": "St. Mary's",
-          "church_location": "Dunstable",
-          "language": null,
-          "notes": null,
-          "area": "Dunstable",
-          "postcode": "LU6 3SP"
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "18:00",
+          "date": "2026-05-08",
+          "day": "Friday",
+          "time": "19:00",
           "type": "Mass",
-          "church": "St. Mary's",
+          "church": "Matki Bożej Częstochowskiej",
           "church_location": "Dunstable",
           "language": null,
-          "notes": "Agnes Fahy (Ann) RIP",
+          "cancelled": false,
+          "notes": "św. Stanisława, biskupa - patron Polski",
           "area": "Dunstable",
-          "postcode": "LU6 3SP"
+          "postcode": "LU6 3AZ"
         },
         {
           "date": "2026-05-09",
@@ -1177,8 +1215,9 @@
           "type": "Mass",
           "church": "Matki Bożej Częstochowskiej",
           "church_location": "Dunstable",
-          "language": "Polish",
-          "notes": null,
+          "language": null,
+          "cancelled": false,
+          "notes": "śp. Feliks Olchowicz",
           "area": "Dunstable",
           "postcode": "LU6 3AZ"
         }
@@ -1202,6 +1241,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1214,6 +1254,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": "Joan Cole RIP",
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1226,6 +1267,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": "Int John Atkins (goodhealth), George MJ RIP, Adrian Spencer RIP",
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1238,6 +1280,7 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
+          "cancelled": false,
           "notes": "Int John Vidler (Senior) RIP",
           "area": "Brackley",
           "postcode": "NN13 6AN"
@@ -1247,9 +1290,10 @@
           "day": "Monday",
           "time": null,
           "type": "Mass",
-          "church": "St. Bernardine of Siena",
+          "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": true,
           "notes": "No Mass",
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1262,6 +1306,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1274,6 +1319,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1286,6 +1332,7 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Brackley",
           "postcode": "NN13 6AN"
@@ -1298,6 +1345,7 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
+          "cancelled": false,
           "notes": "Int Anna Joaquina Fernandes (Birthday)",
           "area": "Brackley",
           "postcode": "NN13 6AN"
@@ -1310,6 +1358,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": "followed by Mass Int Sick & House Bound",
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1322,6 +1371,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1334,6 +1384,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": "Divine Mercy Chaplet & confessions",
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1346,6 +1397,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": "Int Antonio Casciaro RIP",
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1358,6 +1410,7 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
+          "cancelled": false,
           "notes": "and Divine Mercy Chaplet",
           "area": "Brackley",
           "postcode": "NN13 6AN"
@@ -1370,6 +1423,7 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Brackley",
           "postcode": "NN13 6AN"
@@ -1382,6 +1436,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1394,6 +1449,7 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1406,7 +1462,8 @@
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "7 Sunday of Easter",
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
@@ -1418,114 +1475,124 @@
           "church": "St Martin's",
           "church_location": "Brackley",
           "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "7 Sunday of Easter",
           "area": "Brackley",
           "postcode": "NN13 6AN"
         },
         {
           "date": "2026-05-09",
-          "day": "Daily",
+          "day": "Saturday",
           "time": "18:00",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-10",
-          "day": "Daily",
-          "time": "18:00",
+          "day": "Sunday",
+          "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-11",
-          "day": "Daily",
-          "time": "18:00",
+          "day": "Monday",
+          "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-12",
-          "day": "Daily",
-          "time": "18:00",
+          "day": "Tuesday",
+          "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-13",
-          "day": "Daily",
-          "time": "18:00",
+          "day": "Wednesday",
+          "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-14",
-          "day": "Daily",
-          "time": "18:00",
+          "day": "Thursday",
+          "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-15",
-          "day": "Daily",
-          "time": "18:00",
+          "day": "Friday",
+          "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-16",
-          "day": "Daily",
+          "day": "Saturday",
           "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
         },
         {
           "date": "2026-05-17",
-          "day": "Daily",
+          "day": "Sunday",
           "time": "18:30",
           "type": "Rosary",
           "church": "St Bernardine's",
           "church_location": "Buckingham",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Buckingham",
           "postcode": "MK18 1AL"
@@ -1550,6 +1617,7 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Bedford",
           "postcode": "MK40 1HU"
@@ -1562,6 +1630,7 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Bedford",
           "postcode": "MK40 1HU"
@@ -1574,6 +1643,7 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Bedford",
           "postcode": "MK40 1HU"
@@ -1586,6 +1656,7 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Bedford",
           "postcode": "MK40 1HU"
@@ -1598,7 +1669,8 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "Feria",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1610,7 +1682,8 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "Feria",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1622,7 +1695,8 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "Our Lady of Fatima",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1634,6 +1708,7 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
+          "cancelled": false,
           "notes": "The Ascension of the Lord",
           "area": "Bedford",
           "postcode": "MK40 1HU"
@@ -1646,7 +1721,8 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "The Ascension of the Lord",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1658,7 +1734,8 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "The Ascension of the Lord",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1670,7 +1747,8 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "Feria",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
@@ -1682,45 +1760,49 @@
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
-          "notes": null,
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-05-16",
-          "day": "Saturday",
-          "time": "18:00",
-          "type": "Vigil Mass",
-          "church": "Our Lady's",
-          "church_location": "Kempston",
-          "language": null,
-          "notes": null,
-          "area": "Kempston",
-          "postcode": "MK42 8QB"
-        },
-        {
-          "date": "2026-05-09",
-          "day": "Saturday",
-          "time": "11:30",
-          "type": "Confession",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "notes": null,
+          "cancelled": false,
+          "notes": "Feria",
           "area": "Bedford",
           "postcode": "MK40 1HU"
         },
         {
           "date": "2026-05-14",
           "day": "Thursday",
-          "time": "11:30",
-          "type": "Adoration",
+          "time": "19:30",
+          "type": "Confession",
           "church": "St Joseph's",
           "church_location": "Bedford",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Bedford",
           "postcode": "MK40 1HU"
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "18:00",
+          "type": "Vigil Mass",
+          "church": "Our Lady's",
+          "church_location": "Kempston",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Kempston",
+          "postcode": "MK42 8QB"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "19:30",
+          "type": "Confession",
+          "church": "Our Lady's",
+          "church_location": "Kempston",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Kempston",
+          "postcode": "MK42 8QB"
         }
       ],
       "confidence": "high",
@@ -1737,12 +1819,39 @@
         {
           "date": "2026-05-10",
           "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": "St Laurence Church",
+          "church_location": "Winslow",
+          "language": null,
+          "cancelled": false,
+          "notes": "Sixth Sunday of Easter",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
           "time": "11:30",
           "type": "Mass",
           "church": "St. Alban's Chapel",
           "church_location": "Winslow",
           "language": null,
+          "cancelled": false,
           "notes": "Sixth Sunday of Easter",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-05-13",
+          "day": "Thursday",
+          "time": "18:00",
+          "type": "Mass",
+          "church": "St Laurence Church",
+          "church_location": "Winslow",
+          "language": null,
+          "cancelled": false,
+          "notes": "The Ascension of the Lord",
           "area": "Winslow",
           "postcode": "MK18 3AB"
         },
@@ -1754,7 +1863,21 @@
           "church": "St. Alban's Chapel",
           "church_location": "Winslow",
           "language": null,
+          "cancelled": false,
           "notes": "The Ascension of the Lord",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": "St Laurence Church",
+          "church_location": "Winslow",
+          "language": null,
+          "cancelled": false,
+          "notes": "Seventh Sunday of Easter",
           "area": "Winslow",
           "postcode": "MK18 3AB"
         },
@@ -1766,6 +1889,7 @@
           "church": "St. Alban's Chapel",
           "church_location": "Winslow",
           "language": null,
+          "cancelled": false,
           "notes": "Seventh Sunday of Easter",
           "area": "Winslow",
           "postcode": "MK18 3AB"
@@ -1778,19 +1902,21 @@
           "church": "St. Alban's Chapel",
           "church_location": "Winslow",
           "language": null,
+          "cancelled": false,
           "notes": "Pentecost",
           "area": "Winslow",
           "postcode": "MK18 3AB"
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-06-06",
           "day": "Saturday",
-          "time": "17:30",
-          "type": "Confession",
+          "time": null,
+          "type": "Vigil Mass",
           "church": "St. Alban's Chapel",
           "church_location": "Winslow",
           "language": null,
-          "notes": "Confessions before Mass each first Saturday of the month",
+          "cancelled": true,
+          "notes": "No Mass today",
           "area": "Winslow",
           "postcode": "MK18 3AB"
         }
@@ -1814,6 +1940,7 @@
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Central MK",
           "postcode": "MK9 2ES"
@@ -1826,6 +1953,7 @@
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Central MK",
           "postcode": "MK9 2ES"
@@ -1838,6 +1966,7 @@
           "church": "St Bede's",
           "church_location": "Newport Pagnell",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Newport Pagnell",
           "postcode": "MK16 8EN"
@@ -1850,6 +1979,7 @@
           "church": "Our Lady of Lourdes",
           "church_location": "Leadenhall",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Coffee Hall",
           "postcode": "MK6 5NA"
@@ -1862,6 +1992,7 @@
           "church": "St Edward's",
           "church_location": "Shenley Church End",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Shenley Church End",
           "postcode": "MK5 6DX"
@@ -1874,6 +2005,7 @@
           "church": "St Mary's",
           "church_location": "Woburn Sands",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Woburn Sands",
           "postcode": "MK17 8NN"
@@ -1886,6 +2018,7 @@
           "church": "Christ the King",
           "church_location": "Kents Hill",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Kents Hill",
           "postcode": "MK7 6HG"
@@ -1898,6 +2031,7 @@
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
+          "cancelled": false,
           "notes": null,
           "area": "Central MK",
           "postcode": "MK9 2ES"
@@ -1910,6 +2044,7 @@
           "church": "St Bede's",
           "church_location": "Newport Pagnell",
           "language": null,
+          "cancelled": false,
           "notes": "Feast of the Ascension of the Lord",
           "area": "Newport Pagnell",
           "postcode": "MK16 8EN"
@@ -1922,6 +2057,7 @@
           "church": "St Mary's",
           "church_location": "Woburn Sands",
           "language": null,
+          "cancelled": false,
           "notes": "Feast of the Ascension of the Lord",
           "area": "Woburn Sands",
           "postcode": "MK17 8NN"
@@ -1934,6 +2070,7 @@
           "church": "Christ the Cornerstone",
           "church_location": "Central Milton Keynes",
           "language": null,
+          "cancelled": false,
           "notes": "Feast of the Ascension of the Lord",
           "area": "Central MK",
           "postcode": "MK9 2ES"
@@ -1946,9 +2083,21 @@
           "church": "St Edward's",
           "church_location": "Shenley Church End",
           "language": null,
+          "cancelled": false,
           "notes": "Feast of the Ascension of the Lord",
           "area": "Shenley Church End",
           "postcode": "MK5 6DX"
+        },
+        {
+          "date": "2026-05-13",
+          "day": "Wednesday",
+          "time": null,
+          "type": "Mass",
+          "church": null,
+          "church_location": null,
+          "language": null,
+          "cancelled": true,
+          "notes": "No morning Mass"
         }
       ],
       "confidence": "high",

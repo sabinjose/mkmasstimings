@@ -633,6 +633,12 @@ function render() {
   $("btnToday").classList.toggle("active",    SELECTED === "today");
   $("btnTomorrow").classList.toggle("active", SELECTED === "tomorrow");
 
+  // Readings link follows the day toggle: today gets the default URL,
+  // tomorrow gets ?date=YYYY-MM-DD so /readings.html opens that day.
+  $("btnReadings").href = SELECTED === "tomorrow"
+    ? `readings.html?date=${selectedDate()}`
+    : "readings.html";
+
   const all = flattenServices(DATA.parishes);
   const dayServices = all.filter(s => s.date === selectedDate());
   const visible = buildVisibilityFilter(dayServices, INCLUDE_NEARBY);

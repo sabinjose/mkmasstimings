@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T05:06:27.735665+00:00",
+  "generated_at": "2026-05-09T05:10:36.995761+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -442,7 +442,7 @@
       "outside_mk": false
     },
     {
-      "parish": "Our Lady Help of Christians & St Lawrence",
+      "parish": "Our Lady of Lourdes",
       "week_of": "2026-05-03",
       "source_date": "2026-05-03",
       "services": [
@@ -575,6 +575,42 @@
           "church_location": "Olney",
           "language": null,
           "notes": null,
+          "area": "Olney",
+          "postcode": "MK46 5HH"
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "12:00",
+          "type": "Mass",
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
+          "language": null,
+          "notes": "(Anne Harris RIP)",
+          "area": "Olney",
+          "postcode": "MK46 5HH"
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "18:00",
+          "type": "Confession",
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
+          "language": null,
+          "notes": null,
+          "area": "Olney",
+          "postcode": "MK46 5HH"
+        },
+        {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "18:30",
+          "type": "Mass",
+          "church": "Our Lady Help of Christians & St. Lawrence",
+          "church_location": "Olney",
+          "language": null,
+          "notes": "(Pro Populo)",
           "area": "Olney",
           "postcode": "MK46 5HH"
         }
@@ -1043,81 +1079,9 @@
     },
     {
       "parish": "Sacred Heart",
-      "week_of": "2026-05-03",
+      "week_of": "2026-05-10",
       "source_date": null,
       "services": [
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "09:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "notes": "John Lawlor RIP",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
-        {
-          "date": "2026-05-03",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "notes": "Rosemary Terleckyj anniv",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
-        {
-          "date": "2026-05-04",
-          "day": "Monday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "notes": "Benny Sorgente anniv",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
-        {
-          "date": "2026-05-07",
-          "day": "Thursday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "notes": "Maria Pompa RIP",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
-        {
-          "date": "2026-05-08",
-          "day": "Friday",
-          "time": "09:30",
-          "type": "Rosary",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "notes": null,
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
-        {
-          "date": "2026-05-08",
-          "day": "Friday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "notes": "Willie Quilligan RIP",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
         {
           "date": "2026-05-09",
           "day": "Saturday",
@@ -1155,6 +1119,30 @@
           "postcode": "LU7 1HZ"
         },
         {
+          "date": "2026-05-09",
+          "day": "Saturday",
+          "time": "18:15",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "notes": "Karl Staines RIP",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "09:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "notes": "Eilish Farrell intention",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
           "date": "2026-05-10",
           "day": "Sunday",
           "time": "09:00",
@@ -1177,12 +1165,72 @@
           "notes": "Costas Kyprianou anniv",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "notes": "Costas Kyprianou anniv",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-11",
+          "day": "Monday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "notes": "Mary McGregor anniv",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "notes": "Tony Bayes RIP",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
+          "time": "17:45",
+          "type": "Confession",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "notes": null,
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
+          "time": "18:15",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "notes": "Dee & Joe Hacket RIP",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         }
       ],
       "confidence": "high",
       "notes": null,
       "location": "Leighton Buzzard",
-      "source_url": "http://www.sacredheartlb.org.uk/wp-content/uploads/5th-Sunday-of-Easter-3rd-May-2026.pdf",
+      "source_url": "http://www.sacredheartlb.org.uk/wp-content/uploads/6th-Sunday-of-Easter-10th-May-2026.pdf",
       "outside_mk": true
     },
     {
@@ -1714,18 +1762,18 @@
     },
     {
       "parish": "St Alban's",
-      "week_of": "2026-05-03",
+      "week_of": "2026-05-10",
       "source_date": null,
       "services": [
         {
           "date": "2026-05-02",
           "day": "Saturday",
-          "time": "18:00",
-          "type": "Vigil Mass",
+          "time": "17:30",
+          "type": "Confession",
           "church": "St. Alban's Chapel",
           "church_location": "Winslow",
           "language": null,
-          "notes": "Fifth Sunday of Easter",
+          "notes": "Confessions before Mass each first Saturday of the month",
           "area": "Winslow",
           "postcode": "MK18 3AB"
         },
@@ -1742,7 +1790,31 @@
           "postcode": "MK18 3AB"
         },
         {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "11:30",
+          "type": "Mass",
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
+          "language": null,
+          "notes": "Sixth Sunday of Easter",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
           "date": "2026-05-13",
+          "day": "Thursday",
+          "time": "18:00",
+          "type": "Mass",
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
+          "language": null,
+          "notes": "The Ascension of the Lord",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-05-14",
           "day": "Thursday",
           "time": "18:00",
           "type": "Mass",
@@ -1766,14 +1838,38 @@
           "postcode": "MK18 3AB"
         },
         {
-          "date": "2026-05-02",
-          "day": "Saturday",
-          "time": "17:30",
-          "type": "Confession",
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "11:30",
+          "type": "Mass",
           "church": "St. Alban's Chapel",
           "church_location": "Winslow",
           "language": null,
-          "notes": "before Mass",
+          "notes": "Seventh Sunday of Easter",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-05-24",
+          "day": "Sunday",
+          "time": "11:30",
+          "type": "Mass",
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
+          "language": null,
+          "notes": "Pentecost",
+          "area": "Winslow",
+          "postcode": "MK18 3AB"
+        },
+        {
+          "date": "2026-06-06",
+          "day": "Saturday",
+          "time": null,
+          "type": "Vigil Mass",
+          "church": "St. Alban's Chapel",
+          "church_location": "Winslow",
+          "language": null,
+          "notes": "Vigil Mass for the feast of Corpus Christi",
           "area": "Winslow",
           "postcode": "MK18 3AB"
         }
@@ -1781,16 +1877,16 @@
       "confidence": "high",
       "notes": null,
       "location": "Winslow",
-      "source_url": "https://www.stalbanswinslow.org.uk/newsletters/view/Parish_Newsletter_2nd_May_2026.pdf",
+      "source_url": "https://www.stalbanswinslow.org.uk/newsletters/view/Parish_Newsletter_10th_May_2026.pdf",
       "outside_mk": true
     },
     {
       "parish": "MK Parishes",
-      "week_of": "2026-05-03",
+      "week_of": "2026-05-09",
       "source_date": null,
       "services": [
         {
-          "date": "2026-05-02",
+          "date": "2026-05-09",
           "day": "Saturday",
           "time": "17:00",
           "type": "Confession",
@@ -1802,7 +1898,7 @@
           "postcode": "MK9 2ES"
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-09",
           "day": "Saturday",
           "time": "17:30",
           "type": "Vigil Mass",
@@ -1814,7 +1910,7 @@
           "postcode": "MK9 2ES"
         },
         {
-          "date": "2026-05-03",
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "08:30",
           "type": "Mass",
@@ -1826,7 +1922,7 @@
           "postcode": "MK16 8EN"
         },
         {
-          "date": "2026-05-03",
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "09:30",
           "type": "Mass",
@@ -1838,7 +1934,7 @@
           "postcode": "MK6 5NA"
         },
         {
-          "date": "2026-05-03",
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "10:00",
           "type": "Mass",
@@ -1850,19 +1946,19 @@
           "postcode": "MK5 6DX"
         },
         {
-          "date": "2026-05-03",
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
           "church": "St Mary's",
           "church_location": "Woburn Sands",
           "language": null,
-          "notes": "Lilian Morris RIP",
+          "notes": null,
           "area": "Woburn Sands",
           "postcode": "MK17 8NN"
         },
         {
-          "date": "2026-05-03",
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "11:30",
           "type": "Mass",
@@ -1874,7 +1970,7 @@
           "postcode": "MK7 6HG"
         },
         {
-          "date": "2026-05-04",
+          "date": "2026-05-11",
           "day": "Monday",
           "time": "12:30",
           "type": "Mass",
@@ -1886,46 +1982,58 @@
           "postcode": "MK9 2ES"
         },
         {
-          "date": "2026-05-05",
-          "day": "Tuesday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "St Mary's",
-          "church_location": "Woburn Sands",
-          "language": null,
-          "notes": "Charles Brunt RIP",
-          "area": "Woburn Sands",
-          "postcode": "MK17 8NN"
-        },
-        {
-          "date": "2026-05-07",
+          "date": "2026-05-14",
           "day": "Thursday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "St Edward's",
-          "church_location": "Shenley Church End",
-          "language": null,
-          "notes": "Fr Stephen McGuinness Anniversary",
-          "area": "Shenley Church End",
-          "postcode": "MK5 6DX"
-        },
-        {
-          "date": "2026-05-08",
-          "day": "Friday",
           "time": "10:00",
           "type": "Mass",
           "church": "St Bede's",
           "church_location": "Newport Pagnell",
           "language": null,
-          "notes": null,
+          "notes": "Feast of the Ascension of the Lord",
           "area": "Newport Pagnell",
           "postcode": "MK16 8EN"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "St Mary's",
+          "church_location": "Woburn Sands",
+          "language": null,
+          "notes": "Feast of the Ascension of the Lord",
+          "area": "Woburn Sands",
+          "postcode": "MK17 8NN"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "12:30",
+          "type": "Mass",
+          "church": "Christ the Cornerstone",
+          "church_location": "Central Milton Keynes",
+          "language": null,
+          "notes": "Feast of the Ascension of the Lord",
+          "area": "Central MK",
+          "postcode": "MK9 2ES"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "19:30",
+          "type": "Mass",
+          "church": "St Edward's",
+          "church_location": "Shenley Church End",
+          "language": null,
+          "notes": "Feast of the Ascension of the Lord",
+          "area": "Shenley Church End",
+          "postcode": "MK5 6DX"
         }
       ],
       "confidence": "high",
       "notes": null,
       "location": "St Barnabas Cluster",
-      "source_url": "http://eepurl.com/gnT2JcBFV0",
+      "source_url": "http://eepurl.com/SbU3LAOLfI",
       "outside_mk": false
     }
   ]

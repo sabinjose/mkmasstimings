@@ -357,17 +357,18 @@ def enrich_with_church_meta(parish_data: dict, parish: Parish) -> None:
     others alone).
     """
     for svc in parish_data.get("services") or []:
-        name = svc.get("church")
+        name = svc.get("church") or parish.church_name or None
         area = svc.get("church_location")
         ch = find_church(name, area)
-        if ch is None and not name and not area:
-            # Single-church parish — try the parish's location verbatim.
-            ch = find_church(None, parish.location)
+        if ch is None and not svc.get("church") and not area:
+            # Single-church parish — try the parish's location verbatim,
+            # using the parish's church_name override (if any) as the name.
+            ch = find_church(parish.church_name or None, parish.location)
         if ch is None:
             # Multi-area parish_location like "Buckingham / Brackley":
             # try each part.
             for part in (parish.location or "").split("/"):
-                ch = find_church(None, part.strip())
+                ch = find_church(parish.church_name or None, part.strip())
                 if ch:
                     break
         if ch is not None:

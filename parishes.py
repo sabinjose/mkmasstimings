@@ -53,6 +53,7 @@ CHURCHES: list[Church] = [
     Church(name="Sacred Heart Catholic Church", area="Leighton Buzzard",  postcode="LU7 1HZ"),
     Church(name="Sacred Heart Catholic Church", area="Flitwick",          postcode="MK45 1JP"),
     Church(name="St. Mary's",                 area="Dunstable",           postcode="LU6 3SP"),
+    Church(name="Matki Bożej Częstochowskiej", area="Dunstable",           postcode="LU6 3AZ"),
 ]
 
 
@@ -97,7 +98,6 @@ def find_church(name: str | None, area: str | None) -> Church | None:
 # Keys/values are normalised (lowercase, punctuation stripped).
 _PARISH_LOCATION_ALIASES: dict[str, str] = {
     "milton keynes": "heelands",         # St Augustine's
-    "dunstable polish": "dunstable",     # Polska Parafia (location: "Dunstable (Polish)")
 }
 
 
@@ -114,6 +114,12 @@ class Parish:
     # The frontend hides outside-MK services by default and exposes a toggle
     # at the top of the page to include them on demand.
     outside_mk: bool = False
+    # Optional church-name fallback for single-church parishes that share an
+    # `area` with another church (e.g. English St Mary's vs Polish parish in
+    # Dunstable). Used by main.py when the LLM hasn't set `church` on a
+    # service. Multi-church parishes leave this blank — the LLM fills `church`
+    # per service from the bulletin's columns.
+    church_name: str = ""
 
 
 PARISHES: list[Parish] = [
@@ -122,12 +128,52 @@ PARISHES: list[Parish] = [
         source_url="https://www.st-augustinesmk.org.uk/web/newsletter/",
         strategy="page",
         location="Milton Keynes",
+        hints=(
+            "The newsletter's PARISH LITURGIES block typically contains TWO "
+            "'w/c <date>' subheadings: the earlier one lists trailing days "
+            "(Friday + Saturday) of the week the bulletin was published in, "
+            "and the later one lists the upcoming focal week (Sunday through "
+            "the next Saturday). The focal Sunday is the date in the page's "
+            "main heading (e.g. 'Sixth Sunday of Easter — 10th May 2026'); "
+            "set `week_of` to that Sunday's ISO date.\n"
+            "\n"
+            "Date each service to the 'w/c <date>' block it appears under, "
+            "NOT to the earlier subheading. Sunday English Masses always "
+            "appear under the focal week's 'w/c' block — they belong to "
+            "`week_of`, never to the prior Sunday.\n"
+            "\n"
+            "Regular weekly schedule (always emit these for the focal week "
+            "unless the newsletter explicitly cancels a specific service):\n"
+            "- Sunday English Masses: 08:00, 09:30, 11:30, 18:30 (the "
+            "  'w/c' block may print 6:30pm as '6.30pm' or '18:30').\n"
+            "- Sunday Rosary: 10:55 (just before the 11:30 Mass).\n"
+            "- Sunday Polish Mass: 14:00.\n"
+            "- Thursday Polish Mass: 19:00.\n"
+            "- Friday: 17:30 Adoration + 17:30 Confession, 19:00 Mass.\n"
+            "- Saturday: 08:15 Adoration + 08:15 Rosary, 09:00 Mass.\n"
+            "- Mon/Tue/Wed: morning Adoration/Rosary ~08:45 + 09:30 Mass "
+            "  (exact times printed in the bulletin take precedence).\n"
+            "\n"
+            "Emit one entry per recurrence per matching day in the focal "
+            "week. The bulletin's printed times override these defaults; "
+            "use the defaults only when a regular service is missing from "
+            "the dated grid (e.g. the four Sunday English Masses are often "
+            "listed once at the top of the 'w/c' block without per-Mass "
+            "dates — they all belong to the focal Sunday)."
+        ),
     ),
     Parish(
         name="Catholic Bletchley (All Saints / St Thomas Aquinas)",
         source_url="https://catholic-bletchley.com/",
         strategy="pdf_archive",
         location="Bletchley",
+        hints=(
+            "The bulletin sometimes mentions a Rosary 'daily, 30 minutes "
+            "before morning Mass' or similar. Do NOT emit a Rosary entry "
+            "unless the bulletin gives a concrete clock time for it. "
+            "'Before Mass', 'after Mass', 'daily', 'before/after the "
+            "weekday Masses' are not times — skip those entries."
+        ),
     ),
     Parish(
         name="St Francis & St Mary Magdalene",
@@ -167,12 +213,21 @@ PARISHES: list[Parish] = [
         strategy="page",
         location="Dunstable",
         outside_mk=True,
+        church_name="St. Mary's",
     ),
     Parish(
         name="Sacred Heart",
         source_url="https://sacredheartflitwick.co.uk/newsletters/",
         strategy="pdf_archive",
         location="Flitwick",
+        hints=(
+            "The bulletin describes Confession as 'Before Mass on "
+            "Saturday or on request' and Rosary as '30 minutes before "
+            "Mass'. Do NOT emit those entries: 'before Mass', 'on "
+            "request', '30 minutes before Mass' are not concrete clock "
+            "times. Only emit Confession or Rosary entries when the "
+            "bulletin prints an explicit HH:MM time."
+        ),
     ),
     Parish(
         name="Sacred Heart",
@@ -185,8 +240,21 @@ PARISHES: list[Parish] = [
         name="Polska Parafia (Matki Bożej Częstochowskiej)",
         source_url="https://parafiadunstable.co.uk/informacje/biuletyn-parafialny",
         strategy="pdf_archive",
-        location="Dunstable (Polish)",
+        location="Dunstable",
         outside_mk=True,
+        church_name="Matki Bożej Częstochowskiej",
+        hints=(
+            "STRICT RULE: every emitted service MUST have an HH:MM "
+            "clock time. The Polish bulletin frequently contains prose "
+            "such as 'Litanie odmawiane podczas adoracji' / 'Litanies "
+            "recited during adoration'. This is NOT a separate dated "
+            "Adoration service — it is commentary on something that "
+            "happens during another scheduled liturgy. Do NOT emit an "
+            "Adoration entry for it. Do NOT emit any service at all "
+            "unless the bulletin prints a specific HH:MM time for that "
+            "service on a specific date. If you can't read a clock time "
+            "off the bulletin for a given liturgy, skip it entirely."
+        ),
     ),
     Parish(
         name="St Bernardine's & St Martin's",
@@ -216,7 +284,12 @@ PARISHES: list[Parish] = [
             "- 'Mass Times – St Joseph's, Bedford' → church='St Joseph's', "
             "church_location='Bedford'.\n"
             "- 'Mass Times – Our Lady's, Kempston' → church='Our Lady's', "
-            "church_location='Kempston'."
+            "church_location='Kempston'.\n"
+            "\n"
+            "Benediction is sometimes named in the bulletin without a "
+            "clock time (e.g. 'Benediction follows Mass'). Do NOT emit a "
+            "Benediction entry unless the bulletin prints an explicit "
+            "HH:MM time for it."
         ),
     ),
     Parish(

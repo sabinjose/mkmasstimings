@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T15:12:48.035922+00:00",
+  "generated_at": "2026-05-09T21:29:29.235518+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -520,7 +520,7 @@
       "outside_mk": false
     },
     {
-      "parish": "Francis de Sales & Mary Magdalene",
+      "parish": "St Francis & St Mary Magdalene",
       "week_of": "2026-05-10",
       "source_date": null,
       "services": [
@@ -546,7 +546,7 @@
           "church_location": "Stony Stratford",
           "language": null,
           "cancelled": false,
-          "notes": "Peter Kelly RIP",
+          "notes": "Sixth Sunday of Easter; Peter Kelly RIP",
           "area": "Stony Stratford",
           "postcode": "MK11 1AT"
         },
@@ -559,7 +559,20 @@
           "church_location": "Wolverton",
           "language": null,
           "cancelled": false,
-          "notes": "Brian & the O’Neill Family",
+          "notes": "Sixth Sunday of Easter; Brian & the O’Neill Family",
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "11:45",
+          "type": "Chaplet",
+          "church": "St Francis de Sales",
+          "church_location": "Wolverton",
+          "language": null,
+          "cancelled": false,
+          "notes": "Divine Mercy",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
         },
@@ -572,7 +585,7 @@
           "church_location": "Stony Stratford",
           "language": null,
           "cancelled": false,
-          "notes": "Patience Maronga",
+          "notes": "St Fremund, Hermit & Martyr (Minor Rogation Day); Patience Maronga",
           "area": "Stony Stratford",
           "postcode": "MK11 1AT"
         },
@@ -585,7 +598,7 @@
           "church_location": "Wolverton",
           "language": null,
           "cancelled": false,
-          "notes": "Lunt & Smithson Families, Living & Deceased",
+          "notes": "St Pancras, Martyr (Minor Rogation Day); Mary O'Keeffe & Family",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
         },
@@ -598,7 +611,7 @@
           "church_location": "Wolverton",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "19:30–20:30",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
         },
@@ -611,7 +624,7 @@
           "church_location": "Stony Stratford",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Minor Rogation Day; until 14:30",
           "area": "Stony Stratford",
           "postcode": "MK11 1AT"
         },
@@ -620,26 +633,26 @@
           "day": "Wednesday",
           "time": "19:30",
           "type": "Vigil Mass",
-          "church": "St Francis de Sales",
-          "church_location": "Wolverton",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
           "language": null,
           "cancelled": false,
-          "notes": "Pro Populo",
-          "area": "Wolverton",
-          "postcode": "MK12 5LJ"
+          "notes": "Vigil — Solemnity of the Ascension; Pro Populo",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-14",
           "day": "Thursday",
           "time": "10:30",
           "type": "Mass",
-          "church": "St Francis de Sales",
-          "church_location": "Wolverton",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
           "language": null,
           "cancelled": false,
-          "notes": "Alvah, Carol & Hottinger Family",
-          "area": "Wolverton",
-          "postcode": "MK12 5LJ"
+          "notes": "The Ascension of the Lord (Holy Day of Obligation); Alvah, Carol & Hottinger Family",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-14",
@@ -650,7 +663,7 @@
           "church_location": "Wolverton",
           "language": null,
           "cancelled": false,
-          "notes": "Noreen Munnelly",
+          "notes": "The Ascension of the Lord (Holy Day of Obligation); Noreen Munnelly",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
         },
@@ -668,28 +681,119 @@
           "postcode": "MK11 1AT"
         },
         {
+          "date": "2026-05-15",
+          "day": "Friday",
+          "time": "12:30",
+          "type": "Novena",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
+          "language": null,
+          "cancelled": false,
+          "notes": "Holy Spirit Novena Day 1",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
+        },
+        {
           "date": "2026-05-16",
           "day": "Saturday",
           "time": "10:00",
           "type": "Mass",
-          "church": "St Francis de Sales",
-          "church_location": "Wolverton",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
           "language": null,
           "cancelled": false,
           "notes": "Mena Thornton RIP",
-          "area": "Wolverton",
-          "postcode": "MK12 5LJ"
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
+          "time": "10:30",
+          "type": "Novena",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
+          "language": null,
+          "cancelled": false,
+          "notes": "Holy Spirit Novena Day 2",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
         },
         {
           "date": "2026-05-16",
           "day": "Saturday",
           "time": "10:45",
           "type": "Confession",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
+          "language": null,
+          "cancelled": false,
+          "notes": "until 11:45",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
+          "time": "18:30",
+          "type": "Vigil Mass",
           "church": "St Francis de Sales",
           "church_location": "Wolverton",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Pro Populo",
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "09:15",
+          "type": "Mass",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
+          "language": null,
+          "cancelled": false,
+          "notes": "Seventh Sunday of Easter; Paul Reidy RIP",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "10:15",
+          "type": "Novena",
+          "church": "St Mary Magdalene",
+          "church_location": "Stony Stratford",
+          "language": null,
+          "cancelled": false,
+          "notes": "Holy Spirit Novena Day 3",
+          "area": "Stony Stratford",
+          "postcode": "MK11 1AT"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "11:30",
+          "type": "Mass",
+          "church": "St Francis de Sales",
+          "church_location": "Wolverton",
+          "language": null,
+          "cancelled": false,
+          "notes": "Jan Buga j",
+          "area": "Wolverton",
+          "postcode": "MK12 5LJ"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "12:30",
+          "type": "Novena",
+          "church": "St Francis de Sales",
+          "church_location": "Wolverton",
+          "language": null,
+          "cancelled": false,
+          "notes": "Holy Spirit Novena Day 3",
           "area": "Wolverton",
           "postcode": "MK12 5LJ"
         }
@@ -1232,8 +1336,8 @@
     },
     {
       "parish": "Sacred Heart",
-      "week_of": "2026-05-10",
-      "source_date": null,
+      "location": "Leighton Buzzard",
+      "source_url": "https://www.sacredheartlb.org.uk/service-times/",
       "services": [
         {
           "date": "2026-05-09",
@@ -1284,6 +1388,19 @@
           "language": null,
           "cancelled": false,
           "notes": "Feria Mass",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "The Ascension Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
         },
@@ -1351,25 +1468,8 @@
           "notes": "7th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
-        },
-        {
-          "date": "2026-05-14",
-          "day": "Thursday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "cancelled": false,
-          "notes": "The Ascension Mass",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
         }
       ],
-      "confidence": "high",
-      "notes": null,
-      "location": "Leighton Buzzard",
-      "source_url": "http://www.sacredheartlb.org.uk/wp-content/uploads/6th-Sunday-of-Easter-10th-May-2026.pdf",
       "outside_mk": true
     },
     {
@@ -2149,8 +2249,8 @@
       "outside_mk": true
     },
     {
-      "parish": "MK Parishes",
-      "week_of": "2026-05-09",
+      "parish": "MK Parishes Newsletter (Mailchimp)",
+      "week_of": "2026-05-10",
       "source_date": null,
       "services": [
         {
@@ -2175,7 +2275,7 @@
           "church_location": "Central MK",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Sixth Sunday of Easter",
           "area": "Central MK",
           "postcode": "MK9 2ES"
         },
@@ -2188,7 +2288,7 @@
           "church_location": "Newport Pagnell",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Sixth Sunday of Easter",
           "area": "Newport Pagnell",
           "postcode": "MK16 8EN"
         },
@@ -2198,10 +2298,10 @@
           "time": "09:30",
           "type": "Mass",
           "church": "Our Lady of Lourdes",
-          "church_location": "Leadenhall",
+          "church_location": "Coffee Hall",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Sixth Sunday of Easter",
           "area": "Coffee Hall",
           "postcode": "MK6 5NA"
         },
@@ -2214,7 +2314,7 @@
           "church_location": "Shenley Church End",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Sixth Sunday of Easter",
           "area": "Shenley Church End",
           "postcode": "MK5 6DX"
         },
@@ -2227,7 +2327,7 @@
           "church_location": "Woburn Sands",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Sixth Sunday of Easter",
           "area": "Woburn Sands",
           "postcode": "MK17 8NN"
         },
@@ -2240,7 +2340,7 @@
           "church_location": "Kents Hill",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Sixth Sunday of Easter",
           "area": "Kents Hill",
           "postcode": "MK7 6HG"
         },
@@ -2256,6 +2356,19 @@
           "notes": null,
           "area": "Central MK",
           "postcode": "MK9 2ES"
+        },
+        {
+          "date": "2026-05-12",
+          "day": "Tuesday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "St Mary's",
+          "church_location": "Woburn Sands",
+          "language": null,
+          "cancelled": false,
+          "notes": null,
+          "area": "Woburn Sands",
+          "postcode": "MK17 8NN"
         },
         {
           "date": "2026-05-13",
@@ -2277,7 +2390,7 @@
           "church_location": "Newport Pagnell",
           "language": null,
           "cancelled": false,
-          "notes": "Feast of the Ascension of the Lord",
+          "notes": "Ascension of the Lord",
           "area": "Newport Pagnell",
           "postcode": "MK16 8EN"
         },
@@ -2290,7 +2403,7 @@
           "church_location": "Woburn Sands",
           "language": null,
           "cancelled": false,
-          "notes": "Feast of the Ascension of the Lord",
+          "notes": "Ascension of the Lord",
           "area": "Woburn Sands",
           "postcode": "MK17 8NN"
         },
@@ -2303,7 +2416,7 @@
           "church_location": "Central MK",
           "language": null,
           "cancelled": false,
-          "notes": "Feast of the Ascension of the Lord",
+          "notes": "Ascension of the Lord",
           "area": "Central MK",
           "postcode": "MK9 2ES"
         },
@@ -2316,22 +2429,9 @@
           "church_location": "Shenley Church End",
           "language": null,
           "cancelled": false,
-          "notes": "Feast of the Ascension of the Lord",
+          "notes": "Ascension of the Lord",
           "area": "Shenley Church End",
           "postcode": "MK5 6DX"
-        },
-        {
-          "date": "2026-05-12",
-          "day": "Tuesday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "St Mary's",
-          "church_location": "Woburn Sands",
-          "language": null,
-          "cancelled": false,
-          "notes": null,
-          "area": "Woburn Sands",
-          "postcode": "MK17 8NN"
         },
         {
           "date": "2026-05-15",
@@ -2345,10 +2445,62 @@
           "notes": null,
           "area": "Newport Pagnell",
           "postcode": "MK16 8EN"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "12:15",
+          "type": "Mass",
+          "church": "St Edward's",
+          "church_location": "Shenley Church End",
+          "language": null,
+          "cancelled": false,
+          "notes": "Funeral — Joan Suarez RIP",
+          "area": "Shenley Church End",
+          "postcode": "MK5 6DX"
+        },
+        {
+          "date": "2026-05-22",
+          "day": "Friday",
+          "time": "11:30",
+          "type": "Mass",
+          "church": "St Mary's",
+          "church_location": "Woburn Sands",
+          "language": null,
+          "cancelled": false,
+          "notes": "Funeral — Eileen Mitchell RIP",
+          "area": "Woburn Sands",
+          "postcode": "MK17 8NN"
+        },
+        {
+          "date": "2026-06-01",
+          "day": "Monday",
+          "time": "12:00",
+          "type": "Mass",
+          "church": "St Mary's",
+          "church_location": "Woburn Sands",
+          "language": null,
+          "cancelled": false,
+          "notes": "Funeral — Stephen Cotter RIP",
+          "area": "Woburn Sands",
+          "postcode": "MK17 8NN"
+        },
+        {
+          "date": "2026-06-04",
+          "day": "Thursday",
+          "time": "19:30",
+          "type": "Mass",
+          "church": "St Edward's",
+          "church_location": "Shenley Church End",
+          "language": "Spanish",
+          "cancelled": false,
+          "notes": "Corpus Christi — Mass in Spanish",
+          "area": "Shenley Church End",
+          "postcode": "MK5 6DX"
         }
       ],
       "confidence": "high",
-      "notes": null,
+      "notes": "Includes funeral Masses and a scheduled Spanish-language Mass beyond the covered week.",
       "location": "St Barnabas Cluster",
       "source_url": "http://eepurl.com/SbU3LAOLfI",
       "outside_mk": false

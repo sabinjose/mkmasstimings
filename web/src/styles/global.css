@@ -82,12 +82,19 @@ body {
 }
 
 /* Reading body: each verse / paragraph ships as its own <div>. Spread
-   them out so text doesn't squash, and override Universalis' em-based
-   hanging-indent (which scales weirdly on big font sizes — creates
-   visible gaps between psalm lines) with a fixed-rem version that
-   stays consistent across A− / A / A+. */
+   them out so text doesn't squash. */
 .reading-text > div { margin: 0 0 0.55em; }
 .reading-text > div:last-child { margin-bottom: 0; }
+/* Universalis ships the prose `<div style="text-align:justify;">`. At
+   the A+ font size the resulting word-spacing stretches into ugly
+   gaps; left-align is far more readable on a phone column. */
+.reading-text [style*="text-align:justify"],
+.reading-text [style*="text-align: justify"] {
+  text-align: left !important;
+}
+/* Override Universalis' em-based hanging-indent (psalms, gospel
+   acclamation) with a fixed-rem version so the indent doesn't grow
+   with font size and create visible gaps. */
 .reading-text [style*="text-indent"][style*="margin-left"] {
   text-indent: -1.6rem !important;
   margin-left: 1.6rem !important;

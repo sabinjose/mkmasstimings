@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T21:29:29.235518+00:00",
+  "generated_at": "2026-05-10T05:21:17.769765+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -1026,11 +1026,11 @@
     },
     {
       "parish": "St Mary's",
-      "week_of": "2026-05-03",
+      "week_of": "2026-05-10",
       "source_date": null,
       "services": [
         {
-          "date": "2026-05-03",
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "09:30",
           "type": "Mass",
@@ -1038,12 +1038,12 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": "Thanksgiving for Ministry, Fr Rufus Pereira & Family RIP",
+          "notes": "Sixth Sunday of Easter",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-03",
+          "date": "2026-05-10",
           "day": "Sunday",
           "time": "11:30",
           "type": "Mass",
@@ -1051,12 +1051,12 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": "For Parish",
+          "notes": "Sixth Sunday of Easter",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-04",
+          "date": "2026-05-11",
           "day": "Monday",
           "time": "10:00",
           "type": "Mass",
@@ -1064,12 +1064,12 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": "Philip Logan RIP, Stefan & Stefania Bojczuk",
+          "notes": "Saint Fremund, Martyr",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-05",
+          "date": "2026-05-12",
           "day": "Tuesday",
           "time": "08:45",
           "type": "Adoration",
@@ -1077,12 +1077,25 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Saints Nereus and Achilleus; Saint Pancras",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-05",
+          "date": "2026-05-12",
+          "day": "Tuesday",
+          "time": "08:45",
+          "type": "Confession",
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
+          "language": null,
+          "cancelled": false,
+          "notes": "Saints Nereus and Achilleus; Saint Pancras",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
+        },
+        {
+          "date": "2026-05-12",
           "day": "Tuesday",
           "time": "09:30",
           "type": "Mass",
@@ -1090,64 +1103,103 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": "Tommy Kehoe (Ann) RIP",
+          "notes": "Saints Nereus and Achilleus; Saint Pancras",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-05",
-          "day": "Tuesday",
+          "date": "2026-05-13",
+          "day": "Wednesday",
+          "time": "19:00",
+          "type": "Rosary",
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
+          "language": null,
+          "cancelled": false,
+          "notes": "Rosary Procession — Our Lady of Fatima",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "09:15",
+          "type": "Adoration",
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
+          "language": null,
+          "cancelled": false,
+          "notes": "Ascension of the Lord (Holy Day of Obligation)",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
           "time": "09:15",
           "type": "Confession",
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Ascension of the Lord (Holy Day of Obligation)",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-06",
-          "day": "Wednesday",
-          "time": null,
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "10:00",
           "type": "Mass",
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
-          "cancelled": true,
-          "notes": "No Mass",
+          "cancelled": false,
+          "notes": "Ascension of the Lord (Holy Day of Obligation)",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-07",
+          "date": "2026-05-14",
           "day": "Thursday",
-          "time": "08:45",
+          "time": "18:15",
           "type": "Adoration",
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Ascension of the Lord (Holy Day of Obligation)",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-07",
+          "date": "2026-05-14",
           "day": "Thursday",
-          "time": "09:30",
+          "time": "18:15",
+          "type": "Confession",
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
+          "language": null,
+          "cancelled": false,
+          "notes": "Ascension of the Lord (Holy Day of Obligation)",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "19:00",
           "type": "Mass",
           "church": "St. Mary's",
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": "Denise Donnelly RIP",
+          "notes": "Ascension of the Lord (Holy Day of Obligation)",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-08",
+          "date": "2026-05-15",
           "day": "Friday",
           "time": "08:45",
           "type": "Adoration",
@@ -1155,12 +1207,25 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Weekday of Easter",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-08",
+          "date": "2026-05-15",
+          "day": "Friday",
+          "time": "08:45",
+          "type": "Confession",
+          "church": "St. Mary's",
+          "church_location": "Dunstable",
+          "language": null,
+          "cancelled": false,
+          "notes": "Weekday of Easter",
+          "area": "Dunstable",
+          "postcode": "LU6 3SP"
+        },
+        {
+          "date": "2026-05-15",
           "day": "Friday",
           "time": "09:30",
           "type": "Mass",
@@ -1168,12 +1233,12 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": "Ighlis Ivanov RIP",
+          "notes": "Weekday of Easter",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-09",
+          "date": "2026-05-16",
           "day": "Saturday",
           "time": "17:00",
           "type": "Confession",
@@ -1181,12 +1246,12 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "Until 17:30",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-09",
+          "date": "2026-05-16",
           "day": "Saturday",
           "time": "17:30",
           "type": "Rosary",
@@ -1194,12 +1259,12 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": null,
+          "notes": "In the Lady Chapel",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         },
         {
-          "date": "2026-05-09",
+          "date": "2026-05-16",
           "day": "Saturday",
           "time": "18:00",
           "type": "Mass",
@@ -1207,7 +1272,7 @@
           "church_location": "Dunstable",
           "language": null,
           "cancelled": false,
-          "notes": "Agnes Fahy (Ann) RIP",
+          "notes": "Weekday of Easter",
           "area": "Dunstable",
           "postcode": "LU6 3SP"
         }
@@ -1336,19 +1401,19 @@
     },
     {
       "parish": "Sacred Heart",
-      "location": "Leighton Buzzard",
-      "source_url": "https://www.sacredheartlb.org.uk/service-times/",
+      "week_of": "2026-05-10",
+      "source_date": null,
       "services": [
         {
           "date": "2026-05-09",
           "day": "Saturday",
           "time": "18:15",
-          "type": "Mass",
+          "type": "Vigil Mass",
           "church": "Sacred Heart Catholic Church",
           "church_location": "Leighton Buzzard",
           "language": null,
           "cancelled": false,
-          "notes": "6th of Easter Mass",
+          "notes": "6th of Easter",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
         },
@@ -1368,6 +1433,19 @@
         {
           "date": "2026-05-10",
           "day": "Sunday",
+          "time": "09:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "6th of Easter",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
           "church": "Sacred Heart Catholic Church",
@@ -1375,6 +1453,19 @@
           "language": null,
           "cancelled": false,
           "notes": "6th of Easter Mass",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-10",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "6th of Easter",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
         },
@@ -1392,6 +1483,19 @@
           "postcode": "LU7 1HZ"
         },
         {
+          "date": "2026-05-11",
+          "day": "Monday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "Feria",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
           "date": "2026-05-14",
           "day": "Thursday",
           "time": "10:00",
@@ -1401,6 +1505,32 @@
           "language": null,
           "cancelled": false,
           "notes": "The Ascension Mass",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-14",
+          "day": "Thursday",
+          "time": "10:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "The Ascension",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-15",
+          "day": "Friday",
+          "time": null,
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": true,
+          "notes": "No Mass today",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
         },
@@ -1433,6 +1563,19 @@
         {
           "date": "2026-05-16",
           "day": "Saturday",
+          "time": "17:45",
+          "type": "Confession",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "5.45-6.00pm",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
           "time": "18:15",
           "type": "Mass",
           "church": "Sacred Heart Catholic Church",
@@ -1440,6 +1583,19 @@
           "language": null,
           "cancelled": false,
           "notes": "7th of Easter Mass",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-16",
+          "day": "Saturday",
+          "time": "18:15",
+          "type": "Vigil Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "7th of Easter",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
         },
@@ -1459,6 +1615,19 @@
         {
           "date": "2026-05-17",
           "day": "Sunday",
+          "time": "09:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "7th of Easter",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
           "time": "11:00",
           "type": "Mass",
           "church": "Sacred Heart Catholic Church",
@@ -1468,8 +1637,25 @@
           "notes": "7th of Easter Mass",
           "area": "Leighton Buzzard",
           "postcode": "LU7 1HZ"
+        },
+        {
+          "date": "2026-05-17",
+          "day": "Sunday",
+          "time": "11:00",
+          "type": "Mass",
+          "church": "Sacred Heart Catholic Church",
+          "church_location": "Leighton Buzzard",
+          "language": null,
+          "cancelled": false,
+          "notes": "7th of Easter",
+          "area": "Leighton Buzzard",
+          "postcode": "LU7 1HZ"
         }
       ],
+      "confidence": "high",
+      "notes": null,
+      "location": "Leighton Buzzard",
+      "source_url": "http://www.sacredheartlb.org.uk/wp-content/uploads/6th-Sunday-of-Easter-10th-May-2026.pdf",
       "outside_mk": true
     },
     {

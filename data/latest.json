@@ -461,19 +461,6 @@
           "postcode": "MK2 2JE"
         },
         {
-          "date": "2026-05-25",
-          "day": "Monday",
-          "time": "11:00",
-          "type": "Benediction",
-          "church": "St Thomas Aquinas",
-          "church_location": "Bletchley",
-          "language": null,
-          "cancelled": false,
-          "notes": "Perpetual Novena to Our Lady of Perpetual Succour; Benediction at 11:00",
-          "area": "Bletchley",
-          "postcode": "MK2 2JE"
-        },
-        {
           "date": "2026-05-26",
           "day": "Tuesday",
           "time": null,

@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-05-25T06:44:42.642780+00:00",
+  "parishes": [
+    {
+      "parish": "St Augustine's",
+      "location": "Milton Keynes",
+      "source_url": "https://www.st-augustinesmk.org.uk/web/newsletter/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": false
+    },
+    {
+      "parish": "Catholic Bletchley (All Saints / St Thomas Aquinas)",
+      "location": "Bletchley",
+      "source_url": "https://catholic-bletchley.com/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": false
+    },
+    {
+      "parish": "St Francis & St Mary Magdalene",
+      "location": "Wolverton / Stony Stratford",
+      "source_url": "https://www.stfrancisandmary.org/newsletter",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": false
+    },
+    {
+      "parish": "Our Lady of Lourdes",
+      "location": "Olney",
+      "source_url": "https://www.ourladysolney.co.uk/blog/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": false
+    },
+    {
+      "parish": "St Mary's",
+      "location": "Dunstable",
+      "source_url": "https://www.stmarys-dunstable.org/home/newsletter",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": true
+    },
+    {
+      "parish": "Sacred Heart",
+      "location": "Flitwick",
+      "source_url": "https://sacredheartflitwick.co.uk/newsletters/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": false
+    },
+    {
+      "parish": "Sacred Heart",
+      "location": "Leighton Buzzard",
+      "source_url": "https://www.sacredheartlb.org.uk/service-times/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": true
+    },
+    {
+      "parish": "Polska Parafia (Matki Bożej Częstochowskiej)",
+      "location": "Dunstable",
+      "source_url": "https://parafiadunstable.co.uk/informacje/biuletyn-parafialny",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": true
+    },
+    {
+      "parish": "St Bernardine's & St Martin's",
+      "location": "Buckingham / Brackley",
+      "source_url": "https://stbernardines.org/latest-parish-newsletter/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": true
+    },
+    {
+      "parish": "St Joseph's & Our Lady's",
+      "location": "Bedford / Kempston",
+      "source_url": "https://www.stjosephsbedford.org/category/church/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": true
+    },
+    {
+      "parish": "St Alban's",
+      "location": "Winslow",
+      "source_url": "https://www.stalbanswinslow.org.uk/newsletters/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": true
+    },
+    {
+      "parish": "MK Parishes Newsletter (Mailchimp)",
+      "location": "St Barnabas Cluster",
+      "source_url": "https://us19.campaign-archive.com/home/?u=24790f2492cfb4670c635f745&id=2ebd0e3fcd",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
+      "outside_mk": false
+    }
+  ]
+}

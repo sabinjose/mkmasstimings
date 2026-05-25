@@ -16,6 +16,7 @@ import json
 import os
 import sys
 import traceback
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
@@ -396,6 +397,12 @@ def main() -> int:
             "and no merging is performed."
         ),
     )
+    ap.add_argument(
+        "--workers",
+        type=int,
+        default=8,
+        help="parallel parishes to process (default: 8). Set 1 to disable.",
+    )
     args = ap.parse_args()
 
     targets: list[Parish] = list(PARISHES)
@@ -412,12 +419,15 @@ def main() -> int:
     today_str = datetime.now(timezone.utc).date().isoformat()
     old_lookup = load_old(args.out) if args.out else {}
 
-    new_parishes: list[dict] = []
-    for p in targets:
-        old_parish = old_lookup.get(parish_key(p))
-        new_parishes.append(
-            process(p, old_parish, today_str, verbose=args.verbose)
-        )
+    def _process_one(p: Parish) -> dict:
+        return process(p, old_lookup.get(parish_key(p)), today_str, verbose=args.verbose)
+
+    workers = max(1, min(args.workers, len(targets)))
+    if workers == 1:
+        new_parishes: list[dict] = [_process_one(p) for p in targets]
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            new_parishes = list(pool.map(_process_one, targets))
 
     # If filtering with --only and writing back to --out, preserve every
     # other parish's old entry untouched — otherwise --only + --out would

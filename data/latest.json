@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T05:30:58.722690+00:00",
+  "generated_at": "2026-06-27T05:22:29.829948+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -1207,19 +1207,6 @@
       "source_url": "https://sacredheartflitwick.co.uk/newsletters/",
       "services": [
         {
-          "date": "2026-06-26",
-          "day": "Friday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Flitwick",
-          "language": null,
-          "cancelled": false,
-          "notes": "Intention: The Sick and Housebound in Our Parish",
-          "area": "Flitwick",
-          "postcode": "MK45 1JP"
-        },
-        {
           "date": "2026-07-05",
           "day": "Sunday",
           "time": "10:00",
@@ -1253,32 +1240,6 @@
       "location": "Leighton Buzzard",
       "source_url": "https://www.sacredheartlb.org.uk/service-times/",
       "services": [
-        {
-          "date": "2026-06-26",
-          "day": "Friday",
-          "time": "09:30",
-          "type": "Rosary",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "cancelled": false,
-          "notes": null,
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
-        {
-          "date": "2026-06-26",
-          "day": "Friday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "cancelled": false,
-          "notes": "Feria",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
         {
           "date": "2026-06-27",
           "day": "Saturday",
@@ -1737,45 +1698,6 @@
       "source_url": "https://www.stjosephsbedford.org/category/church/",
       "services": [
         {
-          "date": "2026-06-26",
-          "day": "Friday",
-          "time": "10:20",
-          "type": "Rosary",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "cancelled": false,
-          "notes": null,
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-06-26",
-          "day": "Friday",
-          "time": "10:45",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "cancelled": false,
-          "notes": "Feria",
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
-          "date": "2026-06-26",
-          "day": "Friday",
-          "time": "19:30",
-          "type": "Mass",
-          "church": "St Joseph's",
-          "church_location": "Bedford",
-          "language": null,
-          "cancelled": false,
-          "notes": "Mass of Confirmation",
-          "area": "Bedford",
-          "postcode": "MK40 1HU"
-        },
-        {
           "date": "2026-06-27",
           "day": "Saturday",
           "time": "10:20",
@@ -1896,189 +1818,9 @@
     },
     {
       "parish": "MK Parishes Newsletter (Mailchimp)",
-      "week_of": "2026-06-21",
-      "source_date": null,
+      "location": "St Barnabas Cluster",
+      "source_url": "https://us19.campaign-archive.com/home/?u=24790f2492cfb4670c635f745&id=2ebd0e3fcd",
       "services": [
-        {
-          "date": "2026-06-20",
-          "day": "Saturday",
-          "time": "17:00",
-          "type": "Confession",
-          "church": "Christ the Cornerstone",
-          "church_location": "Central MK",
-          "language": null,
-          "cancelled": false,
-          "notes": "Twelth Sunday in Ordinary Time",
-          "area": "Central MK",
-          "postcode": "MK9 2ES"
-        },
-        {
-          "date": "2026-06-20",
-          "day": "Saturday",
-          "time": "17:30",
-          "type": "Vigil Mass",
-          "church": "Christ the Cornerstone",
-          "church_location": "Central MK",
-          "language": null,
-          "cancelled": false,
-          "notes": "Twelth Sunday in Ordinary Time",
-          "area": "Central MK",
-          "postcode": "MK9 2ES"
-        },
-        {
-          "date": "2026-06-21",
-          "day": "Sunday",
-          "time": "08:30",
-          "type": "Mass",
-          "church": "St Bede's",
-          "church_location": "Newport Pagnell",
-          "language": null,
-          "cancelled": false,
-          "notes": "Twelth Sunday in Ordinary Time; Pat Murray RIP, Pat Metcalfe RIP",
-          "area": "Newport Pagnell",
-          "postcode": "MK16 8EN"
-        },
-        {
-          "date": "2026-06-21",
-          "day": "Sunday",
-          "time": "09:30",
-          "type": "Mass",
-          "church": "Our Lady of Lourdes",
-          "church_location": "Coffee Hall",
-          "language": null,
-          "cancelled": false,
-          "notes": "Twelth Sunday in Ordinary Time",
-          "area": "Coffee Hall",
-          "postcode": "MK6 5NA"
-        },
-        {
-          "date": "2026-06-21",
-          "day": "Sunday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "St Edward's",
-          "church_location": "Shenley Church End",
-          "language": null,
-          "cancelled": false,
-          "notes": "Twelth Sunday in Ordinary Time",
-          "area": "Shenley Church End",
-          "postcode": "MK5 6DX"
-        },
-        {
-          "date": "2026-06-21",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": "St Mary's",
-          "church_location": "Woburn Sands",
-          "language": null,
-          "cancelled": false,
-          "notes": "Twelth Sunday in Ordinary Time; Maureen Clarke RIP Anniversary",
-          "area": "Woburn Sands",
-          "postcode": "MK17 8NN"
-        },
-        {
-          "date": "2026-06-21",
-          "day": "Sunday",
-          "time": "11:30",
-          "type": "Mass",
-          "church": "Christ the King",
-          "church_location": "Kents Hill",
-          "language": null,
-          "cancelled": false,
-          "notes": "Twelth Sunday in Ordinary Time",
-          "area": "Kents Hill",
-          "postcode": "MK7 6HG"
-        },
-        {
-          "date": "2026-06-22",
-          "day": "Monday",
-          "time": "12:30",
-          "type": "Mass",
-          "church": "Christ the Cornerstone",
-          "church_location": "Central MK",
-          "language": null,
-          "cancelled": false,
-          "notes": "St John Fisher and St Thomas More",
-          "area": "Central MK",
-          "postcode": "MK9 2ES"
-        },
-        {
-          "date": "2026-06-23",
-          "day": "Tuesday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "St Mary's",
-          "church_location": "Woburn Sands",
-          "language": null,
-          "cancelled": false,
-          "notes": "Private Intention",
-          "area": "Woburn Sands",
-          "postcode": "MK17 8NN"
-        },
-        {
-          "date": "2026-06-24",
-          "day": "Wednesday",
-          "time": null,
-          "type": "Mass",
-          "church": null,
-          "church_location": null,
-          "language": null,
-          "cancelled": true,
-          "notes": "NO MORNING MASS"
-        },
-        {
-          "date": "2026-06-24",
-          "day": "Wednesday",
-          "time": "14:00",
-          "type": "Mass",
-          "church": "St Edward's",
-          "church_location": "Shenley Church End",
-          "language": null,
-          "cancelled": false,
-          "notes": "Funeral — Shirley Loftus RIP",
-          "area": "Shenley Church End",
-          "postcode": "MK5 6DX"
-        },
-        {
-          "date": "2026-06-25",
-          "day": "Thursday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "St Edward's",
-          "church_location": "Shenley Church End",
-          "language": null,
-          "cancelled": false,
-          "notes": null,
-          "area": "Shenley Church End",
-          "postcode": "MK5 6DX"
-        },
-        {
-          "date": "2026-06-25",
-          "day": "Thursday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": "St Mary's",
-          "church_location": "Woburn Sands",
-          "language": null,
-          "cancelled": false,
-          "notes": "Funeral — Susan Levick RIP",
-          "area": "Woburn Sands",
-          "postcode": "MK17 8NN"
-        },
-        {
-          "date": "2026-06-26",
-          "day": "Friday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "St Bede's",
-          "church_location": "Newport Pagnell",
-          "language": null,
-          "cancelled": false,
-          "notes": null,
-          "area": "Newport Pagnell",
-          "postcode": "MK16 8EN"
-        },
         {
           "date": "2026-06-30",
           "day": "Tuesday",
@@ -2093,10 +1835,6 @@
           "postcode": "MK7 6HG"
         }
       ],
-      "confidence": "high",
-      "notes": null,
-      "location": "St Barnabas Cluster",
-      "source_url": "http://eepurl.com/08eLpoyqG4",
       "outside_mk": false
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T05:35:04.753775+00:00",
+  "generated_at": "2026-07-03T05:22:20.084278+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -13,47 +13,8 @@
       "parish": "Catholic Bletchley (All Saints / St Thomas Aquinas)",
       "location": "Bletchley",
       "source_url": "https://catholic-bletchley.com/",
-      "services": [
-        {
-          "date": "2026-06-28",
-          "day": "Sunday",
-          "time": "09:00",
-          "type": "Mass",
-          "church": "All Saints Church",
-          "church_location": "Bletchley",
-          "language": null,
-          "cancelled": false,
-          "notes": "SS Peter & Paul",
-          "area": "Bletchley",
-          "postcode": "MK3 6AN"
-        },
-        {
-          "date": "2026-06-28",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": "All Saints Church",
-          "church_location": "Bletchley",
-          "language": null,
-          "cancelled": false,
-          "notes": "SS Peter & Paul",
-          "area": "Bletchley",
-          "postcode": "MK3 6AN"
-        },
-        {
-          "date": "2026-06-28",
-          "day": "Sunday",
-          "time": "18:30",
-          "type": "Mass",
-          "church": "St Thomas Aquinas Church",
-          "church_location": "Bletchley",
-          "language": null,
-          "cancelled": false,
-          "notes": "SS Peter & Paul",
-          "area": "Bletchley",
-          "postcode": "MK2 2JE"
-        }
-      ],
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
       "outside_mk": false
     },
     {
@@ -68,21 +29,8 @@
       "parish": "Our Lady of Lourdes",
       "location": "Olney",
       "source_url": "https://www.ourladysolney.co.uk/blog/",
-      "services": [
-        {
-          "date": "2026-06-28",
-          "day": "Sunday",
-          "time": "10:30",
-          "type": "Mass",
-          "church": "Our Lady Help of Christians & St. Lawrence",
-          "church_location": "Olney",
-          "language": null,
-          "cancelled": false,
-          "notes": "Ss Peter & Paul, Apostles & Martyrs",
-          "area": "Olney",
-          "postcode": "MK46 5HH"
-        }
-      ],
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
       "outside_mk": false
     },
     {
@@ -131,41 +79,15 @@
       "parish": "Sacred Heart",
       "location": "Leighton Buzzard",
       "source_url": "https://www.sacredheartlb.org.uk/service-times/",
-      "services": [
-        {
-          "date": "2026-06-28",
-          "day": "Sunday",
-          "time": "09:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "cancelled": false,
-          "notes": "SS Peter & Paul",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        },
-        {
-          "date": "2026-06-28",
-          "day": "Sunday",
-          "time": "11:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Leighton Buzzard",
-          "language": null,
-          "cancelled": false,
-          "notes": "SS Peter & Paul",
-          "area": "Leighton Buzzard",
-          "postcode": "LU7 1HZ"
-        }
-      ],
+      "error": "no content found",
+      "services": [],
       "outside_mk": true
     },
     {
       "parish": "Polska Parafia (Matki Bożej Częstochowskiej)",
       "location": "Dunstable",
       "source_url": "https://parafiadunstable.co.uk/informacje/biuletyn-parafialny",
-      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "error": "fetch failed: HTTPSConnectionPool(host='parafiadunstable.co.uk', port=443): Max retries exceeded with url: /informacje/biuletyn-parafialny (Caused by ConnectTimeoutError(<HTTPSConnection(host='parafiadunstable.co.uk', port=443) at 0x7f90e8f1ede0>, 'Connection to parafiadunstable.co.uk timed out. (connect timeout=30)'))",
       "services": [],
       "outside_mk": true
     },
@@ -546,19 +468,6 @@
       "source_url": "https://www.stalbanswinslow.org.uk/newsletters/",
       "services": [
         {
-          "date": "2026-06-28",
-          "day": "Sunday",
-          "time": "11:30",
-          "type": "Mass",
-          "church": "St Laurence Church",
-          "church_location": "Winslow",
-          "language": null,
-          "cancelled": false,
-          "notes": "SS Peter and Paul, Apostles",
-          "area": "Winslow",
-          "postcode": "MK18 3AB"
-        },
-        {
           "date": "2026-07-04",
           "day": "Saturday",
           "time": "17:30",
@@ -591,21 +500,8 @@
       "parish": "MK Parishes Newsletter (Mailchimp)",
       "location": "St Barnabas Cluster",
       "source_url": "https://us19.campaign-archive.com/home/?u=24790f2492cfb4670c635f745&id=2ebd0e3fcd",
-      "services": [
-        {
-          "date": "2026-06-30",
-          "day": "Tuesday",
-          "time": "11:30",
-          "type": "Mass",
-          "church": "Christ the King",
-          "church_location": "Kents Hill",
-          "language": null,
-          "cancelled": false,
-          "notes": "Funeral — Joan McGlynn RIP",
-          "area": "Kents Hill",
-          "postcode": "MK7 6HG"
-        }
-      ],
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
       "outside_mk": false
     }
   ]

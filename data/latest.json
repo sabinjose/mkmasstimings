@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T06:47:42.456770+00:00",
+  "generated_at": "2026-07-05T07:26:10.481385+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -466,34 +466,8 @@
       "parish": "St Alban's",
       "location": "Winslow",
       "source_url": "https://www.stalbanswinslow.org.uk/newsletters/",
-      "services": [
-        {
-          "date": "2026-07-04",
-          "day": "Saturday",
-          "time": "17:30",
-          "type": "Confession",
-          "church": "St Laurence Church",
-          "church_location": "Winslow",
-          "language": null,
-          "cancelled": false,
-          "notes": "First Saturday confessions until 18:00 (before Mass)",
-          "area": "Winslow",
-          "postcode": "MK18 3AB"
-        },
-        {
-          "date": "2026-07-04",
-          "day": "Saturday",
-          "time": "18:00",
-          "type": "Vigil Mass",
-          "church": "St Laurence Church",
-          "church_location": "Winslow",
-          "language": null,
-          "cancelled": false,
-          "notes": "Fourteenth Sunday in Ordinary Time",
-          "area": "Winslow",
-          "postcode": "MK18 3AB"
-        }
-      ],
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
       "outside_mk": true
     },
     {

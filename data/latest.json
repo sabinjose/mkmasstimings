@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T07:26:10.481385+00:00",
+  "generated_at": "2026-07-10T07:35:35.271515+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -45,34 +45,8 @@
       "parish": "Sacred Heart",
       "location": "Flitwick",
       "source_url": "https://sacredheartflitwick.co.uk/newsletters/",
-      "services": [
-        {
-          "date": "2026-07-05",
-          "day": "Sunday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "Sacred Heart Catholic Church",
-          "church_location": "Flitwick",
-          "language": null,
-          "cancelled": false,
-          "notes": "Parish Day — one Mass only",
-          "area": "Flitwick",
-          "postcode": "MK45 1JP"
-        },
-        {
-          "date": "2026-07-05",
-          "day": "Sunday",
-          "time": "10:00",
-          "type": "Mass",
-          "church": "Sacred Heart",
-          "church_location": "Flitwick",
-          "language": null,
-          "cancelled": false,
-          "notes": "Parish Day — one Mass only",
-          "area": "Flitwick",
-          "postcode": "MK45 1JP"
-        }
-      ],
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+      "services": [],
       "outside_mk": false
     },
     {

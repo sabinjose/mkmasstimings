@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T06:14:14.837761+00:00",
+  "generated_at": "2026-07-12T06:33:19.578461+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -37,7 +37,7 @@
       "parish": "St Mary's",
       "location": "Dunstable",
       "source_url": "https://www.stmarys-dunstable.org/home/newsletter",
-      "error": "no content found",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
       "services": [],
       "outside_mk": true
     },
@@ -45,7 +45,7 @@
       "parish": "Sacred Heart",
       "location": "Flitwick",
       "source_url": "https://sacredheartflitwick.co.uk/newsletters/",
-      "error": "fetch failed: HTTPSConnectionPool(host='sacredheartflitwick.co.uk', port=443): Max retries exceeded with url: /newsletters/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='sacredheartflitwick.co.uk', port=443) at 0x7f874cf28ec0>, 'Connection to sacredheartflitwick.co.uk timed out. (connect timeout=30)'))",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
       "services": [],
       "outside_mk": false
     },
@@ -53,7 +53,7 @@
       "parish": "Sacred Heart",
       "location": "Leighton Buzzard",
       "source_url": "https://www.sacredheartlb.org.uk/service-times/",
-      "error": "no content found",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
       "services": [],
       "outside_mk": true
     },
@@ -432,7 +432,7 @@
       "parish": "St Joseph's & Our Lady's",
       "location": "Bedford / Kempston",
       "source_url": "https://www.stjosephsbedford.org/category/church/",
-      "error": "fetch failed: 401 Client Error: Unauthorized for url: https://www.stjosephsbedford.org/category/church/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
       "services": [],
       "outside_mk": true
     },

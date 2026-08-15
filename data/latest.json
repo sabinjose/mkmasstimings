@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T05:37:37.511946+00:00",
+  "generated_at": "2026-08-15T04:30:56.089741+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -37,7 +37,7 @@
       "parish": "St Mary's",
       "location": "Dunstable",
       "source_url": "https://www.stmarys-dunstable.org/home/newsletter",
-      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "error": "no content found",
       "services": [],
       "outside_mk": true
     },
@@ -53,7 +53,7 @@
       "parish": "Sacred Heart",
       "location": "Leighton Buzzard",
       "source_url": "https://www.sacredheartlb.org.uk/service-times/",
-      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "error": "no content found",
       "services": [],
       "outside_mk": true
     },

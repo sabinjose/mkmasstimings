@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T04:35:37.849820+00:00",
+  "generated_at": "2026-08-21T04:37:57.605296+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -45,7 +45,7 @@
       "parish": "Sacred Heart",
       "location": "Flitwick",
       "source_url": "https://sacredheartflitwick.co.uk/newsletters/",
-      "error": "fetch failed: 404 Client Error: Not Found for url: https://sacredheartflitwick.co.uk/newsletters/",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
       "services": [],
       "outside_mk": false
     },

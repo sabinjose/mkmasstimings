@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T04:36:44.278362+00:00",
+  "generated_at": "2026-08-28T15:56:29.024643+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -432,7 +432,7 @@
       "parish": "St Joseph's & Our Lady's",
       "location": "Bedford / Kempston",
       "source_url": "https://www.stjosephsbedford.org/category/church/",
-      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+      "error": "fetch failed: 403 Client Error: Forbidden for url: https://www.stjosephsbedford.org/category/church/",
       "services": [],
       "outside_mk": true
     },

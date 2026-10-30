@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T09:00:18.723102+00:00",
+  "generated_at": "2026-10-30T10:43:49.631775+00:00",
   "parishes": [
     {
       "parish": "St Augustine's",
@@ -37,7 +37,7 @@
       "parish": "St Mary's",
       "location": "Dunstable",
       "source_url": "https://www.stmarys-dunstable.org/home/newsletter",
-      "error": "fetch failed: HTTPSConnectionPool(host='www.stmarys-dunstable.org', port=443): Max retries exceeded with url: /home/newsletter (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.stmarys-dunstable.org', port=443) at 0x7f50089fd1c0>, 'Connection to www.stmarys-dunstable.org timed out. (connect timeout=30)'))",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
       "services": [],
       "outside_mk": true
     },
@@ -53,7 +53,7 @@
       "parish": "Sacred Heart",
       "location": "Leighton Buzzard",
       "source_url": "https://www.sacredheartlb.org.uk/service-times/",
-      "error": "fetch failed: HTTPSConnectionPool(host='www.sacredheartlb.org.uk', port=443): Max retries exceeded with url: /service-times/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sacredheartlb.org.uk', port=443) at 0x7f50089003b0>, 'Connection to www.sacredheartlb.org.uk timed out. (connect timeout=30)'))",
+      "error": "extract failed: litellm.RateLimitError: RateLimitError: OpenAIException - You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
       "services": [],
       "outside_mk": true
     },
